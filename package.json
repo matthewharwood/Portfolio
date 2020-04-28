@@ -10,9 +10,9 @@
   },
   "module": "dist/js/app.js",
   "scripts": {
-    "build": "npm-run-all build:css build:html",
-    "build:css": "postcss src/site/_includes/css/tailwind.css -o src/site/css/styles.css",
-    "build:html": "eleventy",
+    "build": "cross-env NODE_ENV=production npm-run-all build:css build:html",
+    "build:css": "cross-env NODE_ENV=production postcss src/site/_includes/css/tailwind.css -o src/site/css/styles.css",
+    "build:html": "cross-env NODE_ENV=production eleventy",
     "watch": "npm-run-all --parallel watch:css watch:html",
     "watch:js": "microbundle dist/js/app.js  -o dist/js/app.bundle.js -f es --external none -w ",
     "watch:css": "postcss src/site/_includes/css/tailwind.css -o src/site/css/styles.css --watch",
@@ -44,6 +44,7 @@
     "tailwindcss": "^1.1.4"
   },
   "devDependencies": {
+    "cross-env": "^7.0.2",
     "microbundle": "^0.11.0"
   }
 }
