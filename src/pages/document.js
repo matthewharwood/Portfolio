@@ -9,7 +9,7 @@ export const HtmlPage = ({ title, content }) => {
         <title>${title}</title>
         <meta name="description" content="Test OMG" />
         <meta name="author" content="Testing" />
-        <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+        <link href="${DOMAIN}/static/styles.bundle.css" rel="stylesheet" />
         <script type="module" src="${DOMAIN}/static/bundle.modern.js" defer></script>
       </head>
       <body>
