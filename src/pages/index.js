@@ -4,7 +4,7 @@ import {html} from './utils';
 export const Index = () => {
   return html`
     <div>
-       Hello world
+       Hello worldz
     </div>
   `;
 };

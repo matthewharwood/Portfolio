@@ -1,11 +1,11 @@
 import { render } from "preact-render-to-string";
 import express from "express";
 
-import { Index } from "./src/pages";
-import { HtmlPage } from "./src/pages/document";
-import {Work} from './src/pages/work';
-import {Profile} from './src/pages/profile';
-import {Lab} from './src/pages/lab';
+import { Index } from "./pages";
+import { HtmlPage } from "./pages/document";
+import {Work} from './pages/work';
+import {Profile} from './pages/profile';
+import {Lab} from './pages/lab';
 import livereload from "livereload";
 import connectLivereload from "connect-livereload";
 import {join} from 'path';
@@ -15,7 +15,6 @@ const liveReloadServer = livereload.createServer();
 liveReloadServer.watch(join(__dirname, 'src', 'pages'));
 
 
-// ping browser on Express boot, once browser has reconnected and handshaken
 liveReloadServer.server.once("connection", () => {
   setTimeout(() => {
     liveReloadServer.refresh("/");

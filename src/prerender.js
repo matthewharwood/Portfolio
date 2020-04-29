@@ -1,11 +1,11 @@
 import { render } from "preact-render-to-string";
-import { Index } from "./src/pages";
-import { HtmlPage } from "./src/pages/document";
+import { Index } from "./pages";
+import { HtmlPage } from "./pages/document";
 import {copy, ensureDir, writeFile} from 'fs-extra';
 import {join} from 'path';
-import {Profile} from './src/pages/profile';
-import {Work} from './src/pages/work';
-import {Lab} from './src/pages/lab';
+import {Profile} from './pages/profile';
+import {Work} from './pages/work';
+import {Lab} from './pages/lab';
 
 const renderPage = (title, page) => {
   return HtmlPage({ title, content: render(page) });
