@@ -1,7 +1,9 @@
 import {Navigation} from './navigation';
+import {RunningHeader} from './running_header';
 import {autoHydrate} from '../utils/auto_hydrate';
 export const COMPONENT_MAP = {
-  Navigation
+  Navigation,
+  RunningHeader
 }
 
 const AH = {};

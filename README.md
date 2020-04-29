@@ -10,10 +10,15 @@ A Portfolio by Matthew harwood
 
 ## Up and Running
 - `npm i`
-- `npm run watch`
+- `npm run dev`
+
+## Production build
+- `npm run build`
 
 
 ## TODO:
+- Set up production workflow for deployment. dotenv etc.
+
 - Put in hydration for clientside
 - Add Highway JS
 - Add Popmotion Pure
