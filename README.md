@@ -17,8 +17,11 @@ A Portfolio by Matthew harwood
 
 
 ## TODO:
+- Think about how I can get client side console.logs during dev.
 - Set up production workflow for deployment. dotenv etc.
-
+- html minification.
+- Tailwind integration.
+- PurgeCSS.
 - Put in hydration for clientside
 - Add Highway JS
 - Add Popmotion Pure

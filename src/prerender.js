@@ -6,6 +6,21 @@ import {join} from 'path';
 import {Profile} from './pages/profile';
 import {Work} from './pages/work';
 import {Lab} from './pages/lab';
+import {minify} from 'html-minifier';
+console.log(minify)
+const htmlMin = (temp) => minify(temp, {
+  removeAttributeQuotes: true,
+  collapseWhitespace: true,
+  removeComments: true,
+  removeOptionalTags: true,
+  removeRedundantAttributes: true,
+  removeTagWhitespace: true,
+  useShortDoctype: true,
+  minifyCSS: true,
+  minifyJS: true,
+  sortClassName: true,
+  sortAttributes: true,
+});
 
 const renderPage = (title, page) => {
   return HtmlPage({ title, content: render(page) });
@@ -26,11 +41,11 @@ async function main() {
   await copy(STATIC, join(DIST_DIR, 'static'));
   for await (const p of pages) {
     if (p.fileName === 'index') {
-      await writeFile(join(DIST_DIR, 'index.html'), p.content);
+      await writeFile(join(DIST_DIR, 'index.html'), htmlMin(p.content));
     } else {
       const deepDistDir = join(DIST_DIR, p.fileName);
       await ensureDir(deepDistDir);
-      await writeFile(join(deepDistDir, 'index.html'), p.content);
+      await writeFile(join(deepDistDir, 'index.html'), htmlMin(p.content));
     }
   }
 }
