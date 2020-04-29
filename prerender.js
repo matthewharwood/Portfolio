@@ -1,11 +1,11 @@
 import { render } from "preact-render-to-string";
-import { Index } from "./pages";
-import { HtmlPage } from "./pages/document";
+import { Index } from "./src/pages";
+import { HtmlPage } from "./src/pages/document";
 import {copy, ensureDir, writeFile} from 'fs-extra';
 import {join} from 'path';
-import {Profile} from './pages/profile';
-import {Work} from './pages/work';
-import {Lab} from './pages/lab';
+import {Profile} from './src/pages/profile';
+import {Work} from './src/pages/work';
+import {Lab} from './src/pages/lab';
 
 const renderPage = (title, page) => {
   return HtmlPage({ title, content: render(page) });
@@ -19,19 +19,19 @@ const pages = [
   {fileName: 'lab', content: renderPage("Lab Page", Lab())},
 ];
 const DIST_DIR = join(__dirname, 'dist');
-const SRC_DIR = join(__dirname, 'pages');
-const STATIC = join(__dirname, 'static');
+const SRC_DIR = join(__dirname, 'src', 'pages');
+const STATIC = join(__dirname, 'src', 'static');
 
 async function main() {
   await ensureDir(DIST_DIR);
-  await copy(STATIC, `${DIST_DIR}/static`);
+  await copy(STATIC, join(DIST_DIR, 'static'));
   for await (const p of pages) {
     if (p.fileName === 'index') {
-      await writeFile(`${DIST_DIR}/index.html`, p.content);
+      await writeFile(join(DIST_DIR, 'index.html'), p.content);
     } else {
       const deepDistDir = join(DIST_DIR, p.fileName);
       await ensureDir(deepDistDir);
-      await writeFile(`${deepDistDir}/index.html`, p.content);
+      await writeFile(join(deepDistDir, 'index.html'), p.content);
     }
   }
 }

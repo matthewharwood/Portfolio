@@ -1,18 +1,18 @@
 import { render } from "preact-render-to-string";
 import express from "express";
 
-import { Index } from "./pages";
-import { HtmlPage } from "./pages/document";
-import {Work} from './pages/work';
-import {Profile} from './pages/profile';
-import {Lab} from './pages/lab';
+import { Index } from "./src/pages";
+import { HtmlPage } from "./src/pages/document";
+import {Work} from './src/pages/work';
+import {Profile} from './src/pages/profile';
+import {Lab} from './src/pages/lab';
 import livereload from "livereload";
 import connectLivereload from "connect-livereload";
 import {join} from 'path';
 // open livereload high port and start to watch public directory for changes
 const liveReloadServer = livereload.createServer();
 
-liveReloadServer.watch(join(__dirname, 'pages'));
+liveReloadServer.watch(join(__dirname, 'src', 'pages'));
 
 
 // ping browser on Express boot, once browser has reconnected and handshaken
