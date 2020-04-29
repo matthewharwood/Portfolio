@@ -18,9 +18,8 @@ const pages = [
   {fileName: 'work', content: renderPage("Work Page", Work())},
   {fileName: 'lab', content: renderPage("Lab Page", Lab())},
 ];
-const DIST_DIR = join(__dirname, 'dist');
-const SRC_DIR = join(__dirname, 'src', 'pages');
-const STATIC = join(__dirname, 'src', 'static');
+const DIST_DIR = join(__dirname, '../', 'dist');
+const STATIC = join(__dirname, 'static');
 
 async function main() {
   await ensureDir(DIST_DIR);

@@ -2,13 +2,13 @@
   "name": "MorningHarwoodPortfolio",
   "version": "2.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "node ./src/index.js",
-    "prerender": "node src/render.js",
+    "prerender": "node prerender.js",
     "start": "node ./bin/www",
-    "watch": "nodemon ./src/index.js --ext js --ignore dist"
+    "watch": "nodemon index.js --ext js --ignore dist"
   },
   "author": "",
   "license": "MIT",
