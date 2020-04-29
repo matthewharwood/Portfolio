@@ -6,7 +6,6 @@ A Portfolio by Matthew harwood
 - Preact
 - TailwindCSS
 - PostCSS / PurgeCSS
-
 - Hosted by www.render.com for the brotli Compression
 
 ## Up and Running
@@ -15,6 +14,7 @@ A Portfolio by Matthew harwood
 
 
 ## TODO:
+- Put in hydration for clientside
 - Add Highway JS
 - Add Popmotion Pure
 - Add Preact and Partial Hydration

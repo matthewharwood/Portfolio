@@ -1,8 +1,9 @@
 import {html} from '../../utils';
 
-const Navigation = () => {
+const Navigation = ({children}) => {
   return html`
-      <div>Navigation</div>
+      <div>${children}</div>
+      
   `;
 }
 
