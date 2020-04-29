@@ -4,16 +4,15 @@ A Portfolio by Matthew harwood
 
 ## Technology
 - Preact
-- Eleventy
 - TailwindCSS
 - PostCSS / PurgeCSS
 
 - Hosted by www.render.com for the brotli Compression
 
 ## Up and Running
-You'll need two terminals windows for now:
-- `npm run start`
-- `npm run js:watch`
+- `npm i`
+- `npm run watch`
+
 
 ## TODO:
 - Add Highway JS
