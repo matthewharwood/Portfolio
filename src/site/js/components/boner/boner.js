@@ -1,4 +1,4 @@
-import {html} from '../preact.js';
+import {html} from '../preact';
 import {useRef, useLayoutEffect} from 'preact/hooks';
 
 const Boner = () => {

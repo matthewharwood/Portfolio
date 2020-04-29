@@ -1,9 +1,9 @@
-import {html} from './preact.js';
+import {html} from './preact';
 import {NavigationItem} from './navigation/mod.js';
-import {RunningHeader} from './running_header/running_header.js';
-import {Boner} from './boner/boner.js';
-import {Marquee} from './boner/marquee.js';
-import {isClient} from '../utils/which_env.js';
+import {RunningHeader} from './running_header/running_header';
+import {Boner} from './boner/boner';
+import {Marquee} from './boner/marquee';
+import {isClient} from '../utils/which_env';
 
 function autoHydrate(Component, name) {
   if (isClient) {

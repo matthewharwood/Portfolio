@@ -1,5 +1,5 @@
-import {html} from '../preact.js';
-import {useStatic} from '../hooks/use_cloudinary.js';
+import {html} from '../preact';
+import {useStatic} from '../hooks/use_cloudinary';
 
 const LabCard = ({link}) => {
   const src = useStatic('sample.jpg');

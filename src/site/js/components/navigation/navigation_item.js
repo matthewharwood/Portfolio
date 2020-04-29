@@ -1,6 +1,6 @@
-import {html} from '../preact.js';
+import {html} from '../preact';
 
-import {useFlyIn} from '../hooks/use_fly_in.js';
+import {useFlyIn} from '../hooks/use_fly_in';
 
 const preFetch = async (e, link) => {
   if(e.target.href.split("/index.html")[0] === location.href) return;

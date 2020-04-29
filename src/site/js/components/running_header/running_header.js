@@ -1,8 +1,8 @@
-import {html} from '../preact.js';
+import {html} from '../preact';
 import {useState, useMemo} from 'preact/hooks';
-import {useInterval} from '../hooks/use_interval.js';
-import {interests} from '../../../_data/interests.js';
-import {shuffle} from '../../../utils/shuffle.js';
+import {useInterval} from '../hooks/use_interval';
+import {interests} from './data';
+import {shuffle} from '../../utils/shuffle';
 
 const RunningHeader = () => {
   const [count, setCount] = useState(0);

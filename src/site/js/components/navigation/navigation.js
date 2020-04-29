@@ -1,4 +1,4 @@
-import {html} from '../preact.js';
+import {html} from '../preact';
 
 
 export const Navigation = ({children}) => {

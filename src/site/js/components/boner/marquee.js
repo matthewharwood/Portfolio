@@ -1,6 +1,6 @@
-import {html} from '../preact.js';
+import {html} from '../preact';
 import {useLayoutEffect, useRef} from 'preact/hooks';
-import {useInterval} from '../hooks/use_interval.js';
+import {useInterval} from '../hooks/use_interval';
 
 const Marquee = () => {
     useLayoutEffect(() => {
