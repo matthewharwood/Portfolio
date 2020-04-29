@@ -2,7 +2,6 @@ const htmlmin = require("html-minifier");
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.addLayoutAlias('default', 'layouts/base.njk');
-  eleventyConfig.addLayoutAlias('conf', 'layouts/conf.njk');
 
   // minify the html output when running in prod
   if (process.env.NODE_ENV == "production") {
@@ -33,9 +32,7 @@ module.exports = function(eleventyConfig) {
       output: "dist"
     },
     passthroughFileCopy: true,
-    templateFormats : ["njk", "md"],
-    htmlTemplateEngine : "njk",
-    markdownTemplateEngine : "njk",
+    templateFormats : ["js"]
   };
 
 };

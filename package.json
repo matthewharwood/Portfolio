@@ -14,7 +14,7 @@
     "build:css": "cross-env NODE_ENV=production postcss src/site/_includes/css/tailwind.css -o src/site/css/styles.css",
     "build:html": "cross-env NODE_ENV=production eleventy",
     "watch": "npm-run-all --parallel watch:css watch:html",
-    "watch:js": "microbundle dist/js/app.js  -o dist/js/app.bundle.js -f es --external none -w ",
+    "watch:js": "microbundle dist/js/main.js  -o dist/js/main.bundle.js -f es --external none -w ",
     "watch:css": "postcss src/site/_includes/css/tailwind.css -o src/site/css/styles.css --watch",
     "watch:html": "eleventy --serve --port=8181",
     "start": "npm run watch"
@@ -37,14 +37,17 @@
     "@fullhuman/postcss-purgecss": "^1.3.0",
     "autoprefixer": "^9.7.2",
     "cssnano": "^4.1.10",
+    "htm": "^3.0.4",
     "html-minifier": "^4.0.0",
     "luxon": "^1.21.2",
     "npm-run-all": "^4.1.5",
     "postcss-cli": "^6.1.3",
+    "preact": "^10.4.1",
     "tailwindcss": "^1.1.4"
   },
   "devDependencies": {
     "cross-env": "^7.0.2",
-    "microbundle": "^0.11.0"
+    "microbundle": "^0.11.0",
+    "preact-render-to-string": "^5.1.6"
   }
 }
