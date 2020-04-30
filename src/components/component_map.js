@@ -1,10 +1,11 @@
 import {RunningHeader} from './running_header';
 import {autoHydrate} from '../utils/auto_hydrate';
 import {NavigationItem} from './navigation/item';
-
+import {Boner} from './boner/boner';
 export const COMPONENT_MAP = {
   RunningHeader,
-  NavigationItem
+  NavigationItem,
+  Boner
 }
 
 const AH = {};

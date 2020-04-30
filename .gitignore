@@ -2,6 +2,6 @@ dist
 .idea/
 node_modules/
 src/site/css/
-static/bundle.modern.js
-static/bundle.modern.js.map
-static/styles.bundle.css
+src/static/bundle.modern.js
+src/static/bundle.modern.js.map
+src/static/styles.bundle.css
