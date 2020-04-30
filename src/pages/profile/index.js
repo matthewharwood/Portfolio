@@ -9,6 +9,7 @@ import {
   techniques,
   visited,
 } from "../../content/profile";
+import {useStatic} from '../../hooks/use_static';
 
 export const Profile = () => {
   return html`
@@ -30,7 +31,7 @@ const IntroSection = () => {
         <p>${me.description}</p>
       </div>
       <img
-        src="https://via.placeholder.com/900x1080"
+        src="${useStatic('me.jpg')}"
         alt=""
         className="h-50vh lg:h-full w-full lg:w-1/2 object-cover order-first lg:order-none"
       />
