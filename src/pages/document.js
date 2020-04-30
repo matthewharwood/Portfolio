@@ -13,7 +13,9 @@ export const HtmlPage = ({ title, content }) => {
         <script type="module" src="${DOMAIN}/static/bundle.modern.js" defer></script>
       </head>
       <body>
-        ${content}
+        <main data-router-wrapper>
+          ${content}
+        </main>
       </body>
     </html>
   `;

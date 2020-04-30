@@ -1,10 +1,9 @@
 import {html} from '../../utils';
-import {Navigation} from '../../components/navigation';
+
 
 export const Profile = () => {
   return html`
-    <div>
-     <${Navigation} />
+    <div data-router-view="profile">
        Profile Page
     </div>
   `;

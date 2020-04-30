@@ -1,13 +1,16 @@
 import {html} from '../../utils';
-import {Navigation} from '../../components/navigation';
-import {AH} from '../../components/component_map'
+
 
 export const Work = () => {
-  console.log('yooooo');
   return html`
-    <div>
-        <${AH.Navigation}>Hello<//>
-        <${Navigation}>hello<//>
+    <div data-router-view="work">
+      <article >
+          <header>
+              <h2>Marketing Pathfinder</h2>
+              <h3>Internal project name for an internal web application that manage marketing budgets globally for Google.</h3>
+              <button>Enter</button>
+          </header>
+      </article>
     </div>
   `;
 };

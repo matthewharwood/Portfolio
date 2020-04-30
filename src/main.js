@@ -1,6 +1,8 @@
 import { h, hydrate } from "preact";
 import {AH} from './components/component_map';
 import {whenVisible} from './utils/when_visible';
+import Highway from '@dogstudio/highway';
+import {Fade} from './fade';
 
 class ComponentRoot extends HTMLElement {
   constructor() {
@@ -33,10 +35,13 @@ class ComponentRoot extends HTMLElement {
       hydrate(h(Component, data.props), this.root);
     });
   }
-
-  disconnectedCallback() {
-    render(null, this.root);
-  }
 }
 
 customElements.define("component-root", ComponentRoot);
+
+const H = new Highway.Core({
+  transitions: {
+    default: Fade
+  }
+});
+console.log(H)

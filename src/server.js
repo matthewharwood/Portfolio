@@ -9,7 +9,7 @@ import {Lab} from './pages/lab';
 import livereload from "livereload";
 import connectLivereload from "connect-livereload";
 import {join} from 'path';
-// open livereload high port and start to watch public directory for changes
+
 const liveReloadServer = livereload.createServer();
 
 liveReloadServer.watch(join(__dirname, 'src', 'pages'));
