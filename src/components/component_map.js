@@ -1,8 +1,10 @@
 import {RunningHeader} from './running_header';
 import {autoHydrate} from '../utils/auto_hydrate';
+import {NavigationItem} from './navigation/item';
 
 export const COMPONENT_MAP = {
-  RunningHeader
+  RunningHeader,
+  NavigationItem
 }
 
 const AH = {};

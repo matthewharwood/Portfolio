@@ -1,20 +1,16 @@
+import {AH} from '../component_map';
 import {html} from '../../utils';
+import {navigationLinks} from '../../_data/navigation';
 
-const NavigationItem = ({link, index}) => {
+
+const Navigation = () => {
   return html`
-    <a className="text-accent-hover"
-      aria-label="${link.ariaLabel}"
-      href="${link.href}">
-      <div className="relative text-right py-2 overflow-hidden">
-        <div>
-          <span className="navigation-start block text-3xl md:text-6xl text-right font-sans font-bold leading-none mr-8 md:mr-16 sans">${link.text}</span>
-          <span className="text-xs absolute bottom-0 right-0 text-right leading-none font-mono transform -translate-y-6 md:-translate-x-8  md:-translate-y-12 rotate-90">0${index}</span>
-        </div>
-      </div>
-    </a>
-  `;
+    <nav class="fixed bottom-0 right-0 items-end md:grid md:row-start-2 md:row-end-3 md:col-start-2 md:col-end-5 lg:col-start-4 items-end pr-4 pb-2 md:pb-16 md:pr-16 box-border">
+        ${navigationLinks.map((nl, index) => html`<${AH.NavigationItem} link="${nl.link}" index="${index}"/>`)}
+    </nav>
+  `
 }
 
 export {
-  NavigationItem
+  Navigation
 }
