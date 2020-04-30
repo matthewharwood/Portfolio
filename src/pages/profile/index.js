@@ -1,4 +1,5 @@
 import { html } from "htm/preact";
+import { AH } from "../../components/component_map";
 import {
   awards,
   education,
@@ -14,6 +15,7 @@ import {useStatic} from '../../hooks/use_static';
 export const Profile = () => {
   return html`
     <div data-router-view="profile">
+      <${AH.NavigationBar} />
       <${IntroSection} />
       <${ProfileSection} />
     </div>

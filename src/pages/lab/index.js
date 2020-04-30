@@ -1,11 +1,10 @@
-
-
-
 import {LabCard} from '../../components/card/lab_card';
+import { AH } from "../../components/component_map";
 import {html} from 'htm/preact';
 
 export const Lab = () => {
   return html`
+    <${AH.NavigationBar} />
     <div class="flex flex-wrap m-auto p-2 bg-gray-200 min-h-screen relative" data-router-view="lab">
       <a class="w-full">
         <h1 class="text-6xl">Lab</h1>

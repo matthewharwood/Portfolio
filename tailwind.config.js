@@ -8,6 +8,9 @@ module.exports = {
         "50vh": "50vh",
       }
     },
+    container: {
+      center:true,
+    }
   },
   variants: {},
   plugins: [],
