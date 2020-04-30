@@ -9,9 +9,7 @@ export const Index = () => {
       <div class=" md:grid md:row-end-3 md:col-span-2 pt-4 pl-8 md:pb-16 md:pl-16 items-end box-border">
         <${AH.RunningHeader} />
       </div>
-      <div>
-        <div class="fixed inset-0"></div>
-      </div>
+
       <${Navigation} />
     </div>
   `;
