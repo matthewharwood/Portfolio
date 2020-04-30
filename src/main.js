@@ -3,6 +3,7 @@ import {AH} from './components/component_map';
 import {whenVisible} from './utils/when_visible';
 import Highway from '@dogstudio/highway';
 import {Fade} from './fade';
+import {listen} from 'quicklink';
 
 class ComponentRoot extends HTMLElement {
   constructor() {
@@ -44,4 +45,7 @@ const H = new Highway.Core({
     default: Fade
   }
 });
-console.log(H)
+
+window.addEventListener('load', () => {
+  listen();
+});
