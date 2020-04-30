@@ -1,5 +1,5 @@
 import {useStatic} from '../../hooks/use_static';
-import {html} from '../../utils';
+import {html} from 'htm/preact';
 
 
 const LabCard = ({link}) => {

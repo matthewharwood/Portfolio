@@ -1,6 +1,7 @@
-import {html} from '../utils';
+
 import {AH} from '../components/component_map';
 import {Navigation} from '../components/navigation';
+import {html} from 'htm/preact';
 
 export const Index = () => {
   return html`

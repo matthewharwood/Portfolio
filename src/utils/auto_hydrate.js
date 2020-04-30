@@ -1,5 +1,6 @@
-import {html} from '../utils';
+
 import {isClient} from '../utils/which_env';
+import {html} from 'htm/preact';
 
 export function autoHydrate(Component, name) {
   if (isClient) {

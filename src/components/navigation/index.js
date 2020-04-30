@@ -1,7 +1,6 @@
 import {AH} from '../component_map';
-import {html} from '../../utils';
 import {navigationLinks} from '../../_data/navigation';
-
+import {html} from 'htm/preact';
 
 const Navigation = () => {
   return html`

@@ -1,7 +1,8 @@
 
 
-import {html} from '../../utils';
+
 import {LabCard} from '../../components/card/lab_card';
+import {html} from 'htm/preact';
 
 export const Lab = () => {
   return html`

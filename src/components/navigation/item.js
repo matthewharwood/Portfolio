@@ -1,5 +1,6 @@
-import {html} from '../../utils';
+
 import {useFlyIn} from '../../hooks/use_fly_in';
+import {html} from 'htm/preact';
 
 const NavigationItem = ({link, index}) => {
   const animeRef = useFlyIn(index);

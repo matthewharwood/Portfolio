@@ -1,4 +1,4 @@
-import {html} from '../../utils';
+import {html} from 'htm/preact';
 
 
 export const Profile = () => {
