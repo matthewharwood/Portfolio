@@ -4,7 +4,6 @@ import { AH } from "../../components/component_map";
 export const Work = () => {
   return html`
     <div data-router-view="work">
-      <${AH.NavigationBar} />
       <${WorkItem} />
       <${WorkItem} />
       <${WorkItem} />

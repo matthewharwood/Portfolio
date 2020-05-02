@@ -1,4 +1,6 @@
 import { html } from "htm/preact";
+import {useRef, useLayoutEffect} from 'preact/hooks';
+
 
 export const NavigationBar = () => {
   const links = [
@@ -15,8 +17,38 @@ export const NavigationBar = () => {
       href: "/profile",
     },
   ];
+  const navRef = useRef(null);
+  useLayoutEffect(() => {
+    navRef.current.classList.add("transition", "duration-150", "ease-in-out");
+    const hide = () => {
+      navRef.current.classList.add("hide-nav");
+      navRef.current.classList.remove("show-nav");
+    }
+    const show = () =>  {
+      navRef.current.classList.add("show-nav");
+      navRef.current.classList.remove("hide-nav");
+    }
+
+    if(location.pathname !== '/') {
+      show();
+    }
+    import('../../router').then(({InitRouter}) => {
+      console.log(InitRouter.getRouter());
+      InitRouter.getRouter().on('NAVIGATE_IN', ({ to, trigger, location }) => {
+        console.log('is this working');
+        if(location.pathname === '/') {
+          console.log('is this working /', navRef.current);
+          hide();
+        } else {
+          console.log('is this not working /', navRef.current);
+          show();
+        }
+      });
+    })
+  })
+
   return html`
-    <header className="relative bg-black text-white z-30 py-3">
+    <header ref="${navRef}" className="nav-styles hide-nav">
       <div className="container flex flex-col md:flex-row justify-between">
         <a href="/" className="flex items-center">
           <img src="https://via.placeholder.com/100" alt="" className="h-10" />

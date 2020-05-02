@@ -8,6 +8,10 @@
 
 @tailwind utilities;
 
+
+
+
+/* purgecss start ignore */
 .container {
   @apply px-16;
 }
@@ -15,3 +19,27 @@
 body {
   @apply text-gray-800;
 }
+.nav-styles {
+  @apply transition;
+  @apply duration-150;
+  @apply ease-in-out;
+  @apply text-gray-800;
+  @apply bg-black;
+  @apply text-white;
+  @apply z-30;
+  @apply py-3;
+  @apply transform;
+  @apply w-full;
+  @apply hide-nav;
+  @apply fixed;
+}
+
+.hide-nav {
+  @apply duration-0;
+  transform: translateY(-100%);
+}
+
+.show-nav {
+  transform: translateY(0);
+}
+/* purgecss end ignore */

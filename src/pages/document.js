@@ -1,5 +1,5 @@
 const DOMAIN = 'http://localhost:3000';
-export const HtmlPage = ({ title, content }) => {
+export const HtmlPage = ({ title, content, navigation }) => {
   return `
     <!DOCTYPE html>
     <html lang="en">
@@ -13,6 +13,7 @@ export const HtmlPage = ({ title, content }) => {
         <script type="module" src="${DOMAIN}/static/bundle.modern.js" defer></script>
       </head>
       <body>
+        ${navigation}
         <main data-router-wrapper>
           ${content}
         </main>

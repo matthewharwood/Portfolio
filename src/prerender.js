@@ -9,6 +9,8 @@ import {Lab} from './pages/lab';
 import {minify} from 'html-minifier';
 
 import { WorkNikeJordanEditor } from './pages/work/nike-jordan-editor'
+import {html} from 'htm/preact';
+import {AH} from './components/component_map';
 
 console.log(minify)
 const htmlMin = (temp) => minify(temp, {
@@ -26,7 +28,7 @@ const htmlMin = (temp) => minify(temp, {
 });
 
 const renderPage = (title, page) => {
-  return HtmlPage({ title, content: render(page) });
+  return HtmlPage({ title, content: render(page), navigation: render(html`<${AH.NavigationBar} />`) });
 };
 
 

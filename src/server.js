@@ -6,11 +6,14 @@ import { HtmlPage } from "./pages/document";
 import {Work} from './pages/work';
 import {Profile} from './pages/profile';
 import {Lab} from './pages/lab';
+import {AH} from './components/component_map';
+import {html} from 'htm/preact';
 import livereload from "livereload";
 import connectLivereload from "connect-livereload";
 import {join} from 'path';
 
 import { WorkNikeJordanEditor } from './pages/work/nike-jordan-editor'
+
 
 const liveReloadServer = livereload.createServer();
 
@@ -30,8 +33,9 @@ server.use(connectLivereload());
 server.use(express.static('/'));
 
 server.use('/static', express.static(join(__dirname + '/static')));
+
 const renderPage = (title, page) => {
-  return HtmlPage({ title, content: render(page) });
+  return HtmlPage({ title, content: render(page), navigation: render(html`<${AH.NavigationBar} />`) });
 };
 
 server.get("/", function(req, res) {

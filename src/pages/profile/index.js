@@ -15,7 +15,6 @@ import {useStatic} from '../../hooks/use_static';
 export const Profile = () => {
   return html`
     <div data-router-view="profile">
-      <${AH.NavigationBar} />
       <${IntroSection} />
       <${ProfileSection} />
     </div>
@@ -25,7 +24,7 @@ export const Profile = () => {
 const IntroSection = () => {
   return html`
     <section
-      className="lg:h-screen flex flex-col lg:flex-row items-center lg:fixed inset-0 z-0"
+      className="lg:h-screen flex flex-col lg:flex-row items-center inset-0 z-0"
     >
       <div className="w-full lg:w-1/2 p-10 lg:p-20 flex flex-col">
         <h1 className="text-4xl font-bold mb-5">${me.name}</h1>
@@ -43,7 +42,7 @@ const IntroSection = () => {
 
 const ProfileSection = () => {
   return html`
-    <section className="px-10 lg:px-20 z-10 relative lg:mt-80vh">
+    <section className="px-10 lg:px-20 z-10 relative transform lg:-translate-y-40">
       <div className="flex flex-col lg:px-20 bg-white lg:bg-gray-200 lg:pt-20">
         <div className="flex flex-col lg:flex-row lg:justify-between">
           <h2 className="text-4xl font-bold">Résumé</h2>

@@ -7,7 +7,7 @@ export function autoHydrate(Component, name) {
     return Component;
   }
   return props => html`
-    <component-root name=${name} />
+    <hydrate-root name=${name} />
     <${Component} ...${props} />
     <script
         type="text/hydration"
