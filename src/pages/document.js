@@ -1,4 +1,4 @@
-const DOMAIN = 'http://localhost:3000';
+// const DOMAIN = 'http://localhost:3000';
 export const HtmlPage = ({ title, content, navigation }) => {
   return `
     <!DOCTYPE html>
@@ -9,8 +9,8 @@ export const HtmlPage = ({ title, content, navigation }) => {
         <title>${title}</title>
         <meta name="description" content="Test OMG" />
         <meta name="author" content="Testing" />
-        <link href="${DOMAIN}/static/styles.bundle.css" rel="stylesheet" />
-        <script type="module" src="${DOMAIN}/static/bundle.modern.js" defer></script>
+        <link href="/static/styles.bundle.css" rel="stylesheet" />
+        <script type="module" src="/static/bundle.modern.js" defer></script>
       </head>
       <body>
         ${navigation}
