@@ -17,7 +17,7 @@ export const NavigationBar = () => {
   ];
   return html`
     <header className="relative bg-black text-white z-30 py-3">
-      <div className="container flex flex-col md:flex-row justify-between px-5">
+      <div className="container flex flex-col md:flex-row justify-between">
         <a href="/" className="flex items-center">
           <img src="https://via.placeholder.com/100" alt="" className="h-10" />
           <span className="text-xl font-bold uppercase ml-3 whitespace-no-wrap">

@@ -10,6 +10,8 @@ import livereload from "livereload";
 import connectLivereload from "connect-livereload";
 import {join} from 'path';
 
+import { WorkNikeJordanEditor } from './pages/work/nike-jordan-editor'
+
 const liveReloadServer = livereload.createServer();
 
 liveReloadServer.watch(join(__dirname, 'src', 'pages'));
@@ -38,6 +40,10 @@ server.get("/", function(req, res) {
 
 server.get("/work", function(req, res) {
   res.send(renderPage("Work", Work()));
+});
+
+server.get("/work/nike-jordan-editor", function(req, res) {
+  res.send(renderPage("Nike Jordan Editor", WorkNikeJordanEditor()));
 });
 
 server.get("/profile", function(req, res) {

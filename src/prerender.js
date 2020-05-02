@@ -7,6 +7,9 @@ import {Profile} from './pages/profile';
 import {Work} from './pages/work';
 import {Lab} from './pages/lab';
 import {minify} from 'html-minifier';
+
+import { WorkNikeJordanEditor } from './pages/work/nike-jordan-editor'
+
 console.log(minify)
 const htmlMin = (temp) => minify(temp, {
   removeAttributeQuotes: true,
@@ -32,6 +35,7 @@ const pages = [
   {fileName: 'profile', content: renderPage("Profile Page", Profile())},
   {fileName: 'work', content: renderPage("Work Page", Work())},
   {fileName: 'lab', content: renderPage("Lab Page", Lab())},
+  {fileName: 'nike-jordan-editor', content: renderPage("Nike Jordan Editor", WorkNikeJordanEditor())},
 ];
 const DIST_DIR = join(__dirname, '../', 'dist');
 const STATIC = join(__dirname, 'static');
