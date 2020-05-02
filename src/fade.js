@@ -1,12 +1,15 @@
 // File: fade.js
 // Import Highway
 import Highway from '@dogstudio/highway';
+import {isServer} from './utils/which_env';
 
 
 // Fade
 class Fade extends Highway.Transition {
   in({ from, to, done }) {
-    if(typeof document === 'undefined') return;
+    if(isServer) return;
+    window.scrollTo(0, 0);
+
     //
     // const keyframeTo = [
     //   {  opacity: 0},
