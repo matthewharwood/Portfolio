@@ -10,7 +10,7 @@
     "serve:prod": "cross-env NODE_ENV=production npm run build:prod && npx serve ./dist -l 3000",
     "bundle:css": "cross-env NODE_ENV=production postcss src/static/styles.css -o dist/static/styles.bundle.css",
     "prerender": "cross-env NODE_ENV=production node prerender.js",
-    "bundle": "cross-env NODE_ENV=production microbundle src/main.js -f modern -o ./dist/bundle.js --external none",
+    "bundle": "cross-env NODE_ENV=production microbundle src/main.js -f modern -o ./dist/static/bundle.js --external none",
     "dev": "cross-env npm-run-all --parallel bundle:watch dev:css:watch server:watch",
     "dev:css:watch": "cross-env postcss src/static/styles.css -o src/static/styles.bundle.css --watch",
     "start": "node ./bin/www",
