@@ -28,7 +28,7 @@ const htmlMin = (temp) => minify(temp, {
 });
 
 const renderPage = (title, page) => {
-  return HtmlPage({ title, content: render(page), navigation: render(html`<${AH.NavigationBar} />`) });
+  return HtmlPage({ title, content: render(page), navigation: render(html`<${AH.NavigationBar} />`), polymorph: render(html`<${AH.Polymorph} />`) });
 };
 
 

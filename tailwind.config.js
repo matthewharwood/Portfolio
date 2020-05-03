@@ -6,6 +6,7 @@ module.exports = {
       },
       margin: {
         '80vh': '80vh',
+        '1/5': '20%'
       },
       height: {
         '50vh': '50vh',

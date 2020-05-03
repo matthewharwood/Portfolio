@@ -2,8 +2,9 @@ import {html} from 'htm/preact';
 import {useLayoutEffect, useRef, useState} from 'preact/hooks';
 import {isServer} from '../../utils/which_env';
 
+
 const calcActiveLink = (s, pathname) => s.map(i => {
-  if(isServer) return;
+  if (isServer) return;
   if (i.href === pathname) {
     i.isActive = true;
   } else {
@@ -18,22 +19,23 @@ export const NavigationBar = () => {
     {
       title: 'Work',
       href: '/work',
+      isActive: false,
     },
     {
       title: 'Lab',
       href: '/lab',
+      isActive: false,
     },
     {
       title: 'Profile',
       href: '/profile',
+      isActive: false,
     },
   ];
-
 
   const navRef = useRef(null);
   const [stateLink, updateStateLinks] = useState(links);
   useLayoutEffect(() => {
-    navRef.current.classList.add('transition', 'duration-150', 'ease-in-out');
     const hide = () => {
       navRef.current.classList.add('hide-nav');
       navRef.current.classList.remove('show-nav');
@@ -42,11 +44,17 @@ export const NavigationBar = () => {
       navRef.current.classList.add('show-nav');
       navRef.current.classList.remove('hide-nav');
     };
-    calcActiveLink(links);
     if (location.pathname !== '/') {
       show();
     }
-    updateStateLinks(calcActiveLink(links, location.pathname));
+
+    // Init
+    navRef.current.classList.add('transition', 'duration-150', 'ease-in-out');
+    const calculatedActiveLinks = calcActiveLink(links, location.pathname);
+    updateStateLinks(calculatedActiveLinks);
+
+
+    // Update
     import('../../router').then(({InitRouter}) => {
       InitRouter.getRouter().on('NAVIGATE_IN', ({to, trigger, location}) => {
         updateStateLinks(calcActiveLink(links, location.pathname));
@@ -75,6 +83,7 @@ export const NavigationBar = () => {
         </ul>
       </div>
     </header>
+
   `;
 };
 

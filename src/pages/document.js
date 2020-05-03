@@ -1,5 +1,5 @@
 // const DOMAIN = 'http://localhost:3000';
-export const HtmlPage = ({ title, content, navigation }) => {
+export const HtmlPage = ({ title, content, navigation, polymorph }) => {
   return `
     <!DOCTYPE html>
     <html lang="en">
@@ -17,6 +17,7 @@ export const HtmlPage = ({ title, content, navigation }) => {
         <main data-router-wrapper>
           ${content}
         </main>
+        ${polymorph}
       </body>
     </html>
   `;

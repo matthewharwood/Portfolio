@@ -19,6 +19,7 @@
 body {
   @apply text-gray-800;
 }
+
 .nav-styles {
   @apply transition;
   @apply duration-150;
@@ -41,5 +42,13 @@ body {
 
 .show-nav {
   transform: translateY(0);
+}
+
+.polymorph-shadow {
+  box-shadow: -14px -2px 24px rgba(255, 255, 255, 0.75), 12px 12px 12px rgba(170, 170, 170, 0.25);
+}
+
+.polymorph-home {
+  width: 50%;
 }
 /* purgecss end ignore */

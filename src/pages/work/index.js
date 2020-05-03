@@ -13,6 +13,7 @@ export const Work = () => {
 
 const WorkItem = () => {
   return html`
+ 
     <div className="h-screen p-10 relative">
       <div
         className="h-full w-full absolute inset-0 z-10 flex flex-col justify-center items-center text-center font-bold"
@@ -32,11 +33,6 @@ const WorkItem = () => {
           >
         </div>
       </div>
-      <img
-        src="https://via.placeholder.com/1920x1080/EEEEEE/CCCCCC"
-        alt=""
-        className="z-0 relative h-full w-full object-cover"
-      />
     </div>
   `;
 };
