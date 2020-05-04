@@ -22,8 +22,8 @@ export const WorkNikeJordanEditor = () => {
 
 const PostHeaderBlock = () => {
   return html`
-    <section className="bg-gray-800 text-gray-300 pt-64">
-      <div className="container py-16">
+    <section className="bg-gray-800 text-gray-300 pt-12">
+      <div className="container px-5 lg:px-16 py-16">
         <div className="flex flex-col">
           <span className="text-red-600 uppercase font-bold"
             >Web Application</span
@@ -67,7 +67,7 @@ const PostHeaderColumn = () => {
 const SummaryBlock = () => {
   return html`
     <section
-      className="container border-b border-gray-400 py-16 grid grid-cols-3"
+      className="container px-5 lg:px-16 border-b border-gray-400 py-16 grid grid-cols-3"
     >
       <div className="col-span-3 lg:col-span-2 flex flex-col">
         <span className="text-2xl text-red-500">00</span>
@@ -117,7 +117,7 @@ const VideoCard = () => {
 
 const OutlineBlock = () => {
   return html`
-    <section className="container grid grid-cols-12 py-16">
+    <section className="container px-5 lg:px-16 grid grid-cols-12 py-16">
       <div className="col-span-12 lg:col-span-5 flex items-center lg:block lg:items-start mb-10 lg:mb-0">
         <h3 className="text-3xl uppercase flex-shrink-0">Process</h3>
         <div className="ml-5 w-full border-t border-b border-gray-600 lg:hidden"></div>
@@ -158,7 +158,7 @@ const OutlineListItem = ({ isLast = false }) => {
 
 const HighlightBlock = () => {
   return html`
-    <section className="container grid grid-cols-12 gap-10 py-16">
+    <section className="container px-5 lg:px-16 grid grid-cols-12 lg:gap-10 py-16">
       <div className="flex flex-col col-span-12 lg:col-span-6">
         <span className="text-2xl text-red-500">00</span>
         <h2 className="text-5xl">Getting Started</h2>
@@ -184,7 +184,7 @@ const HighlightBlock = () => {
 const HighlightBoldBlock = () => {
   return html`
     <section className="bg-white py-16 px-5 lg:px-0">
-      <div className="container grid grid-cols-12 gap-10 py-16 bg-gray-100">
+      <div className="container px-5 lg:px-16 grid grid-cols-12 lg:gap-10 py-16 bg-gray-100">
         <div className="flex flex-col col-span-12 lg:col-span-6">
           <span className="text-2xl text-red-500">00</span>
           <h2 className="text-5xl">Proposed Solution</h2>
@@ -205,7 +205,7 @@ const HighlightBoldBlock = () => {
 const QuoteBlock = () => {
   return html`
     <section className="bg-gray-100 py-16 lg:py-32">
-      <div className="container flex flex-col items-center">
+      <div className="container px-5 lg:px-16 flex flex-col items-center">
         <div className="w-full lg:w-1/2 flex flex-col">
           <p className="relative italic text-lg">
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
@@ -228,7 +228,7 @@ const QuoteBlock = () => {
 const HeadlineBlock = () => {
   return html`
     <section className="bg-gray-100 py-8 lg:py-16">
-      <div className="container grid grid-cols-3">
+      <div className="container px-5 lg:px-16 grid grid-cols-3">
         <div className="col-span-3 lg:col-span-1">
           <h3 className="text-3xl uppercase">Challenge</h3>
         </div>
@@ -245,7 +245,7 @@ const HeadlineBlock = () => {
 const CardTitleBlock = () => {
   return html`
     <section className="bg-gray-100 py-16">
-      <div className="container grid grid-cols-3">
+      <div className="container px-5 lg:px-16 grid grid-cols-3">
         <div className="lg:col-start-2 col-span-3 lg:col-span-2">
           <${Card} />
           <${Card} />
@@ -274,7 +274,7 @@ const Card = () => {
 const VideoBlock = () => {
   return html`
     <section className="py-16 bg-gray-100">
-      <div className="container grid grid-cols-3 gap-10">
+      <div className="container sm:px-5 lg:px-16 grid grid-cols-3 gap-10">
         <div className="col-span-3 lg:col-span-2">
           <video
             src="https://www.w3schools.com/html/mov_bbb.mp4"
@@ -282,7 +282,7 @@ const VideoBlock = () => {
             controls
           ></video>
         </div>
-        <div className="col-span-3 lg:col-span-1 flex flex-col">
+        <div className="col-span-3 lg:col-span-1 flex flex-col px-5 sm:px-0">
           <h5 className="font-bold uppercase text-gray-600">
             Making a Project
           </h5>
@@ -300,7 +300,7 @@ const VideoBlock = () => {
 const StepsCardsBlock = () => {
   return html`
     <section className="bg-gray-100 py-16">
-      <div className="container grid grid-cols-3">
+      <div className="container sm:px-5 lg:px-16 grid grid-cols-3">
         <div className="lg:col-start-2 col-span-3 lg:col-span-2 grid grid-cols-1 lg:grid-cols-2 gap-10">
           <${StepCard} />
           <${StepCard} />
@@ -333,7 +333,7 @@ const StepCard = () => {
 const CardTilesBlock = () => {
   return html`
     <section className="bg-gray-100 py-16">
-      <div className="container grid grid-cols-3">
+      <div className="container sm:px-5 lg:px-16 grid grid-cols-3">
         <div className="lg:col-start-2 col-span-3 lg:col-span-2 grid grid-cols-1 lg:grid-cols-2 gap-10">
           <${CardTile} />
           <${CardTile} />
