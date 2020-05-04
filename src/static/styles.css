@@ -12,9 +12,6 @@
 
 
 /* purgecss start ignore */
-.container {
-  @apply px-16;
-}
 
 body {
   @apply text-gray-800;
@@ -25,7 +22,7 @@ body {
   @apply duration-150;
   @apply ease-in-out;
   @apply text-gray-800;
-  @apply bg-black;
+  @apply bg-white;
   @apply text-white;
   @apply z-30;
   @apply py-3;

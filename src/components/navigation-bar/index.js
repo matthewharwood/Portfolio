@@ -69,14 +69,14 @@ export const NavigationBar = () => {
 
   return html`
     <header ref="${navRef}" className="nav-styles hide-nav">
-      <div className="container flex flex-col md:flex-row justify-between">
-        <a href="/" className="flex items-center">
-          <img src="https://via.placeholder.com/100" alt="" className="h-10" />
-          <span className="text-xl font-bold uppercase ml-3 whitespace-no-wrap">
+      <div className="px-4 lg:px-16 flex">
+        <a href="/" className="flex items-center flex-1">
+          <div className="w-8 h-2 p-1 bg-blue-700 transform -rotate-45 box-content"/>
+          <span className="hidden sm:flex text-lg font-bold uppercase ml-3 whitespace-no-wrap tracking-wider font-black">
             Morning Harwood
           </span>
         </a>
-        <ul className="flex flex-col md:flex-row items-start md:items-center">
+        <ul className="flex transform translate-x-1">
           ${stateLink.map(
       (link) => html` <${NavLink} ...${link} /> `
   )}
@@ -88,10 +88,10 @@ export const NavigationBar = () => {
 };
 
 const NavLink = ({title, href, isActive}) => {
-  const activeClass = isActive ? 'bg-gray-900' : '';
+  const activeClass = isActive ? 'font-semibold' : '';
   return html`
-    <li className="mt-2 py-1 md:my-0 md:py-0 md:ml-4 ">
-      <a href="${href}" className="md:px-3 py-2 rounded-full bg-transparent hover:bg-gray-800 ${activeClass}">${title}</a>
+    <li className="py-1 md:my-0 md:py-0 ml-1 sm:ml-2 md:ml-4 ">
+      <a href="${href}" className=" px-3 py-2 rounded-full bg-transparent hover:bg-gray-300 text-gray-900 uppercase font-normal tracking-wide ${activeClass}">${title}</a>
     </li>
   `;
 };

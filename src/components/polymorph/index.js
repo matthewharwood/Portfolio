@@ -101,7 +101,7 @@ const Polymorph = () => {
     }
   });
   return html`
-    <div className="fixed inset-0 flex justify-center items-center pointer-events-none px-20 py-16">
+    <div className="fixed inset-0 flex justify-center items-center pointer-events-none lg:px-20 lg:py-16 py-4 px-6">
       <div className="polymorph h-40 bg-gray-200 polymorph-home" ref="${polymorphRef}" />
     </div>`;
 };

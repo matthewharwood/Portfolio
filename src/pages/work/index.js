@@ -19,10 +19,10 @@ const WorkItem = () => {
         className="h-full w-full absolute inset-0 z-10 flex flex-col justify-center items-center text-center font-bold"
       >
         <div
-          className="flex flex-col items-center justify-center px-16 w-full md:w-10/12 lg:w-8/12 xl:w-7/12"
+          className="flex flex-col items-center justify-center px-10 md:px-16 w-full md:w-10/12 lg:w-8/12 xl:w-7/12"
         >
-          <h1 className="text-4xl md:text-5xl lg:text-6xl">Stanley Editor</h1>
-          <p className="text-lg md:text-2xl mt-3 mb-10">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl">Stanley Editor</h1>
+          <p className="font-normal md:font-bold text-md md:text-2xl mt-3 mb-10">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
             et iure ab ea, fugiat minus?
           </p>
