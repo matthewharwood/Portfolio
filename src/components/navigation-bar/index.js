@@ -72,7 +72,7 @@ export const NavigationBar = () => {
       <div className="px-4 lg:px-16 flex">
         <a href="/" className="flex items-center flex-1">
           <div className="w-8 h-2 p-1 bg-blue-700 transform -rotate-45 box-content"/>
-          <span className="hidden sm:flex text-lg font-bold uppercase ml-3 whitespace-no-wrap tracking-wider font-black">
+          <span className="hidden sm:flex text-lg font-bold uppercase ml-3 whitespace-no-wrap tracking-wider text-black">
             Morning Harwood
           </span>
         </a>

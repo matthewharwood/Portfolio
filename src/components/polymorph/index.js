@@ -51,7 +51,7 @@ const Polymorph = () => {
     if (href === '/') {
       anime({
         targets: polymorphRef.current,
-        transformOrigin: ['0 50%', '0% 50%'],
+        transformOrigin: ['0 50%', '50% 50%'],
         boxShadow: [
           {value: ['-14px -2px 24px rgba(255, 255, 255, 0.75), 12px 12px 12px rgba(170, 170, 170, 0.25)'],  duration: 0,},
           {value: ['-14px -2px 24px rgba(255, 255, 255, 0.75), 12px 12px 12px rgba(170, 170, 170, 0.25)'],  duration: 1000,},
@@ -62,15 +62,7 @@ const Polymorph = () => {
         ],
         rotateZ: [
           {value: 0, duration: 0, delay: 800,},
-          {value: -30, duration: 2000, delay: 800, easing: 'spring(1, 100, 5, 5)'},
-        ],
-        translateX: [
-          {value: 0, duration: 0},
-          {value: '-10%', duration: 1000, delay: 1600}
-        ],
-        translateY: [
-          {value: 0, duration: 0},
-          {value: '200%', duration: 2000, delay: 1600, easing: 'spring(1, 100, 10, 5)'}
+          {value: -(Math.atan(window.innerHeight/window.innerWidth) * 180 / Math.PI), duration: 2000, delay: 800, easing: 'spring(1, 100, 5, 5)'},
         ],
         duration: 4000,
         easing: 'easeInOutSine'
