@@ -66,15 +66,22 @@ export const NavigationBar = () => {
       });
     });
   }, []);
-
+  const spin = (e) => {
+    e.target.classList.add('spin')
+  }
+  const cancelSpin = (e) => {
+    e.target.classList.remove('spin')
+  }
   return html`
     <header ref="${navRef}" className="nav-styles hide-nav">
       <div className="px-4 lg:px-12 flex">
-        <a href="/" className="flex items-center flex-1">
-          <span className="hidden sm:flex text-md capitalize ml-3 whitespace-no-wrap font-mh font-bold text-black">
-            / Morning Harwood
-          </span>
-        </a>
+      <div className="flex flex-1">
+          <a href="/" className="pr-8" onMouseEnter="${spin}" onMouseLeave="${cancelSpin}">
+            <span className="sm:flex text-md capitalize pl-3 whitespace-no-wrap font-mh font-bold text-black">
+              <span className="logo">/</span><span className="pl-4 hidden sm:flex">Morning Harwood</span>
+            </span>
+          </a>
+        </div>
         <ul className="flex transform -translate-x-1">
           ${stateLink.map(
       (link) => html` <${NavLink} ...${link} /> `
@@ -88,9 +95,10 @@ export const NavigationBar = () => {
 
 const NavLink = ({title, href, isActive}) => {
   const activeClass = isActive ? 'font-bold' : '';
+  const hover = isActive ? 'cursor-default' : 'hover:bg-black hover:text-white'
   return html`
     <li className="py-1 md:my-0 md:py-0 ml-1 sm:ml-2 md:ml-4">
-      <a href="${href}" className=" px-3 py-2 rounded-full bg-transparent hover:bg-black hover:text-white text-gray-900 uppercase font-normal tracking-wide font-mh ${activeClass}">${title}</a>
+      <a href="${href}" className="px-3 py-2  bg-transparent ${hover} text-gray-900 uppercase font-normal tracking-wide font-mh ${activeClass}">${title}</a>
     </li>
   `;
 };

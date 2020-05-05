@@ -18,11 +18,11 @@ const RunningHeader = () => {
   }, 1000);
 
   return html`
-    <p className="font-medium text-xs flex justify-start items-center" onMouseEnter="${() => setPlay(false)}" onMouseLeave="${() => setPlay(true)}">
-      <span className="text-xs pr-2">
+    <p className="font-normal text-xs flex justify-start items-center" onMouseEnter="${() => setPlay(false)}" onMouseLeave="${() => setPlay(true)}">
+      <span className="text-xs pr-2 font-mh">
         Contact me about
       </span>
-      <button className="text-xs bg-black text-white py-2 px-2 rounded-full capitalize">${_interests[count].name}</button>
+      <button className="text-xs bg-black text-white py-2 px-2 rounded-full capitalize font-mh">${_interests[count].name}</button>
     </p>
   `
 }

@@ -49,4 +49,16 @@ body {
 .polymorph-home {
   width: 50%;
 }
+.spin .logo{
+  animation: spin 200ms linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotateZ(0);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
 /* purgecss end ignore */

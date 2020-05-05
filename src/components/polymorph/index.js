@@ -68,33 +68,10 @@ const Polymorph = () => {
         easing: 'easeInOutSine'
       });
     }
-
-    // if (href === '/work') {
-    //   anime({
-    //     targets: polymorphRef.current,
-    //     transformOrigin: ['50% 50%', '50% 50%'],
-    //
-    //     width: [
-    //       {value: 0, duration: 0},
-    //       {value: '100%', duration: 1000}
-    //     ],
-    //     height: [
-    //       {value: 0, duration: 0},
-    //       {value: '100%', duration: 1000}
-    //     ],
-    //     scale: [
-    //       {value: 0, duration: 0,},
-    //       {value: 1, duration: 1000,}
-    //     ],
-    //
-    //     duration: 4000,
-    //     easing: 'easeInOutSine'
-    //   });
-    // }
   });
   return html`
     <div className="fixed inset-0 flex justify-center items-center pointer-events-none lg:px-20 lg:py-16 py-4 px-6">
-      <div className="polymorph h-40 bg-gray-200 polymorph-home" ref="${polymorphRef}" />
+      <div className="polymorph h-40 bg-black polymorph-home" ref="${polymorphRef}" />
     </div>`;
 };
 
