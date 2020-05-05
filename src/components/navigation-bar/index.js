@@ -69,14 +69,13 @@ export const NavigationBar = () => {
 
   return html`
     <header ref="${navRef}" className="nav-styles hide-nav">
-      <div className="px-4 lg:px-16 flex">
+      <div className="px-4 lg:px-12 flex">
         <a href="/" className="flex items-center flex-1">
-          <div className="w-8 h-2 p-1 bg-blue-700 transform -rotate-45 box-content"/>
-          <span className="hidden sm:flex text-lg font-bold uppercase ml-3 whitespace-no-wrap tracking-wider text-black">
-            Morning Harwood
+          <span className="hidden sm:flex text-md capitalize ml-3 whitespace-no-wrap font-mh font-bold text-black">
+            / Morning Harwood
           </span>
         </a>
-        <ul className="flex transform translate-x-1">
+        <ul className="flex transform -translate-x-1">
           ${stateLink.map(
       (link) => html` <${NavLink} ...${link} /> `
   )}
@@ -88,10 +87,10 @@ export const NavigationBar = () => {
 };
 
 const NavLink = ({title, href, isActive}) => {
-  const activeClass = isActive ? 'font-semibold' : '';
+  const activeClass = isActive ? 'font-bold' : '';
   return html`
-    <li className="py-1 md:my-0 md:py-0 ml-1 sm:ml-2 md:ml-4 ">
-      <a href="${href}" className=" px-3 py-2 rounded-full bg-transparent hover:bg-gray-300 text-gray-900 uppercase font-normal tracking-wide ${activeClass}">${title}</a>
+    <li className="py-1 md:my-0 md:py-0 ml-1 sm:ml-2 md:ml-4">
+      <a href="${href}" className=" px-3 py-2 rounded-full bg-transparent hover:bg-black hover:text-white text-gray-900 uppercase font-normal tracking-wide font-mh ${activeClass}">${title}</a>
     </li>
   `;
 };

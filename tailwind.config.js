@@ -14,6 +14,10 @@ module.exports = {
       opacity: {
         '10': '10%'
       },
+      fontFamily: {
+        'mh': "'Space Mono', monospace",
+        'body': "'Lato', sans-serif"
+      },
       colors: {
         gray: {
           100: '#F6F6F6',

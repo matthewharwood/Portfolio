@@ -25,11 +25,12 @@ body {
   @apply bg-white;
   @apply text-white;
   @apply z-30;
-  @apply py-3;
+  @apply py-6;
   @apply transform;
   @apply w-full;
   @apply hide-nav;
   @apply fixed;
+  @apply shadow;
 }
 
 .hide-nav {
