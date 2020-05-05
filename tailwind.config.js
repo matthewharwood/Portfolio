@@ -11,6 +11,9 @@ module.exports = {
       height: {
         '50vh': '50vh',
       },
+      opacity: {
+        '10': '10%'
+      },
       colors: {
         gray: {
           100: '#F6F6F6',
