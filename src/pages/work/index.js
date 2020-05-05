@@ -23,12 +23,20 @@ const articles = [
 
 
 ];
+
+/**
+ *  <ul className="items-center flex justify-center list-none m-0 p-0">
+       <li className="rounded h-6 w-6 bg-gray-200 my-2" />
+    </ul>
+ */
 export const Work = () => {
   return html`
     <div data-router-view="work">
     ${articles.map((nl, index) =>
       html`<${WorkItem} ...${nl} index="${index}" />`
-  )}
+    )}
+    
+
     </div>
   `;
 };

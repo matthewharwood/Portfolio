@@ -12,7 +12,10 @@
 
 
 /* purgecss start ignore */
-
+::selection {
+  background-color: #000;
+  color: #fff;
+}
 body {
   @apply text-gray-800;
 }
@@ -46,9 +49,6 @@ body {
   box-shadow: -14px -2px 24px rgba(255, 255, 255, 0.75), 12px 12px 12px rgba(170, 170, 170, 0.25);
 }
 
-.polymorph-home {
-  width: 50%;
-}
 .spin .logo{
   animation: spin 200ms linear infinite;
 }
