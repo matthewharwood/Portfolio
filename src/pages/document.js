@@ -17,7 +17,6 @@ export const HtmlPage = ({ title, content, navigation, polymorph }) => {
         <main data-router-wrapper>
           ${content}
         </main>
-        ${polymorph}
       </body>
     </html>
   `;
