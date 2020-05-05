@@ -39,9 +39,9 @@ const pages = [
   {fileName: 'profile', content: renderPage('Profile Page', Profile())},
   {fileName: 'work', content: renderPage('Work Page', Work())},
   {fileName: 'lab', content: renderPage('Lab Page', Lab())},
-  {fileName: 'nike-jordan-editor', content: renderPage('Nike Jordan Editor', WorkNikeJordanEditor())},
-  {fileName: 'marketing-pathfinder', content: renderPage('Marketing Pathfinder', MarketingPathfinder())},
-  {fileName: 'uber-dotcom-performance', content: renderPage('Uber.com Performance', UberDotcomPerformance())},
+  {fileName: 'work/nike-jordan-editor', content: renderPage('Nike Jordan Editor', WorkNikeJordanEditor())},
+  {fileName: 'work/marketing-pathfinder', content: renderPage('Marketing Pathfinder', MarketingPathfinder())},
+  {fileName: 'work/uber-dotcom-performance', content: renderPage('Uber.com Performance', UberDotcomPerformance())},
 ];
 const DIST_DIR = join(__dirname, '../', 'dist');
 const STATIC = join(__dirname, 'static');
@@ -53,6 +53,7 @@ async function main() {
     if (p.fileName === 'index') {
       await writeFile(join(DIST_DIR, 'index.html'), htmlMin(p.content));
     } else {
+      console.log(p.filename)
       const deepDistDir = join(DIST_DIR, p.fileName);
       await ensureDir(deepDistDir);
       await writeFile(join(deepDistDir, 'index.html'), htmlMin(p.content));
