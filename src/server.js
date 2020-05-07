@@ -16,6 +16,7 @@ import {WorkNikeJordanEditor} from './pages/work/nike-jordan-editor';
 import {MarketingPathfinder} from './pages/work/marketing-pathfinder';
 import {UberDotcomPerformance} from './pages/work/uber-dotcom-performance';
 
+import { Rorschach } from './pages/lab/rorschach'
 
 const liveReloadServer = livereload.createServer();
 
@@ -67,6 +68,10 @@ server.get('/profile', function (req, res) {
 
 server.get('/lab', function (req, res) {
   res.send(renderPage('Lab', Lab()));
+});
+
+server.get('/lab/rorschach', function (req, res) {
+  res.send(renderPage('Rorschach', Rorschach()));
 });
 
 

@@ -13,6 +13,7 @@ import {html} from 'htm/preact';
 import {AH} from './components/component_map';
 import {MarketingPathfinder} from './pages/work/marketing-pathfinder';
 import {UberDotcomPerformance} from './pages/work/uber-dotcom-performance';
+import { Rorschach } from './pages/lab/rorschach'
 
 console.log(minify);
 const htmlMin = (temp) => minify(temp, {
@@ -39,6 +40,7 @@ const pages = [
   {fileName: 'profile', content: renderPage('Profile Page', Profile())},
   {fileName: 'work', content: renderPage('Work Page', Work())},
   {fileName: 'lab', content: renderPage('Lab Page', Lab())},
+  {fileName: 'lab/rorschach', content: renderPage('Rorschach', Rorschach())},
   {fileName: 'work/nike-jordan-editor', content: renderPage('Nike Jordan Editor', WorkNikeJordanEditor())},
   {fileName: 'work/marketing-pathfinder', content: renderPage('Marketing Pathfinder', MarketingPathfinder())},
   {fileName: 'work/uber-dotcom-performance', content: renderPage('Uber.com Performance', UberDotcomPerformance())},
