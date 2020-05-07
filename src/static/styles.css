@@ -35,10 +35,21 @@ body {
   @apply fixed;
   @apply shadow;
 }
-
+.rorschach {
+  font-size: 10px;
+  opacity: .2;
+  color: #fff;
+  text-align: justify;
+  background: #fff url("../../../assets/rorschach.gif") center 40px no-repeat;
+  background-size: auto 80.66664%;
+  mix-blend-mode: multiply;
+}
 .hide-nav {
   @apply duration-0;
   transform: translateY(-100%);
+}
+.opacity-10 {
+  opacity: 10%;
 }
 
 .show-nav {

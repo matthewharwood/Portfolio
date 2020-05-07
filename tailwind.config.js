@@ -11,9 +11,6 @@ module.exports = {
       height: {
         '50vh': '50vh',
       },
-      opacity: {
-        '10': '10%'
-      },
       fontFamily: {
         'mh': "'Space Mono', monospace",
         'body': "'Lato', sans-serif"

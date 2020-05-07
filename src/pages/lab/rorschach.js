@@ -21,7 +21,9 @@ const IntroHeadingBlock = () => {
 export const ImageBlock = () => {
   return html`
     <section className="container px-5 flex flex-col items-center lg:px-32">
-      <img src="https://via.placeholder.com/1280x800" alt="" />
+      <p className="rorschach">
+        ${'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, odio vel. Ab aliquam, id impedit ipsum iure laudantium nobis quibusdam. Adipisci commodi consequuntur doloremque eos eum itaque possimus repellat sit.'.repeat(125)}
+      </p>
       <span className="text-xl md:text-2xl font-mono mt-8 lg:mt-16"
         >With a little paint and paper</span
       >
