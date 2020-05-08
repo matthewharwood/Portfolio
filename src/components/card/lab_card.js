@@ -1,21 +1,17 @@
-import {useStatic} from '../../hooks/use_static';
 import {html} from 'htm/preact';
+import {Media} from '../media';
 
 
-const Video = ({src}) => {
-  return html`
-    <video className="flex" autoplay muted loop>
-      <source src="${useStatic(src)}" type="video/mp4" />
-       Your browser does not support the video tag.
-    </video>`;
-};
-const LabCard = ({name, href, src, tags, description}) => {
-  const isVideo = src.includes('.mp4');
-  const Media = () => isVideo ? html`<${Video} src=${src} />`
-      : html`<img className="w-full" src="${useStatic(src)}" alt="Sunset in the mountains" />`;
+
+const LabCard = ({name, href, src, tags, description, alt}) => {
   return html`
     <a className="flex flex-col rounded overflow-hidden shadow-lg m-10 no-underline" href="${href}">
-      <${Media} />
+    <div className="lab-cards-aspect-ratio relative">
+        <div className="absolute top-0 left-0 w-full h-full">
+            <${Media} src="${src}" alt="${alt}" />
+        </div>
+      </div>
+    
       <div className="px-6 py-4">
         <div className="font-bold text-xl mb-2">${name}</div>
         <p className="text-gray-700 text-base">

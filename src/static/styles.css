@@ -35,21 +35,31 @@ body {
   @apply fixed;
   @apply shadow;
 }
+
 .rorschach {
   font-size: 10px;
   opacity: .2;
   color: #fff;
   text-align: justify;
-  background: #fff url("../../../assets/rorschach.gif") center 40px no-repeat;
-  background-size: auto 80.66664%;
+  background: #fff url("https://res.cloudinary.com/morningharwood/video/upload/f_gif,q_auto,e_loop/rorschach/rorschach.mp4") 50% no-repeat;
+  background-size: auto 180%;
   mix-blend-mode: multiply;
 }
+.invert-full {
+  filter: invert(100%)
+}
+.invert-0 {
+  filter: invert(0)
+}
+.lab-cards-aspect-ratio {
+  height: 0;
+  overflow: hidden;
+  padding-top: 133%;
+}
+
 .hide-nav {
   @apply duration-0;
   transform: translateY(-100%);
-}
-.opacity-10 {
-  opacity: 10%;
 }
 
 .show-nav {
