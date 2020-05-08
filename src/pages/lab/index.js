@@ -1,11 +1,9 @@
 import {LabCard} from '../../components/card/lab_card';
 import {html} from 'htm/preact';
-import {RouterLayout} from '../../layouts/router-layout';
-import {FooterLayout} from '../../layouts/footer-layout';
 
 const PADDING = 'p-10';
 const LabLinks =[
-  {name: 'rorschach', src:"rorschach.mp4", href: 'lab/rorschach/', tags: ['wow'], description: 'lorem ipsum'}
+  {name: 'rorschach', src:"rorschach/rorschach.mp4", href: 'lab/rorschach/', tags: ['wow'], description: 'lorem ipsum'}
 ];
 
 export const Lab = () => {
