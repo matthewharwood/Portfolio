@@ -58,7 +58,7 @@ const WorkNikeJordanEditor = () => {
 
 const WorkNikeJordanEditorPage = (props) => {
   return html`
-       <${PostLayout} ...${props}>
+    <${PostLayout} ...${props}>
         <${WorkNikeJordanEditor} />
     </PostLayout>
   `
