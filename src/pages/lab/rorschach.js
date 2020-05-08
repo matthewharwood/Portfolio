@@ -75,16 +75,6 @@ const CodeBlock = () => {
   `
 }
 
-
-const RorschachPage = (props) => {
-  return html`
-     <${PostLayout} ...${props}>
-        <${Rorschach} />
-     </PostLayout>
-  `
-};
-
 export {
   Rorschach,
-  RorschachPage
 }

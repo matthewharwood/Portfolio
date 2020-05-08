@@ -31,12 +31,10 @@ const articles = [
  */
 export const Work = () => {
   return html`
-    <div data-router-view="work">
+    <div>
     ${articles.map((nl, index) =>
       html`<${WorkItem} ...${nl} index="${index}" />`
     )}
-    
-
     </div>
   `;
 };

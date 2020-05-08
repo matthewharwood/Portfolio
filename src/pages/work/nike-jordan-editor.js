@@ -13,7 +13,6 @@ import { CardTile } from "../../components/card-tile";
 import { CardTiles } from "../../components/card-tiles";
 import { VideoBlock } from '../../components/video-block'
 import { StepsCards } from '../../components/step-cards'
-import {PostLayout} from '../../layouts/post-layout';
 
 const WorkNikeJordanEditor = () => {
   return html`
@@ -55,16 +54,6 @@ const WorkNikeJordanEditor = () => {
   `;
 };
 
-
-const WorkNikeJordanEditorPage = (props) => {
-  return html`
-    <${PostLayout} ...${props}>
-        <${WorkNikeJordanEditor} />
-    </PostLayout>
-  `
-};
-
 export {
   WorkNikeJordanEditor,
-  WorkNikeJordanEditorPage
 }

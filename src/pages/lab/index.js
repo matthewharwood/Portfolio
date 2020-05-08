@@ -8,7 +8,7 @@ const LabLinks =[
 
 export const Lab = () => {
   return html`
-    <div className="pt-32 container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3" data-router-view="lab">
+    <div className="pt-32 container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
       <div className="col-span-3 leading-tight ${PADDING}">
         <h1 className="text-6xl font-bold">Lab</h1>
         <span className="text-xl font-bold">A Laboratory of Experiments</span>

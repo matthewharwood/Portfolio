@@ -12,11 +12,12 @@ import livereload from 'livereload';
 import connectLivereload from 'connect-livereload';
 import {join} from 'path';
 
-import {WorkNikeJordanEditor, WorkNikeJordanEditorPage} from './pages/work/nike-jordan-editor';
-import {MarketingPathfinder, MarketingPathFinderPage} from './pages/work/marketing-pathfinder';
-import {UberDotcomPerformance, UberDotcomPerformancePage} from './pages/work/uber-dotcom-performance';
+import {WorkNikeJordanEditor} from './pages/work/nike-jordan-editor';
+import {MarketingPathfinder} from './pages/work/marketing-pathfinder';
+import {UberDotcomPerformance} from './pages/work/uber-dotcom-performance';
 
-import {Rorschach, RorschachPage} from './pages/lab/rorschach';
+import {Rorschach} from './pages/lab/rorschach';
+import {withFooterAndRouter} from './layouts/with_footer_and_router';
 
 const liveReloadServer = livereload.createServer();
 
@@ -42,36 +43,36 @@ const renderPage = (title, page) => {
 };
 
 server.get('/', function (req, res) {
-  res.send(renderPage('Home', Index()));
+  res.send(renderPage('Home', withFooterAndRouter({title: 'index'})(Index)));
 });
 
 server.get('/work', function (req, res) {
-  res.send(renderPage('Work', Work()));
+  res.send(renderPage('Work', withFooterAndRouter({title: 'work'})(Work)));
 });
 
 server.get('/work/nike-jordan-editor', function (req, res) {
-  res.send(renderPage('Nike Jordan Editor', WorkNikeJordanEditorPage({title: 'nike-jordan-editor'})));
+  res.send(renderPage('Nike Jordan Editor', withFooterAndRouter({title: 'nike-jordan-editor'})(WorkNikeJordanEditor)));
 });
 
 server.get('/work/marketing-pathfinder', function (req, res) {
-  res.send(renderPage('Marketing Pathfinder', MarketingPathFinderPage({title: 'marketing-path-finder'})));
+  res.send(renderPage('Marketing Pathfinder', withFooterAndRouter({title: 'marketing-path-finder'})(MarketingPathfinder)));
 });
 
 server.get('/work/uber-dotcom-performance', function (req, res) {
-  res.send(renderPage('Uber.com Performance', UberDotcomPerformancePage({title: 'uber-com-performance'})));
+  res.send(renderPage('Uber.com Performance', withFooterAndRouter({title: 'uber-com-performance'})(UberDotcomPerformance)));
 });
 
 server.get('/profile', function (req, res) {
-  res.send(renderPage('Profile', Profile()));
+  res.send(renderPage('Profile', withFooterAndRouter({title: 'Profile'})(Profile)));
 });
 
 
 server.get('/lab', function (req, res) {
-  res.send(renderPage('Lab', Lab()));
+  res.send(renderPage('Lab', withFooterAndRouter({title: 'Lab'})(Lab)));
 });
 
 server.get('/lab/rorschach', function (req, res) {
-  res.send(renderPage('Rorschach', RorschachPage({title: 'rorschach'})));
+  res.send(renderPage('Rorschach', withFooterAndRouter({title: 'rorschach'})(Rorschach)));
 });
 
 

@@ -14,10 +14,8 @@ import {useStatic} from '../../hooks/use_static';
 
 export const Profile = () => {
   return html`
-    <div data-router-view="profile">
-      <${IntroSection} />
-      <${ProfileSection} />
-    </div>
+    <${IntroSection} />
+    <${ProfileSection} />
   `;
 };
 

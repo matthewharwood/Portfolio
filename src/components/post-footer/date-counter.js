@@ -23,7 +23,7 @@ const DateCounter = () => {
   const mattAge = getAge(BIRTH_YEAR);
   const years = range(mattAge + 1, new Date().getFullYear() - mattAge);
   const [ref, inView] = useIsVisible();
-  
+
   useInterval(() => {
     if (inView) {
       const len = years.length - 1;
