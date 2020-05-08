@@ -4,6 +4,9 @@ module.exports = {
       transitionDuration: {
         '0': '0ms',
       },
+      fontSize: {
+        xxs: '.625rem',
+      },
       margin: {
         '80vh': '80vh',
         '1/5': '20%'

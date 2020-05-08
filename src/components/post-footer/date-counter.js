@@ -33,7 +33,7 @@ const DateCounter = () => {
   }, 80);
 
   return html`
-    <span ref="${ref}">${years[count]}</span>
+    <span className="pl-1" ref="${ref}"> ${years[count]}</span>
   `
 }
 

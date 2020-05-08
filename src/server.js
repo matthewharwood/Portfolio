@@ -43,7 +43,7 @@ const renderPage = (title, page) => {
 };
 
 server.get('/', function (req, res) {
-  res.send(renderPage('Home', withFooterAndRouter({title: 'index'})(Index)));
+  res.send(renderPage('Home', Index()));
 });
 
 server.get('/work', function (req, res) {
