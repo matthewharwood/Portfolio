@@ -36,7 +36,7 @@ const PostFooter = () => {
   `;
 };
 
-const SlideUp = ({ isVisible=true }) => {
+const SlideUp = ({ isVisible=false }) => {
   const display = isVisible ? 'block' : 'hidden';
   return html`
     <section
