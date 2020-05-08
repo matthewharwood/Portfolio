@@ -3,7 +3,7 @@ import {html} from 'htm/preact';
 
 const PADDING = 'p-10';
 const LabLinks =[
-  {name: 'rorschach', src:"rorschach/rorschach.mp4", href: 'lab/rorschach/', tags: ['random', 'art', 'css'], description: 'lorem ipsum'}
+  {name: 'Rorschach CSS', src:"rorschach/rorschach.mp4", href: 'lab/rorschach/', tags: ['random', 'art', 'css'], description: 'Some paint, paper, and CSS'}
 ];
 
 export const Lab = () => {
