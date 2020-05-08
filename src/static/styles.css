@@ -61,9 +61,6 @@ body {
   @apply duration-0;
   transform: translateY(-100%);
 }
-.opacity-10 {
-  opacity: 10%;
-}
 
 .show-nav {
   transform: translateY(0);

@@ -49,7 +49,7 @@ const WorkItem = ({name, description, href, img}) => {
       <div
         className="h-full w-full  flex flex-col justify-center items-center text-center font-bold relative"
       >
-        <img src="${img}" alt="" className="inset-0 absolute h-full w-full object-fill p-12 md:p-48 justify-center items-center self-center opacity-10" />     
+        <img src="${img}" alt="" className="inset-0 absolute h-full w-full object-fill p-12 md:p-48 justify-center items-center self-center" style="opacity: 10%" />     
         <div
           className="flex flex-col items-center justify-center px-4 md:px-10 md:px-16 w-full md:w-10/12 lg:w-8/12 relative"
         >
