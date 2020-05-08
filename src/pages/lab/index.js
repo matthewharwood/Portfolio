@@ -1,5 +1,7 @@
 import {LabCard} from '../../components/card/lab_card';
 import {html} from 'htm/preact';
+import {RouterLayout} from '../../layouts/router-layout';
+import {FooterLayout} from '../../layouts/footer-layout';
 
 const PADDING = 'p-10';
 const LabLinks =[
@@ -44,4 +46,3 @@ const Row = () => {
     </div>
   `;
 };
-

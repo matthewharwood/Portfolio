@@ -1,6 +1,8 @@
 import { html } from "htm/preact";
+import {PostLayout} from '../../layouts/post-layout';
+import {UberDotcomPerformance} from '../work/uber-dotcom-performance';
 
-export const Rorschach = () => {
+const Rorschach = () => {
   return html`
     <${IntroHeadingBlock} />
     <${ImageBlock} />
@@ -18,7 +20,7 @@ const IntroHeadingBlock = () => {
   `;
 };
 
-export const ImageBlock = () => {
+const ImageBlock = () => {
   return html`
     <section className="container px-5 flex flex-col items-center lg:px-32">
       <p className="rorschach">
@@ -31,7 +33,7 @@ export const ImageBlock = () => {
   `;
 };
 
-export const ImageThumbs = () => {
+const ImageThumbs = () => {
   return html`
     <section className="container px-5 grid grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-10 py-8 lg:py-16">
       <${ImageThumb} />
@@ -71,4 +73,18 @@ const CodeBlock = () => {
     </pre>
     </div>
   `
+}
+
+
+const RorschachPage = (props) => {
+  return html`
+     <${PostLayout} ...${props}>
+        <${Rorschach} />
+    </PostLayout>
+  `
+};
+
+export {
+  Rorschach,
+  RorschachPage
 }

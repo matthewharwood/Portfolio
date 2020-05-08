@@ -12,11 +12,11 @@ import livereload from 'livereload';
 import connectLivereload from 'connect-livereload';
 import {join} from 'path';
 
-import {WorkNikeJordanEditor} from './pages/work/nike-jordan-editor';
-import {MarketingPathfinder} from './pages/work/marketing-pathfinder';
-import {UberDotcomPerformance} from './pages/work/uber-dotcom-performance';
+import {WorkNikeJordanEditor, WorkNikeJordanEditorPage} from './pages/work/nike-jordan-editor';
+import {MarketingPathfinder, MarketingPathFinderPage} from './pages/work/marketing-pathfinder';
+import {UberDotcomPerformance, UberDotcomPerformancePage} from './pages/work/uber-dotcom-performance';
 
-import { Rorschach } from './pages/lab/rorschach'
+import {Rorschach, RorschachPage} from './pages/lab/rorschach';
 
 const liveReloadServer = livereload.createServer();
 
@@ -50,15 +50,15 @@ server.get('/work', function (req, res) {
 });
 
 server.get('/work/nike-jordan-editor', function (req, res) {
-  res.send(renderPage('Nike Jordan Editor', WorkNikeJordanEditor()));
+  res.send(renderPage('Nike Jordan Editor', WorkNikeJordanEditorPage({title: 'nike-jordan-editor'})));
 });
 
 server.get('/work/marketing-pathfinder', function (req, res) {
-  res.send(renderPage('Marketing Pathfinder', MarketingPathfinder()));
+  res.send(renderPage('Marketing Pathfinder', MarketingPathFinderPage({title: 'marketing-path-finder'})));
 });
 
 server.get('/work/uber-dotcom-performance', function (req, res) {
-  res.send(renderPage('Uber.com Performance', UberDotcomPerformance()));
+  res.send(renderPage('Uber.com Performance', UberDotcomPerformancePage({title: 'uber-com-performance'})));
 });
 
 server.get('/profile', function (req, res) {
@@ -71,7 +71,7 @@ server.get('/lab', function (req, res) {
 });
 
 server.get('/lab/rorschach', function (req, res) {
-  res.send(renderPage('Rorschach', Rorschach()));
+  res.send(renderPage('Rorschach', RorschachPage({title: 'rorschach'})));
 });
 
 

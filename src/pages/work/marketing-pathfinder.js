@@ -1,4 +1,5 @@
 import {html} from 'htm/preact';
+import {PostLayout} from '../../layouts/post-layout';
 
 const MarketingPathfinder = () => {
   return html`
@@ -8,6 +9,15 @@ const MarketingPathfinder = () => {
   `;
 }
 
+const MarketingPathFinderPage = (props) => {
+  return html`
+    <${PostLayout} ...${props}>
+        <${MarketingPathfinder} />
+    </PostLayout>
+  `
+};
+
 export {
-  MarketingPathfinder
+  MarketingPathfinder,
+  MarketingPathFinderPage
 }

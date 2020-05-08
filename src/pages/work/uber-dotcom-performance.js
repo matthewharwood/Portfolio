@@ -1,4 +1,5 @@
 import {html} from 'htm/preact';
+import {PostLayout} from '../../layouts/post-layout';
 
 const UberDotcomPerformance = () => {
   return html`
@@ -8,6 +9,16 @@ const UberDotcomPerformance = () => {
   `;
 }
 
+
+const UberDotcomPerformancePage = (props) => {
+  return html`
+     <${PostLayout} ...${props}>
+        <${UberDotcomPerformance} />
+    </PostLayout>
+  `
+};
+
 export {
-  UberDotcomPerformance
+  UberDotcomPerformance,
+  UberDotcomPerformancePage
 }
