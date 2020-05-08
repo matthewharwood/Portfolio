@@ -16,7 +16,7 @@ export const Highlight = ({
       className="container px-5 lg:px-16 grid grid-cols-12 lg:gap-10 py-16"
     >
       <div className="flex flex-col col-span-12 ${textColsClass}">
-        <span className="text-2xl text-red-500">${subtitle}</span>
+        <span className="text-2xl text-accent">${subtitle}</span>
         <h2 className="text-5xl">${title}</h2>
         <p className="mt-5 leading-loose">${text}</p>
       </div>

@@ -64,7 +64,7 @@ const CodeBlock = () => {
   `;
   return html`
     <div className="container px-5 py-8 lg:py-16">
-    <pre className="bg-gray-200 border-l-4 border-red-500 py-4 lg:py-8 w-full overflow-x-auto">
+    <pre className="bg-secondary-lighter border-l-4 border-red-500 py-4 lg:py-8 w-full overflow-x-auto">
       <code>
         ${codeText}
       </code>
