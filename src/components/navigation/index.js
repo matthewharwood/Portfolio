@@ -9,7 +9,7 @@ const Navigation = () => {
     >
       ${navigationLinks.map(
         (nl, index) =>
-          html`<${AH.NavigationItem} link="${nl.link}" index="${index}" />`
+          html`<${AH.NavigationItem} link="${nl.link}" index="${index + 3}" />`
       )}
     </nav>
   `;

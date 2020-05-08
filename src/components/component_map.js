@@ -5,6 +5,7 @@ import { autoHydrate } from "../utils/auto_hydrate";
 import { NavigationItem } from "./navigation/item";
 import {Polymorph} from './polymorph';
 import {DateCounter} from './post-footer/date-counter';
+import {Span} from './logo/span';
 
 
 export const COMPONENT_MAP = {
@@ -13,6 +14,7 @@ export const COMPONENT_MAP = {
   NavigationBar,
   Polymorph,
   DateCounter,
+  Span,
 }
 
 const AH = {};
