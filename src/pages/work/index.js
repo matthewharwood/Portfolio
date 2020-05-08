@@ -51,14 +51,14 @@ const WorkItem = ({name, description, href, img}) => {
         <div
           className="flex flex-col items-center justify-center px-4 md:px-10 md:px-16 w-full md:w-10/12 lg:w-8/12 relative"
         >
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-mh tracking-wide text-black font-normal">${name}</h1>
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-mh tracking-wide text-primary font-normal">${name}</h1>
   
-          <p className="font-normal md:font-normal text-md md:text-md mt-3 mb-10  text-black font-body xl:w-6/12">
+          <p className="font-normal md:font-normal text-md md:text-md mt-3 mb-10  text-primary font-body xl:w-6/12">
            ${description}
           </p>
           <a
             href="${href}"
-            className="bg-black text-white px-10 py-4 font-normal uppercase hover:bg-gray-900 font-mh tracking-widest">
+            className="bg-primary text-secondary px-10 py-4 font-normal uppercase hover:bg-primary-hover font-mh tracking-widest">
             Enter
           </a>
           

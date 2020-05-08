@@ -41,7 +41,7 @@ const IntroSection = () => {
 const ProfileSection = () => {
   return html`
     <section className="px-10 lg:px-20 z-10 relative transform lg:-translate-y-40">
-      <div className="flex flex-col lg:px-20 bg-white lg:bg-gray-200 lg:pt-20">
+      <div className="flex flex-col lg:px-20 bg-secondary lg:bg-secondary-lighter lg:pt-20">
         <div className="flex flex-col lg:flex-row lg:justify-between">
           <h2 className="text-4xl font-bold">Résumé</h2>
           <div className="flex flex-col text-blue-600 text-left lg:text-right">

@@ -27,7 +27,7 @@ export const HtmlPage = ({ title, content, navigation, polymorph }) => {
         <meta name="generator" content="htm Preact" />
         <script type="module" src="/static/bundle.modern.js" defer></script>
       </head>
-      <body>
+      <body class="theme-dark">
         ${navigation}
         <main data-router-wrapper>
           ${content}

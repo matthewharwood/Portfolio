@@ -8,25 +8,76 @@
 
 @tailwind utilities;
 
+:root {
+  --color-primary: #000000;
+  --color-primary-lighter: #545454;
+  --color-primary-hover: #222222;
+  --color-primary-active: #333333;
 
+  --color-secondary: #FFFFFF;
+  --color-secondary-lighter: #F6F6F6;
+  --color-secondary-hover: #EEEEEE;
+  --color-secondary-active: #E2E2E2;
 
+  --color-tertiary: #E2E2E2;
+  --color-tertiary-hover: #CBCBCB;
+  --color-tertiary-active: #AFAFAF;
+
+  --color-accent: #FF6347;
+
+  --color-border: #AFAFAF;
+}
+
+.theme-dark {
+  --color-primary: #CBCBCB;
+  --color-primary-lighter: #DDDDDD;
+  --color-primary-hover: #E2E2E2;
+  --color-primary-active: #EEEEEE;
+
+  --color-secondary: #111111;
+  --color-secondary-lighter: #222222;
+  --color-secondary-hover: #333333;
+  --color-secondary-active: #444444;
+
+  --color-tertiary: #E2E2E2;
+  --color-tertiary-hover: #CBCBCB;
+  --color-tertiary-active: #AFAFAF;
+
+  --color-border: #545454;
+}
+
+.theme-blue-pink {
+  --color-primary: #FFFFFF;
+  --color-primary-hover: #F6F6F6;
+  --color-primary-active: #EEEEEE;
+
+  --color-secondary: #000000;
+  --color-secondary-hover: #222222;
+  --color-secondary-active: #333333;
+
+  --color-tertiary: #E2E2E2;
+  --color-tertiary-hover: #CBCBCB;
+  --color-tertiary-active: #AFAFAF;
+
+  --color-border: #AFAFAF;
+}
+
+body {
+  @apply bg-secondary text-primary;
+}
 
 /* purgecss start ignore */
 ::selection {
   background-color: #000;
   color: #fff;
 }
-body {
-  @apply text-gray-800;
-}
 
 .nav-styles {
   @apply transition;
   @apply duration-150;
   @apply ease-in-out;
-  @apply text-gray-800;
-  @apply bg-white;
-  @apply text-white;
+  @apply text-primary;
+  @apply bg-secondary;
   @apply z-30;
   @apply py-6;
   @apply transform;
