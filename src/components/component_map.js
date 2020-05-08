@@ -4,12 +4,14 @@ import { RunningHeader } from "./running_header";
 import { autoHydrate } from "../utils/auto_hydrate";
 import { NavigationItem } from "./navigation/item";
 import {Polymorph} from './polymorph';
+import {DateCounter} from './post-footer/date-counter';
 
 export const COMPONENT_MAP = {
   RunningHeader,
   NavigationItem,
   NavigationBar,
   Polymorph,
+  DateCounter,
 }
 
 const AH = {};

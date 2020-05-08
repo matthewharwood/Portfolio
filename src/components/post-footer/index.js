@@ -1,10 +1,14 @@
 import { html } from "htm/preact";
 import { socialLinks } from "./data";
+import {AH} from '../component_map';
+
+
+
 
 const PostFooter = () => {
   return html`
     <footer className="border border-gray-500 px-5 py-4 flex justify-between">
-      <span>© MORNING HARWOOD 2019</span>
+      <span>© MORNING HARWOOD <${AH.DateCounter} /></span>
       <div className="flex items-center">
         ${Object.entries(socialLinks)
           .slice(0, 5)

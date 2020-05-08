@@ -1,6 +1,7 @@
 import {AH} from '../components/component_map';
 import {Navigation} from '../components/navigation';
 import {html} from 'htm/preact';
+import {RunningHeader} from '../components/running_header';
 
 export const Index = () => {
   return html`
