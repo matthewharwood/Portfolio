@@ -1,4 +1,5 @@
 import { html } from "htm/preact";
+import { SummaryCard } from "../summary-card"
 
 export const Summary = ({
   hasBackground = false,
@@ -20,6 +21,16 @@ export const Summary = ({
         >
           <${VideoCard} />
           <${VideoCard} />
+        </div>
+        <div
+          className="col-span-5 grid grid-cols-1 lg:grid-cols-3 gap-4 mt-16"
+        >
+          <${SummaryCard} />
+          <${SummaryCard} />
+          <${SummaryCard} />
+          <${SummaryCard} />
+          <${SummaryCard} />
+          <${SummaryCard} />
         </div>
       </div>
       ${hasBorder &&
