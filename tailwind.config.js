@@ -36,7 +36,8 @@ module.exports = {
         accent: "var(--color-accent)",
 
         border: "var(--color-border)",
-
+        shadow: "var(--color-shadow)",
+        "shadow-lighter": "var(--color-shadow-lighter)",
         gray: {
           100: "#F6F6F6",
           200: "#EEEEEE",

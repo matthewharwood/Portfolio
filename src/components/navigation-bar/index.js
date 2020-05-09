@@ -73,7 +73,7 @@ export const NavigationBar = () => {
     e.target.classList.remove('spin')
   }
   return html`
-    <header ref="${navRef}" className="nav-styles hide-nav">
+    <header ref="${navRef}" className="nav-styles  hide-nav">
       <div className="px-4 lg:px-12 flex">
       <div className="flex flex-1">
           <a href="/" className="pr-8" onMouseEnter="${spin}" onMouseLeave="${cancelSpin}">
@@ -95,7 +95,7 @@ export const NavigationBar = () => {
 
 const NavLink = ({title, href, isActive}) => {
   const activeClass = isActive ? 'font-bold' : '';
-  const hover = isActive ? 'cursor-default' : 'hover:bg-secondary hover:text-primary-hover'
+  const hover = isActive ? 'cursor-default' : 'hover:bg-primary hover:text-secondary'
   return html`
     <li className="py-1 md:my-0 md:py-0 ml-1 sm:ml-2 md:ml-4">
       <a href="${href}" className="px-3 py-2  bg-transparent ${hover} text-primary uppercase font-normal tracking-wide font-mh ${activeClass}">${title}</a>
