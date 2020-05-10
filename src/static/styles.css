@@ -1,9 +1,9 @@
 /* purgecss start ignore */
-@tailwind  base;
+@tailwind base;
 /* purgecss end ignore */
 
 /* purgecss start ignore */
-@tailwind  components;
+@tailwind components;
 /* purgecss end ignore */
 
 @tailwind utilities;
@@ -14,58 +14,56 @@
   --color-primary-hover: #222222;
   --color-primary-active: #333333;
 
-  --color-secondary: #FFFFFF;
-  --color-secondary-lighter: #F6F6F6;
-  --color-secondary-hover: #EEEEEE;
-  --color-secondary-active: #E2E2E2;
+  --color-secondary: #ffffff;
+  --color-secondary-lighter: #f6f6f6;
+  --color-secondary-hover: #eeeeee;
+  --color-secondary-active: #e2e2e2;
 
-  --color-tertiary: #E2E2E2;
-  --color-tertiary-hover: #CBCBCB;
-  --color-tertiary-active: #AFAFAF;
+  --color-tertiary: #e2e2e2;
+  --color-tertiary-hover: #cbcbcb;
+  --color-tertiary-active: #afafaf;
 
-  --color-accent: #FF6347;
+  --color-accent: #ff6347;
 
-  --color-border: #AFAFAF;
+  --color-border: #afafaf;
   --shadow: rgba(0, 0, 0, 0.1);
   --shadow-lighter: rgba(0, 0, 0, 0.06);
 }
 
 .theme-dark {
-  --color-primary: #FFFFFF;
-  --color-primary-lighter: #DDDDDD;
-  --color-primary-hover: #E2E2E2;
-  --color-primary-active: #EEEEEE;
+  --color-primary: #ffffff;
+  --color-primary-lighter: #dddddd;
+  --color-primary-hover: #e2e2e2;
+  --color-primary-active: #eeeeee;
 
   --color-secondary: #000000;
   --color-secondary-lighter: #222222;
   --color-secondary-hover: #333333;
   --color-secondary-active: #444444;
 
-  --color-tertiary: #E2E2E2;
-  --color-tertiary-hover: #CBCBCB;
-  --color-tertiary-active: #AFAFAF;
+  --color-tertiary: #e2e2e2;
+  --color-tertiary-hover: #cbcbcb;
+  --color-tertiary-active: #afafaf;
 
   --color-border: #545454;
   --shadow: rgba(255, 255, 255, 0.1);
   --shadow-lighter: rgba(255, 255, 255, 0.06);
-
-
 }
 
 .theme-blue-pink {
-  --color-primary: #FFFFFF;
-  --color-primary-hover: #F6F6F6;
-  --color-primary-active: #EEEEEE;
+  --color-primary: #ffffff;
+  --color-primary-hover: #f6f6f6;
+  --color-primary-active: #eeeeee;
 
   --color-secondary: #000000;
   --color-secondary-hover: #222222;
   --color-secondary-active: #333333;
 
-  --color-tertiary: #E2E2E2;
-  --color-tertiary-hover: #CBCBCB;
-  --color-tertiary-active: #AFAFAF;
+  --color-tertiary: #e2e2e2;
+  --color-tertiary-hover: #cbcbcb;
+  --color-tertiary-active: #afafaf;
 
-  --color-border: #AFAFAF;
+  --color-border: #afafaf;
 }
 
 body {
@@ -95,19 +93,21 @@ body {
 }
 
 .rorschach {
-  font-size: .5vw;
-  opacity: .2;
+  font-size: 0.5vw;
+  opacity: 0.2;
   color: #fff;
   text-align: justify;
-  background: #fff url("https://res.cloudinary.com/morningharwood/video/upload/f_gif,q_auto,e_loop/rorschach/rorschach.mp4") 50% no-repeat;
+  background: #fff
+    url("https://res.cloudinary.com/morningharwood/video/upload/f_gif,q_auto,e_loop/rorschach/rorschach.mp4")
+    50% no-repeat;
   background-size: auto 180%;
   mix-blend-mode: multiply;
 }
 .invert-full {
-  filter: invert(100%)
+  filter: invert(100%);
 }
 .invert-0 {
-  filter: invert(0)
+  filter: invert(0);
 }
 .lab-cards-aspect-ratio {
   height: 0;
@@ -125,10 +125,11 @@ body {
 }
 
 .polymorph-shadow {
-  box-shadow: -14px -2px 24px rgba(255, 255, 255, 0.75), 12px 12px 12px rgba(170, 170, 170, 0.25);
+  box-shadow: -14px -2px 24px rgba(255, 255, 255, 0.75),
+    12px 12px 12px rgba(170, 170, 170, 0.25);
 }
 
-.spin .logo{
+.spin .logo {
   animation: spin 200ms linear infinite;
 }
 
