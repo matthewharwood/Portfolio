@@ -27,6 +27,7 @@ This is a working example of a SSG with partial(selective) hydration[⚡🧩💦
 - Hosted by www.render.com for the Brotli Compression
 - Quicklinks
 - Turbolinks inspired router based on HighwayJS
+- AnimeJS (Animation)
 
 ## Up and Running
 

@@ -46,6 +46,7 @@ const pages = [
   {fileName: 'work/marketing-pathfinder', content: renderPage('Marketing Pathfinder',  withFooterAndRouter({title: 'marketing-path-finder'})(MarketingPathfinder))},
   {fileName: 'work/uber-dotcom-performance', content: renderPage('Uber.com Performance', withFooterAndRouter({title: 'uber-com-performance'})(UberDotcomPerformance))},
 ];
+
 const DIST_DIR = join(__dirname, '../', 'dist');
 const STATIC = join(__dirname, 'static');
 

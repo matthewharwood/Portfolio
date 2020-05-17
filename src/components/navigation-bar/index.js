@@ -46,6 +46,8 @@ export const NavigationBar = () => {
     };
     if (location.pathname !== '/') {
       show();
+    } else {
+      hide();
     }
 
     // Init
@@ -73,7 +75,7 @@ export const NavigationBar = () => {
     e.target.classList.remove('spin')
   }
   return html`
-    <header ref="${navRef}" className="nav-styles  hide-nav">
+    <header ref="${navRef}" className="nav-styles transition duration-150 ease-in-out text-primary bg-secondary z-30 py-6 transform w-full fixed">
       <div className="px-4 lg:px-12 flex">
       <div className="flex flex-1">
           <a href="/" className="pr-8" onMouseEnter="${spin}" onMouseLeave="${cancelSpin}">
