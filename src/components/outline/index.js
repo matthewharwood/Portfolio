@@ -1,6 +1,7 @@
 import { html } from "htm/preact";
 
 export const Outline = ({ title, steps }) => {
+  const Empty = `<div>Empty</div>`
   return html`
     <section className="py-16">
       <div className="container px-5 lg:px-16 grid grid-cols-12">
@@ -14,7 +15,7 @@ export const Outline = ({ title, steps }) => {
         </div>
         <div className="col-span-12 lg:col-span-7">
           <ul>
-            ${steps.map(
+            ${steps && steps.map(
               (step, index) => html`
                 <${OutlineListItem}
                   text="${step}"
