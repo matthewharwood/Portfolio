@@ -1,5 +1,5 @@
 import Highway from '@dogstudio/highway';
-import {Fade} from './fade';
+import {Fade} from './utils/fade';
 import {listen} from 'quicklink';
 
 const state = {

@@ -1,4 +1,4 @@
-import {whenVisible} from './utils/when_visible';
+import {whenVisible} from './when_visible';
 import anime from 'animejs/lib/anime.es.js';
 class FadeIn extends HTMLElement {
   constructor() {

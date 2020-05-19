@@ -2,7 +2,7 @@ import {useState, useMemo} from 'preact/hooks';
 
 import {useInterval} from '../../hooks/use_interval.js';
 import {interests} from '../../_data/interests.js';
-import {shuffle} from '../../utils/shuffle.js';
+import {shuffle} from '../../utils/shuffle/shuffle.js';
 import {html} from 'htm/preact';
 
 const RunningHeader = () => {

@@ -1,7 +1,7 @@
 // File: fade.js
 // Import Highway
 import Highway from '@dogstudio/highway';
-import {isServer} from './utils/which_env';
+import {isServer} from './which_env';
 
 
 // Fade

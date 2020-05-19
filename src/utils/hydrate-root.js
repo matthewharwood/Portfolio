@@ -1,5 +1,5 @@
-import {whenVisible} from './utils/when_visible';
-import {AH} from './components/component_map';
+import {whenVisible} from './when_visible';
+import {AH} from '../components/component_map';
 import {h, hydrate} from 'preact';
 
 

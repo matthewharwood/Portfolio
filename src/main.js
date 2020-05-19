@@ -1,6 +1,6 @@
 import {InitRouter} from './router';
-import {HydrateRoot} from './hydrate-root';
-import {FadeIn} from './fade_in';
+import {HydrateRoot} from './utils/hydrate-root';
+import {FadeIn} from './utils/fade_in';
 
 
 function main() {
