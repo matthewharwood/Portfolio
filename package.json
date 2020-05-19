@@ -11,9 +11,11 @@
     "bundle:css": "cross-env NODE_ENV=production postcss src/static/styles.css -o dist/static/styles.bundle.css",
     "prerender": "cross-env NODE_ENV=production node prerender.js",
     "bundle": "cross-env NODE_ENV=production microbundle src/main.js -f modern -o ./dist/static/bundle.js --external none",
-    "dev": "cross-env npm-run-all --parallel bundle:watch dev:css:watch server:watch storybook",
+    "dev": "cross-env npm-run-all --parallel bundle:watch dev:css:watch server:watch storybook open cms",
     "dev:css:watch": "cross-env postcss src/static/styles.css -o src/static/styles.bundle.css --watch",
     "start": "node ./bin/www",
+    "cms": "cd ./src/cms && npm run start",
+    "open": "open-cli http://localhost:3000 & open-cli http://localhost:3333",
     "server:watch": "nodemon index.js --ext js --ignore dist",
     "bundle:watch": "cross-env microbundle src/main.js -f modern -o ./src/static/bundle.js --external none -w",
     "storybook": "start-storybook  -s ./src/static -p 6006",
@@ -25,7 +27,9 @@
   "babel": {
     "env": {
       "test": {
-        "plugins": ["@babel/plugin-transform-modules-commonjs"]
+        "plugins": [
+          "@babel/plugin-transform-modules-commonjs"
+        ]
       },
       "dev": {
         "plugins": [
@@ -92,6 +96,7 @@
     "microbundle": "^0.12.0-next.8",
     "nodemon": "^2.0.3",
     "npm-run-all": "^4.1.5",
+    "open-cli": "^6.0.1",
     "postcss-cli": "^7.1.1",
     "preact-render-to-string": "^5.1.6"
   }
