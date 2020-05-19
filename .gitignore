@@ -5,3 +5,4 @@ src/site/css/
 src/static/bundle.modern.js
 src/static/bundle.modern.js.map
 src/static/styles.bundle.css
+src/_data/dump.json
