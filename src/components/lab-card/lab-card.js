@@ -4,6 +4,7 @@ import {Media} from '../media';
 
 
 const LabCard = ({name, href, src, tags, description, alt}) => {
+
   return html`
     <a className="bg-secondary-lighter flex flex-col rounded overflow-hidden shadow-lg m-10 no-underline" href="${href}">
     <div className="lab-cards-aspect-ratio relative">

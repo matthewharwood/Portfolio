@@ -1,4 +1,4 @@
-import {LabCard} from '../../components/card/lab_card';
+import {LabCard} from '../../components/lab-card/lab-card';
 import {html} from 'htm/preact';
 
 const PADDING = 'p-10';

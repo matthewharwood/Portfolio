@@ -9,9 +9,6 @@ const Logo = () => {
   `
 }
 
-Logo.schema = (_type, query) =>  '1234'
-// *[_type == 'movie' && releaseYear >= 1979]
-
 
 export {
   Logo

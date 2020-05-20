@@ -6,7 +6,7 @@ import route from './route';
 import page from './page';
 import interest from './interest'
 import blockContent from './blockContent';
-
+import labCard from '../../components/lab-card/lab-card.schema';
 import video from '../../components/media/video.schema'
 import img from '../../components/media/img.schema';
 
@@ -19,6 +19,7 @@ export default createSchema({
     page,
     blockContent,
     interest,
+    labCard,
   ])
 })
 
