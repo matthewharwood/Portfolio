@@ -1,6 +1,6 @@
 
 import createSchema from 'part:@sanity/base/schema-creator'
-
+import tag from './tag';
 import schemaTypes from 'all:part:@sanity/base/schema-type'
 import route from './route';
 import page from './page';
@@ -9,6 +9,9 @@ import blockContent from './blockContent';
 import labCard from '../../components/lab-card/lab-card.schema';
 import video from '../../components/media/video.schema'
 import img from '../../components/media/img.schema';
+import technology from './technology';
+import person from './person';
+import cloudinary from './cloudinary';
 
 export default createSchema({
   name: 'default',
@@ -18,8 +21,12 @@ export default createSchema({
     route,
     page,
     blockContent,
+    cloudinary,
     interest,
     labCard,
+    tag,
+    technology,
+    person
   ])
 })
 

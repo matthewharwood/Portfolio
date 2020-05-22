@@ -9,9 +9,10 @@
   },
   "env": {
     "development": {
-      "api": {
-        "dataset": "dev"
-      }
+      "plugins": [
+        "@sanity/vision",
+        "asset-source-cloudinary"
+      ]
     }
   },
   "plugins": [
@@ -19,19 +20,17 @@
     "@sanity/components",
     "@sanity/default-layout",
     "@sanity/default-login",
-    "@sanity/desk-tool"
+    "@sanity/desk-tool",
+    "asset-source-cloudinary"
   ],
-  "env": {
-    "development": {
-      "plugins": [
-        "@sanity/vision"
-      ]
-    }
-  },
   "parts": [
     {
       "name": "part:@sanity/base/schema",
       "path": "./schemas/schema"
+    },
+    {
+      "implements": "part:@sanity/form-builder/input/image/asset-sources",
+      "path": "./parts/assetSources.js"
     }
   ]
 }
