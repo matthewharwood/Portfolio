@@ -9,6 +9,7 @@ import blockContent from './blockContent';
 import labCard from '../../components/lab-card/lab-card.schema';
 import video from '../../components/media/video.schema'
 import img from '../../components/media/img.schema';
+import outline from '../../components/outline/outline.schema';
 import technology from './technology';
 import person from './person';
 import cloudinary from './cloudinary';
@@ -26,7 +27,8 @@ export default createSchema({
     labCard,
     tag,
     technology,
-    person
+    person,
+    outline,
   ])
 })
 

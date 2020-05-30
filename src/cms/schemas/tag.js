@@ -13,7 +13,8 @@ export default {
     {
       name: 'icon',
       title: 'Icon',
-      type: 'image',
+      type: 'reference',
+      to: { type: 'cloudinary' },
     },
   ]
 }

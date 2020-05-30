@@ -15,8 +15,8 @@ export default {
     },
     {
       name: 'src',
-      title: 'Src',
-      type: 'string'
+      title: 'Video/Image',
+      type: 'image'
     },
     {
       name: 'description',
@@ -32,10 +32,7 @@ export default {
       name: 'tags',
       title: 'Tags',
       type: 'array',
-      of: [{type: 'string'}],
-      options: {
-        layout: 'tags'
-      }
+      of: [{type: 'tag'}],
     },
   ]
 }
