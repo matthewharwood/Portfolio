@@ -30,6 +30,7 @@ export default {
       of: [
         { type: 'video' },
         { type: 'interest' },
+        { type: 'outline' },
       ],
     },
   ]

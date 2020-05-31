@@ -3,7 +3,8 @@ import {OutlineList} from './list';
 
 
 const Outline = (props) => {
-  const title = props?.title ?? 'Default Title';
+  const title = props && props.title || 'default title';
+
   return html`
     <section className="py-16">
       <div className="container px-5 lg:px-16 grid grid-cols-12">

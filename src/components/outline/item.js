@@ -1,8 +1,9 @@
 import {html} from 'htm/preact';
 
 const OutlineListItem = (props) => {
-  const text = props?.text ?? 'hello';
-  const height = props.isLast ? 'h-0' : 'h-10';
+  const text = props &&  props.text || 'hello';
+  const height = props && props.isLast ? 'h-0' : 'h-10';
+
   return html`
     <li className="flex flex-col justify-start">
       <div className="flex items-center">
