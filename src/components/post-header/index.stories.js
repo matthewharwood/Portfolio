@@ -1,16 +1,20 @@
 import {html} from 'htm/preact';
 import {render} from 'preact-render-to-string';
 
-import {PostFooter} from './';
+import {PostHeader} from './';
 
 export default {
-  title: 'Post Footer'
+  title: 'Post Header'
 };
 
 const FIXTURE = {
+  heading: 'hello world',
+  description: 'description text',
+  subtext: 'subtext text',
+  info: [{heading: 'heading', text: 'text'}],
 };
 
 export const Main = () => {
-  const Component = html`<${PostFooter} ...${FIXTURE}/>`;
+  const Component = html`<${PostHeader} ...${FIXTURE}/>`;
   return render(Component);
 };

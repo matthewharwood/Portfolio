@@ -1,25 +1,16 @@
 import {html} from 'htm/preact';
 import {render} from 'preact-render-to-string';
 
-import {Outline} from './';
+import {Polymorph} from './';
 
 export default {
-  title: 'Outline'
+  title: 'Polymorph'
 };
+
 const FIXTURE = {
-  title: 'Steps',
-  steps: [
-    {text: 'hello'},
-    {text: 'world'}
-  ]
 };
 
 export const Main = () => {
-  const Component = html`<${Outline} ...${FIXTURE}/>`;
+  const Component = html`<${Polymorph} ...${FIXTURE}/>`;
   return render(Component);
 };
-
-// export const Empty = () => {
-//   const Component = html`<${Outline} />`;
-//   return render(Component);
-// };

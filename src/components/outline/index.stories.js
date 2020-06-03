@@ -19,7 +19,7 @@ export const Main = () => {
   return render(Component);
 };
 
-export const Empty = () => {
-  const Component = html`<${Outline} />`;
-  return render(Component);
-};
+// export const Empty = () => {
+//   const Component = html`<${Outline} />`;
+//   return render(Component);
+// };

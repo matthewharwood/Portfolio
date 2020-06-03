@@ -3,10 +3,10 @@
 import {html} from 'htm/preact';
 import {render} from 'preact-render-to-string';
 
-import {Logo} from './';
+import {Navigation} from './';
 
 export default {
-  title: 'Logo'
+  title: 'Navigation'
 };
 
 const FIXTURE = {
@@ -14,6 +14,6 @@ const FIXTURE = {
 };
 
 export const Main = () => {
-  const Component = html`<${Logo} ...${FIXTURE}/>`;
+  const Component = html`<${Navigation} ...${FIXTURE}/>`;
   return render(Component);
 };

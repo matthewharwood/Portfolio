@@ -3,20 +3,17 @@
 import {html} from 'htm/preact';
 import {render} from 'preact-render-to-string';
 
-import {HighlightBold} from './';
+import {Logo} from './';
 
 export default {
-  title: 'Highlight Bold'
+  title: 'Logo'
 };
 
 const FIXTURE = {
-  title: 'Steps',
-  text: 'hello',
-  image: 'sample.jpg',
-  subtitle: 'hello subtitle'
+  text: 'Good Morning Harwood'
 };
 
 export const Main = () => {
-  const Component = html`<${HighlightBold} ...${FIXTURE}/>`;
+  const Component = html`<${Logo} ...${FIXTURE}/>`;
   return render(Component);
 };

@@ -1,4 +1,5 @@
 import { html } from "htm/preact";
+import {useStatic} from '../../hooks/use_static';
 
 export const CardTile = ({ cards }) => {
   return html`
@@ -18,7 +19,7 @@ const Card = ({ data }) => {
       className="flex flex-col lg:flex-row items-center lg:items-start text-center lg:text-start mb-10"
     >
       <img
-        src="${data.image}"
+        src="${useStatic(data.image)}"
         alt=""
         className="h-64 w-64 lg:mr-10 object-cover"
       />

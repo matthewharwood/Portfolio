@@ -2,7 +2,7 @@ import {html} from 'htm/preact';
 import {OutlineListItem} from './item';
 
 const OutlineList = (props) => {
-  const steps = props && Array.isArray(props.steps) && props.steps || [1]
+  const steps = props && props.steps || [1]
   return html`
     <ul>
       ${steps.map((step, i) => {

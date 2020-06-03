@@ -1,4 +1,5 @@
 import { html } from "htm/preact";
+import {useStatic} from '../../hooks/use_static';
 
 export const Highlight = ({
   isImageRight,
@@ -21,7 +22,7 @@ export const Highlight = ({
         <p className="mt-5 leading-loose">${text}</p>
       </div>
       <div className="col-span-12 ${imageOrder} ${imageColsClass}">
-        <img src="${image}" alt="" className="h-full w-full object-cover" />
+        <img src="${useStatic(image)}" alt="" className="h-full w-full object-cover" />
       </div>
     </section>
   `;

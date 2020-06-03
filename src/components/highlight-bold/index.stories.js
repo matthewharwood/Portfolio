@@ -1,26 +1,22 @@
-// isImageRight,
-//     imageCols = 6,
-//     subtitle,
-//     title,
-//     text,
-//     image,
 
 
 import {html} from 'htm/preact';
 import {render} from 'preact-render-to-string';
 
-import {Highlight} from './';
+import {HighlightBold} from './';
 
 export default {
-  title: 'Highlight'
+  title: 'Highlight Bold'
 };
+
 const FIXTURE = {
   title: 'Steps',
   text: 'hello',
-  image: 'sample.jpg'
+  image: 'sample.jpg',
+  subtitle: 'hello subtitle'
 };
 
 export const Main = () => {
-  const Component = html`<${Highlight} ...${FIXTURE}/>`;
+  const Component = html`<${HighlightBold} ...${FIXTURE}/>`;
   return render(Component);
 };

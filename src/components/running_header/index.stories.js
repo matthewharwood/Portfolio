@@ -1,10 +1,10 @@
 import {html} from 'htm/preact';
 import {render} from 'preact-render-to-string';
 
-import {Quote} from './';
+import {RunningHeader} from './';
 
 export default {
-  title: 'Quote'
+  title: 'Running Header'
 };
 
 const FIXTURE = {
@@ -16,6 +16,6 @@ const FIXTURE = {
 };
 
 export const Main = () => {
-  const Component = html`<${Quote} ...${FIXTURE}/>`;
+  const Component = html`<${RunningHeader} ...${FIXTURE}/>`;
   return render(Component);
 };

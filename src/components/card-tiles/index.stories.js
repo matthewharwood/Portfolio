@@ -1,7 +1,7 @@
 import {html} from 'htm/preact';
 import {render} from 'preact-render-to-string';
 
-import {CardTile} from './';
+import {CardTiles} from './';
 
 export default {
   title: 'Card Tiles'
@@ -29,6 +29,6 @@ const FIXTURE = {
 }
 
 export const Main = () => {
-  const Component = html`<${CardTile} ...${FIXTURE}/>`;
+  const Component = html`<${CardTiles} ...${FIXTURE}/>`;
   return render(Component);
 };

@@ -1,20 +1,23 @@
-import {html} from 'htm/preact';
-import {render} from 'preact-render-to-string';
+import {h} from 'preact';
 
-import {SummaryCard} from './';
+import {Summary} from './';
 
 export default {
-  title: 'SummaryCard'
+  title: 'Summary'
 };
+
 const FIXTURE = {
   title: 'Steps',
-  steps: [
-    {text: 'hello'},
-    {text: 'world'}
+  number: 0,
+  heading: 'this is a heading',
+  text: 'lorem ipsum',
+  videos: [
+    {poster: 'sample.jpg', title: 'hello title'}
   ]
 };
 
 export const Main = () => {
-  const Component = html`<${SummaryCard} ...${FIXTURE}/>`;
-  return render(Component);
+
+
+  return (<Summary {...FIXTURE} />)
 };

@@ -1,20 +1,21 @@
 import {html} from 'htm/preact';
 import {render} from 'preact-render-to-string';
 
-import {PostPagination} from './';
+import {Quote} from './';
 
 export default {
-  title: 'Post Pagination'
+  title: 'Quote'
 };
 
 const FIXTURE = {
-  heading: 'hello world',
-  description: 'description text',
-  subtext: 'subtext text',
-  info: [{heading: 'heading', text: 'text'}],
+  hasBorder: true,
+  quote: 'This is an awesome quote',
+  person: 'person name',
+  title: 'Senior software engineer',
+  date: 'Dec 2019',
 };
 
 export const Main = () => {
-  const Component = html`<${PostPagination} ...${FIXTURE}/>`;
+  const Component = html`<${Quote} ...${FIXTURE}/>`;
   return render(Component);
 };

@@ -1,34 +1,20 @@
 import {html} from 'htm/preact';
 import {render} from 'preact-render-to-string';
 
-import {CardTiles} from './';
+import {Headline} from './';
 
 export default {
-  title: 'Card Tiles'
+  title: 'Headline'
 };
 
 const FIXTURE = {
-  cards: [
-    {
-      image: 'rorschach/r-1.jpg',
-      title: 'title',
-      subtitle: 'text text text'
-    },
-    {
-      image: 'rorschach/r-1.jpg',
-      title: 'title',
-      subtitle: 'text text text'
-    },
-    {
-      image: 'rorschach/r-1.jpg',
-      title: 'title',
-      subtitle: 'text text text'
-    }
-  ]
-
+  hasBackground: false,
+  hasBorder: false,
+  title: 'hello world',
+  text: 'text text text'
 }
 
 export const Main = () => {
-  const Component = html`<${CardTiles} ...${FIXTURE}/>`;
+  const Component = html`<${Headline} ...${FIXTURE}/>`;
   return render(Component);
 };

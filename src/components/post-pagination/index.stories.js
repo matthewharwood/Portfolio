@@ -1,10 +1,10 @@
 import {html} from 'htm/preact';
 import {render} from 'preact-render-to-string';
 
-import {PostHeader} from './';
+import {PostPagination} from './';
 
 export default {
-  title: 'Post Header'
+  title: 'Post Pagination'
 };
 
 const FIXTURE = {
@@ -15,6 +15,6 @@ const FIXTURE = {
 };
 
 export const Main = () => {
-  const Component = html`<${PostHeader} ...${FIXTURE}/>`;
+  const Component = html`<${PostPagination} ...${FIXTURE}/>`;
   return render(Component);
 };
