@@ -4,14 +4,9 @@ import {useState} from 'preact/hooks';
 
 const VideoCard = (props) => {
 
-  const {poster = 'sample.jpg', title = 'sample'} = props;
+  const {poster = 'sample.jpg', title = 'sample', videoSrc = 'rorschach/rorschach.mp4'} = props;
   const [state, update] = useState(false);
-  console.log(poster, useStatic(poster));
-  const toggle = () => {
-    console.log(state);
-    update(!state);
-    console.log(state);
-  };
+  const toggle = () => update(!state);
   return html`
     <div className="w-full relative" onClick="${toggle}">
       <div className="relative">
@@ -29,9 +24,14 @@ const VideoCard = (props) => {
       </div>
       
     </div>
-    <div className="${state ? 'block' : 'hidden'}">
-        <div onClick="${toggle}">close</div>
-        <h1>modal</h1>
+    <div className="${state ? 'block fixed inset-0 z-10 bg-primary' : 'hidden'}">
+        <button className="fixed top-0 z-10 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick="${toggle}" >close</button>
+        <div className="h-0 overflow-hidden pt-16/9">
+            <div className="left-0 top-0 absolute w-full h-full">
+            <video src="${useStatic(videoSrc)}"  playsinline autoplay muted loop  className="flex h-full justify-center items-center mx-auto w-full"/>
+            </div>
+        </div>
+
     </div>
   `;
 };

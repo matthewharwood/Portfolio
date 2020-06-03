@@ -3,6 +3,9 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 module.exports = {
   theme: {
     extend: {
+      padding: {
+        '16/9': '56.25%'
+      },
       transitionDuration: {
         "0": "0ms",
       },

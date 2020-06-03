@@ -17,10 +17,7 @@ export const Summary = ({
           <h2 className="text-5xl">${heading}</h2>
           <p className="mt-5 leading-loose">${text}</p>
         </div>
-        <div
-            id="video"
-          className="lg:row-start-2 col-span-6 lg:col-span-5 grid grid-cols-1 lg:grid-cols-2 gap-10 mt-16"
-        >
+        <div className="lg:row-start-2 col-span-6 lg:col-span-5 grid grid-cols-1 lg:grid-cols-2 gap-10 mt-16">
           ${videos.map(p => html`<${AH.VideoCard} ..${p} />`)}
         </div>
       </div>
