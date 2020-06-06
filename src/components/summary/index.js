@@ -18,7 +18,7 @@ export const Summary = ({
           <p className="mt-5 leading-loose">${text}</p>
         </div>
         <div className="lg:row-start-2 col-span-6 lg:col-span-5 grid grid-cols-1 lg:grid-cols-2 gap-10 mt-16">
-          ${videos.map(p => html`<${AH.VideoCard} ..${p} />`)}
+          ${videos && videos.map(p => html`<${AH.VideoCard} ..${p} />`)}
         </div>
       </div>
       ${hasBorder &&

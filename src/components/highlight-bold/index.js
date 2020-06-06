@@ -13,7 +13,7 @@ export const HighlightBold= ({
   const imageColsClass = `lg:col-span-${imageCols}`;
   const textColsClass = `lg:col-span-${12 - imageCols}`;
   const src = image && image.asset && image.asset.originalFilename;
-  console.log(image);
+
   return html`
     <section className="py-16 px-5 lg:px-0">
       <div
