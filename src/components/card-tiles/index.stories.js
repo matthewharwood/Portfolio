@@ -1,6 +1,4 @@
-import {html} from 'htm/preact';
-import {render} from 'preact-render-to-string';
-
+import {h} from 'preact';
 import {CardTiles} from './';
 
 export default {
@@ -29,6 +27,7 @@ const FIXTURE = {
 }
 
 export const Main = () => {
-  const Component = html`<${CardTiles} ...${FIXTURE}/>`;
-  return render(Component);
+  return (
+      <CardTiles {...FIXTURE} />
+  )
 };

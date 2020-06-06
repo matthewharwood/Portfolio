@@ -12,7 +12,7 @@ const LabCardDescription = ({description}) => {
     </p>`;
 };
 const LabCardTags = ({tags}) => {
-  return tags.map((tag) => html`
+  return tags && tags.map((tag) => html`
     <span className="inline-block border-solid border-1 bg-tertiary rounded-full px-3 py-1 text-sm font-semibold shadow-inner mr-2 mb-2 ">#${tag.name}</span>
   `
   );

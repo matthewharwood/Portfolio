@@ -1,5 +1,4 @@
-import {html} from 'htm/preact';
-import {render} from 'preact-render-to-string';
+import {h} from 'preact';
 
 import {NavigationBar} from './';
 
@@ -7,7 +6,12 @@ export default {
   title: 'Navigation'
 };
 
+const FIXTURE = {
+
+};
+
 export const Main = () => {
-  const Component = html`<${NavigationBar}/>`;
-  return render(Component);
+  return (
+      <NavigationBar {...FIXTURE} />
+  )
 };

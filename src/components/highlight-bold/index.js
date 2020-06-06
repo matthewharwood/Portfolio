@@ -1,4 +1,5 @@
 import { html } from "htm/preact";
+import {useStatic} from '../../hooks/use_static';
 
 export const HighlightBold= ({
   isImageRight,
@@ -11,6 +12,8 @@ export const HighlightBold= ({
   const imageOrder = isImageRight ? "order-last" : "order-first";
   const imageColsClass = `lg:col-span-${imageCols}`;
   const textColsClass = `lg:col-span-${12 - imageCols}`;
+  const src = image && image.asset && image.asset.originalFilename;
+  console.log(image);
   return html`
     <section className="py-16 px-5 lg:px-0">
       <div
@@ -25,7 +28,7 @@ export const HighlightBold= ({
           ${image &&
           html`
             <img
-              src="https://via.placeholder.com/800x600"
+              src="${useStatic(src)}"
               alt=""
               className="h-full w-full object-cover"
             />

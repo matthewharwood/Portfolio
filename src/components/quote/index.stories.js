@@ -1,5 +1,4 @@
-import {html} from 'htm/preact';
-import {render} from 'preact-render-to-string';
+import {h} from 'preact';
 
 import {Quote} from './';
 
@@ -16,6 +15,7 @@ const FIXTURE = {
 };
 
 export const Main = () => {
-  const Component = html`<${Quote} ...${FIXTURE}/>`;
-  return render(Component);
+  return (
+      <Quote {...FIXTURE} />
+  )
 };

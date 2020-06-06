@@ -1,7 +1,4 @@
-
-
-import {html} from 'htm/preact';
-import {render} from 'preact-render-to-string';
+import {h} from 'preact';
 
 import {Navigation} from './';
 
@@ -14,6 +11,7 @@ const FIXTURE = {
 };
 
 export const Main = () => {
-  const Component = html`<${Navigation} ...${FIXTURE}/>`;
-  return render(Component);
+  return (
+      <Navigation {...FIXTURE} />
+  )
 };

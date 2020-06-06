@@ -1,5 +1,4 @@
-import {html} from 'htm/preact';
-import {render} from 'preact-render-to-string';
+import {h} from 'preact';
 
 import {PostFooter} from './';
 
@@ -11,6 +10,7 @@ const FIXTURE = {
 };
 
 export const Main = () => {
-  const Component = html`<${PostFooter} ...${FIXTURE}/>`;
-  return render(Component);
+  return (
+      <PostFooter {...FIXTURE} />
+  )
 };

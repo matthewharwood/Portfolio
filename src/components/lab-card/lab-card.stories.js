@@ -1,5 +1,4 @@
-import {html} from 'htm/preact';
-import {render} from 'preact-render-to-string';
+import {h} from 'preact';
 
 import {LabCard} from './lab-card';
 import Data from '../../_data/sanity.json';
@@ -10,6 +9,7 @@ export default {
 export const Main =  () => {
   const props = Data.filter(d => d._type === 'labCard')[0]
   console.log(props);
-  const Component = html`<div style="width: 400px"><${LabCard} ...${props} /></div>`;
-  return render(Component);
+  return (
+      <div style={{width: '400px'}}><LabCard {...props} /></div>
+  )
 };

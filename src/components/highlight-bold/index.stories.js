@@ -1,9 +1,7 @@
-
-
-import {html} from 'htm/preact';
-import {render} from 'preact-render-to-string';
+import {h} from 'preact';
 
 import {HighlightBold} from './';
+import Data from '../../_data/sanity.json';
 
 export default {
   title: 'Highlight Bold'
@@ -17,6 +15,8 @@ const FIXTURE = {
 };
 
 export const Main = () => {
-  const Component = html`<${HighlightBold} ...${FIXTURE}/>`;
-  return render(Component);
+  const props = Data.filter(d => d._type === 'highlightBold')[0];
+  return (
+      <HighlightBold {...props} />
+  )
 };

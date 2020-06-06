@@ -19,25 +19,21 @@ const links = [
     title: 'home',
     href: '/',
     isActive: false,
-    origin: 'origin-bottom-left'
   },
   {
     title: 'Work',
     href: '/work',
     isActive: false,
-    origin: 'origin-center'
   },
   {
     title: 'Lab',
     href: '/lab',
     isActive: false,
-    origin: 'origin-center'
   },
   {
     title: 'Profile',
     href: '/profile',
     isActive: false,
-    origin: 'origin-center'
   },
 ];
 
@@ -46,7 +42,7 @@ const Polymorph = () => {
 
   useLayoutEffect(() => {
     calcActiveLink(links, location.pathname);
-    const {origin, href} = calcActiveLink(links, location.pathname).find(i => Boolean(i.isActive));
+    const {href} = calcActiveLink(links, location.pathname).find(i => Boolean(i.isActive)) || {};
     const isNotPortrait = window.innerWidth/window.innerHeight >= 1;
     const rotateZValue = isNotPortrait ? -(Math.atan(window.innerHeight/window.innerWidth) * 180 / Math.PI) : -30;
     if (href === '/') {

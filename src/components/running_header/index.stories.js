@@ -1,5 +1,4 @@
-import {html} from 'htm/preact';
-import {render} from 'preact-render-to-string';
+import {h} from 'preact';
 
 import {RunningHeader} from './';
 
@@ -16,6 +15,7 @@ const FIXTURE = {
 };
 
 export const Main = () => {
-  const Component = html`<${RunningHeader} ...${FIXTURE}/>`;
-  return render(Component);
+  return (
+      <RunningHeader {...FIXTURE} />
+  )
 };

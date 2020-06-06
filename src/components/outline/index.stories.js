@@ -1,5 +1,4 @@
-import {html} from 'htm/preact';
-import {render} from 'preact-render-to-string';
+import {h} from 'preact';
 
 import {Outline} from './';
 
@@ -15,11 +14,8 @@ const FIXTURE = {
 };
 
 export const Main = () => {
-  const Component = html`<${Outline} ...${FIXTURE}/>`;
-  return render(Component);
+  return (
+      <Outline {...FIXTURE} />
+  )
 };
 
-// export const Empty = () => {
-//   const Component = html`<${Outline} />`;
-//   return render(Component);
-// };

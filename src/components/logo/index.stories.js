@@ -1,8 +1,4 @@
-
-
-import {html} from 'htm/preact';
-import {render} from 'preact-render-to-string';
-
+import {h} from 'preact';
 import {Logo} from './';
 
 export default {
@@ -14,6 +10,7 @@ const FIXTURE = {
 };
 
 export const Main = () => {
-  const Component = html`<${Logo} ...${FIXTURE}/>`;
-  return render(Component);
+  return (
+      <Logo {...FIXTURE} />
+  )
 };

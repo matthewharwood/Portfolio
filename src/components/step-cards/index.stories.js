@@ -1,5 +1,4 @@
-import {html} from 'htm/preact';
-import {render} from 'preact-render-to-string';
+import { h } from 'preact';
 
 import {StepsCards} from './';
 
@@ -48,6 +47,6 @@ const FIXTURE = {
 };
 
 export const Main = () => {
-  const Component = html`<${StepsCards} ...${FIXTURE}/>`;
-  return render(Component);
+
+  return (<StepsCards {...FIXTURE} />)
 };

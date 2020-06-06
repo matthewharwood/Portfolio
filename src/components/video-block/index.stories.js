@@ -1,6 +1,4 @@
-import {html} from 'htm/preact';
-import {render} from 'preact-render-to-string';
-
+import {h} from 'preact';
 import {VideoBlock} from './';
 
 export default {
@@ -14,6 +12,5 @@ const FIXTURE = {
 };
 
 export const Main = () => {
-  const Component = html`<${VideoBlock} ...${FIXTURE}/>`;
-  return render(Component);
+  return (<VideoBlock {...FIXTURE} />)
 };

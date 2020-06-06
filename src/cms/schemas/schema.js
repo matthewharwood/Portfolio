@@ -11,6 +11,7 @@ import video from '../../components/media/video.schema'
 import img from '../../components/media/img.schema';
 import outline from '../../components/outline/outline.schema';
 import summary from '../../components/summary/summary.schema';
+import highlightBold from '../../components/highlight-bold/highlight-bold.schema';
 
 import technology from './technology';
 import person from './person';
@@ -32,6 +33,7 @@ export default createSchema({
     person,
     outline,
     summary,
+    highlightBold,
   ])
 })
 

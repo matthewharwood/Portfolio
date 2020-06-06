@@ -1,6 +1,4 @@
-import {html} from 'htm/preact';
-import {render} from 'preact-render-to-string';
-
+import {h} from 'preact';
 import {PostPagination} from './';
 
 export default {
@@ -15,6 +13,7 @@ const FIXTURE = {
 };
 
 export const Main = () => {
-  const Component = html`<${PostPagination} ...${FIXTURE}/>`;
-  return render(Component);
+  return (
+      <PostPagination {...FIXTURE} />
+  )
 };
