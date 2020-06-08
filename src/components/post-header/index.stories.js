@@ -1,5 +1,4 @@
 import {h} from 'preact';
-
 import {PostHeader} from './';
 
 export default {
@@ -7,14 +6,21 @@ export default {
 };
 
 const FIXTURE = {
-  heading: 'hello world',
-  description: 'description text',
-  subtext: 'subtext text',
-  info: [{heading: 'heading', text: 'text'}],
+  heading: 'Uber.com Performance',
+  description: 'A year long performance audit and refactor of uber.com',
+  subtext: 'performance',
+  info: [
+    {heading: 'Company', values: [{name: 'Uber'}]},
+    {heading: 'Collaborators', values: [{name: 'Ryan Wong'}, {name: 'Wasif Zaman'}]},
+    {
+      heading: 'Technology',
+      values: [{name: 'FusionJS'}, {name: 'ReactJS'}, {name: 'Styletron'}, {name: 'Baseweb'}, {name: 'Webpack'}, {name: 'Cloudinary'}]
+    }
+  ],
 };
 
 export const Main = () => {
   return (
       <PostHeader {...FIXTURE} />
-  )
+  );
 };

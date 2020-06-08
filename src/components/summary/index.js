@@ -8,7 +8,6 @@ export const Summary = ({
   hasBorder = false,
   videos,
 }) => {
-  console.log(AH.VideoCard)
   return html`
     <section className="flex flex-col items-center">
       <div className="container py-16 px-5 lg:px-16 grid grid-cols-6">

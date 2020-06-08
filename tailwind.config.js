@@ -31,6 +31,12 @@ module.exports = {
           ...defaultTheme.fontFamily.sans,
         ]
       },
+      maxHeight: {
+        '0': '0',
+        '1/4': '25vh',
+        '1/2': '50vh',
+        '3/4': '75vh',
+      },
       colors: {
         primary: "var(--color-primary)",
         "primary-lighter": "var(--color-primary-lighter)",
@@ -43,6 +49,7 @@ module.exports = {
         "secondary-active": "var(--color-secondary-active)",
 
         tertiary: "var(--color-tertiary)",
+        "tertiary-lighter": "var(--color-tertiary-lighter)",
         "tertiary-hover": "var(--color-tertiary-hover)",
         "tertiary-active": "var(--color-tertiary-active)",
 

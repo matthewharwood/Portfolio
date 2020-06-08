@@ -7,23 +7,23 @@ export const data = {
     info: [
       {
         heading: "Client",
-        text: "Nike Jordan",
+        values: [{name: "Nike Jordan"}],
       },
       {
         heading: "Agency",
-        text: "AKQA",
+        values: [{name: "AKQA"}],
       },
       {
         heading: "When",
-        text: "Feb 2014 - Mar 2014 (8 weeks)",
+        values: [{name: "Feb 2014 - Mar 2014 (8 weeks)"}],
       },
       {
         heading: "My Role",
-        text: "Developer/Designer",
+        values: [{name: "Developer/Designer"}],
       },
       {
         heading: "Collaborators",
-        text: "z",
+        values: [{name: "Jeffery Qua"}],
       },
     ],
   },

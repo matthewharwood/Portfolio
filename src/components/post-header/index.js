@@ -5,31 +5,38 @@ export const PostHeader = ({ heading, description, subtext, info }) => {
     <section className="bg-black text-tertiary pt-12">
       <div className="container px-5 lg:px-16 py-16">
         <div className="flex flex-col">
-          <span className="text-accent uppercase font-bold">
+          <span className="text-tertiary-lighter uppercase font-bold text-xs tracking-widest">
             ${subtext}
           </span>
-          <h1 className="text-5xl">${heading}</h1>
+          <h1 className="text-5xl font-mono">${heading}</h1>
           <p className="text-xl">${description}</p>
         </div>
-        <div
-          className="grid grid-flow-col grid-cols-1 lg:grid-cols-3 grid-rows-2 border-t mt-5 pt-5"
-        >
-          ${info.map(
-            (infoItem) => html` <${PostHeaderColumn} ...${infoItem} /> `
-          )}
+        <div className="flex border-t mt-5 pt-5">
+          <div
+            className="inline-flex flex-col flex-wrap max-h-1/4"
+          >
+            ${info.map(
+              (infoItem) => html` <${PostHeaderColumn} ...${infoItem} /> `
+            )}
+          </div>
         </div>
       </div>
     </section>
   `;
 };
 
-const PostHeaderColumn = ({ heading, text }) => {
+const PostHeaderColumn = ({ heading, values }) => {
+
+
   return html`
-    <div className="flex flex-col mb-5">
-      <span className="text-sm text-tertiary uppercase font-bold"
+    <div className="mb-5 pr-10">
+      <span className="text-xxs tracking-widest opacity-75 text-tertiary-lighter uppercase font-bold"
         >${heading}</span
       >
-      <span className="italic">${text}</span>
+ 
+      ${values.map(({name}) => {
+        return html`<p className="">${name}</p>`
+      })}
     </div>
   `;
 };
