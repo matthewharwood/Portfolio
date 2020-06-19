@@ -2,21 +2,18 @@ import {html} from 'htm/preact';
 
 const OutlineListItem = (props) => {
   const text = props &&  props.text || 'hello';
-  const height = props && props.isLast ? 'h-0' : 'h-10';
+  const description = props && props.description;
 
   return html`
-    <li className="flex flex-col justify-start">
-      <div className="flex items-center">
-        <div className="h-2 w-2 rounded-full bg-border mr-20"></div>
-        <span
-          className="font-bold uppercase text-primary leading-none text-sm"
-        >
-          ${text}
-        </span>
-      </div>
-      <div
-        className="${height} ml-1 border-l border-dotted my-2 border-border"
-      ></div>
+    <li className="grid grid-flow-row gap-6">
+      <h4
+        className="font-bold capitalize text-primary leading-none text-2xl"
+      >
+        ${text}
+      </h4>
+      <p >
+        ${description}
+      </p>
     </li>
   `;
 };
