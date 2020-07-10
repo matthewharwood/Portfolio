@@ -15,8 +15,13 @@ export default {
     },
     {
       name: 'src',
-      title: 'Video/Image',
+      title: 'Image',
       type: 'image'
+    },
+    {
+      name: 'video',
+      title: 'Video',
+      type: 'string',
     },
     {
       name: 'description',

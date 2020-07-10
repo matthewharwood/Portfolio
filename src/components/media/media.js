@@ -1,11 +1,19 @@
-import {isVideo, Video} from './video';
+import {Video} from './video';
 import {html} from 'htm/preact';
 import {useStatic} from '../../hooks/use_static';
+import {decode} from 'universal-base64';
 
-const Media = ({src = 'sample.jpg', alt = '', classNames = ''}) => {
-  return isVideo(src)
-      ? html`<${Video} className="${classNames}" src=${src} />`
-      : html`<img className="${classNames}" src="${useStatic(src)}" alt="${alt}" />`;
+const Media = ({src, alt = '', classNames = '', video}) => {
+  return video
+      ? html`<${Video} src="${video}" className="${classNames}" />`
+      : html`<${Image} src=${src} className="${classNames}"/>`
 };
 
-export {Media};
+const Image = ({src, alt = '', className = ''}) => {
+
+  const {id} = src && src.asset && src.asset.source && src.asset.source;
+  const atobSrc = JSON.parse(decode(id)).public_id + '.jpg';
+
+  return html`<img className="${className}" src="${atobSrc}" alt="${alt}" />`;
+};
+export {Media, Image};

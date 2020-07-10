@@ -12,7 +12,6 @@ export default {
       name: 'upload',
       title: 'Upload',
       type: 'image',
-
     }
   ]
 };

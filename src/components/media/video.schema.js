@@ -8,5 +8,10 @@ export default {
       title: 'Source',
       type: 'string'
     },
+    {
+      name: 'poster',
+      title: 'Poster',
+      type: 'image'
+    },
   ],
 }

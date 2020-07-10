@@ -18,14 +18,14 @@ const LabCardTags = ({tags}) => {
   );
 };
 
-const LabCard = ({name, href, src, tags, description, alt}) => {
-  const originalFilename = src && src.asset && src.asset.originalFilename;
+const LabCard = ({name, href, src, tags, description, alt, video}) => {
+
   return html`
-  <a className="transition ease-in duration-100 bg-secondary-lighter flex flex-col rounded overflow-hidden shadow text-primary hover:underline hover:shadow-lg m-10 no-underline" href="${href}">
+  <a className="transition cursor-pointer ease-in duration-100 bg-secondary-lighter flex flex-col rounded overflow-hidden shadow text-primary hover:underline hover:shadow-lg m-10 no-underline" href="${href}">
     <div className="lab-cards-aspect-ratio relative">
-        <div className="absolute top-0 left-0 w-full h-full">
-            <${Media} src="${'rorschach/' + originalFilename}" alt="${alt}" />
-        </div>
+      <div className="absolute top-0 left-0 w-full h-full">
+        <${Media} src="${src}" video="${video}" alt="${alt}" />
+      </div>
     </div>
     
     <div className="px-6 py-4">

@@ -8,7 +8,6 @@ export default {
 
 export const Main =  () => {
   const props = Data.filter(d => d._type === 'labCard')[0]
-  console.log(props);
   return (
       <div style={{width: '400px'}}><LabCard {...props} /></div>
   )
