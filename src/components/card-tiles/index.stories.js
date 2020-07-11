@@ -1,33 +1,15 @@
 import {h} from 'preact';
 import {CardTiles} from './';
+import Data from '../../_data/sanity.json';
 
 export default {
   title: 'Card Tiles'
 };
 
-const FIXTURE = {
-  cards: [
-    {
-      image: 'rorschach/r-1.jpg',
-      title: 'title',
-      subtitle: 'text text text'
-    },
-    {
-      image: 'rorschach/r-1.jpg',
-      title: 'title',
-      subtitle: 'text text text'
-    },
-    {
-      image: 'rorschach/r-1.jpg',
-      title: 'title',
-      subtitle: 'text text text'
-    }
-  ]
-
-}
 
 export const Main = () => {
+  const props = Data.filter(d => d._type === 'cardTiles')[0];
   return (
-      <CardTiles {...FIXTURE} />
+      <CardTiles {...props} />
   )
 };

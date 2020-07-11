@@ -1,7 +1,6 @@
 import {h} from 'preact';
 
 import {CardTile} from './';
-import {CardTiles} from '../card-tiles';
 
 export default {
   title: 'Card Tile'
@@ -29,6 +28,6 @@ const FIXTURE = {
 
 export const Main = () => {
   return (
-      <CardTiles {...FIXTURE} />
+      <CardTile {...FIXTURE} />
   )
 };
