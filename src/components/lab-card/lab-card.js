@@ -27,7 +27,7 @@ const LabCard = ({name, href, src, tags, description, alt, video}) => {
         <${Media} src="${src}" video="${video}" alt="${alt}" />
       </div>
     </div>
-    
+
     <div className="px-6 py-4">
       <${LabCardName} name="${name}" />
       <${LabCardDescription} description="${description}" />

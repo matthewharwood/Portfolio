@@ -10,10 +10,9 @@ const Media = ({src, alt = '', classNames = '', video}) => {
 };
 
 const Image = ({src, alt = '', className = ''}) => {
-
   const {id} = src && src.asset && src.asset.source && src.asset.source;
   const atobSrc = JSON.parse(decode(id)).public_id + '.jpg';
 
-  return html`<img className="${className}" src="${atobSrc}" alt="${alt}" />`;
+  return html`<img className="${className}" src="${useStatic(atobSrc)}" alt="${alt}" />`;
 };
 export {Media, Image};
