@@ -1,4 +1,5 @@
 import { html } from "htm/preact";
+import {Image} from '../media';
 
 export const StepsCards = ({ steps }) => {
   const colorsArray = [
@@ -58,7 +59,7 @@ const StepCard = ({ data, color }) => {
       className="bg-secondary-lighter grid grid-cols-4 gap-10 p-5 border-t-4 ${borderColor} shadow"
     >
       <div className="col-span-1">
-        <img src="${data.image}" alt="" />
+        <${Image} src="${data.src}" alt="" />
       </div>
       <div className="col-span-3 flex flex-col text-primary-lighter">
         <h5 className="font-bold uppercase">${data.title}</h5>

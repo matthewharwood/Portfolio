@@ -12,6 +12,9 @@ import outline from '../../components/outline/outline.schema';
 import summary from '../../components/summary/summary.schema';
 import highlightBold from '../../components/highlight-bold/highlight-bold.schema';
 import {cardTile, cardTiles} from '../../components/card-tiles/card-tiles.schema';
+import {stepCard, stepCards} from '../../components/step-cards/step-cards.schema';
+import headline from '../../components/headline/headline.schema';
+import highlight from '../../components/highlight/highlight.schema';
 import technology from './technology';
 import person from './person';
 import cloudinary from './cloudinary';
@@ -34,7 +37,11 @@ export default createSchema({
     summary,
     highlightBold,
     cardTile,
-    cardTiles
+    cardTiles,
+    stepCard,
+    stepCards,
+    headline,
+    highlight,
   ])
 });
 

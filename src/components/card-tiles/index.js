@@ -28,6 +28,7 @@ export const CardTiles = ({ cards }) => {
           className="lg:col-start-2 col-span-3 lg:col-span-2 grid grid-cols-1 lg:grid-cols-2 gap-10"
         >
           ${cards.map((card) => {
+            console.log(card);
             return html`<${CardTile} ...${card} />`
           })}
         </div>

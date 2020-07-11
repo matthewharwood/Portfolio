@@ -1,6 +1,7 @@
 import { h } from 'preact';
 
 import {StepsCards} from './';
+import Data from '../../_data/sanity.json';
 
 export default {
   title: 'Step Cards'
@@ -47,6 +48,6 @@ const FIXTURE = {
 };
 
 export const Main = () => {
-
-  return (<StepsCards {...FIXTURE} />)
+  const props = Data.filter(d => d._type === 'stepCards')[0];
+  return (<StepsCards {...props} />)
 };

@@ -9,6 +9,7 @@ export default {
 
 export const Main = () => {
   const props = Data.filter(d => d._type === 'cardTiles')[0];
+  console.log(props);
   return (
       <CardTiles {...props} />
   )
