@@ -1,5 +1,6 @@
 import {h} from 'preact';
 import {PostHeader} from './';
+import {seed} from '../../_data/seed-data';
 
 export default {
   title: 'Post Header'
@@ -20,7 +21,9 @@ const FIXTURE = {
 };
 
 export const Main = () => {
+  const props = seed('postHeader');
+  console.log(props);
   return (
-      <PostHeader {...FIXTURE} />
+      <PostHeader {...props} />
   );
 };

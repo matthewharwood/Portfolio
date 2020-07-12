@@ -1,11 +1,4 @@
-/**
- *   isImageRight,
- imageCols = 6,
- subtitle,
- title,
- text,
- image,
- */
+
 export default {
   name: 'highlightBold',
   title: 'Highlight Bold',

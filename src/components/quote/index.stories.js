@@ -1,21 +1,15 @@
 import {h} from 'preact';
 
 import {Quote} from './';
+import {seed} from '../../_data/seed-data';
 
 export default {
   title: 'Quote'
 };
 
-const FIXTURE = {
-  hasBorder: true,
-  quote: 'This is an awesome quote',
-  person: 'person name',
-  title: 'Senior software engineer',
-  date: 'Dec 2019',
-};
-
 export const Main = () => {
+  const props = seed('quote');
   return (
-      <Quote {...FIXTURE} />
+      <Quote {...props} />
   )
 };
