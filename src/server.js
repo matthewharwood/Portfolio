@@ -18,6 +18,7 @@ import {UberDotcomPerformance} from './pages/work/uber-dotcom-performance';
 
 import {Rorschach} from './pages/lab/rorschach';
 import {withFooterAndRouter} from './layouts/with_footer_and_router';
+import {seed} from './_data/seed-data';
 
 const liveReloadServer = livereload.createServer();
 
@@ -51,7 +52,9 @@ server.get('/work', function (req, res) {
 });
 
 server.get('/work/nike-jordan-editor', function (req, res) {
-  res.send(renderPage('Nike Jordan Editor', withFooterAndRouter({title: 'nike-jordan-editor'})(WorkNikeJordanEditor)));
+  const props = seed('page');
+
+  res.send(renderPage('Nike Jordan Editor', withFooterAndRouter({title: 'nike-jordan-editor'})(() => WorkNikeJordanEditor(props))));
 });
 
 server.get('/work/marketing-pathfinder', function (req, res) {

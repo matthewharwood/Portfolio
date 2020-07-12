@@ -21,6 +21,7 @@ import quote from '../../components/quote/quote.schema';
 import technology from './technology';
 import person from './person';
 import cloudinary from './cloudinary';
+import {cardTilesVertical} from '../../components/card-tiles-vertical/card-tiles-vertical.schema';
 
 export default createSchema({
   name: 'default',
@@ -41,6 +42,7 @@ export default createSchema({
     highlightBold,
     cardTile,
     cardTiles,
+    cardTilesVertical,
     stepCard,
     stepCards,
     headline,

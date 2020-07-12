@@ -30,7 +30,16 @@ export default {
       of: [
         { type: 'video' },
         { type: 'interest' },
+        { type: 'postHeader'},
+        { type: 'summary'},
         { type: 'outline' },
+        { type: 'highlight'},
+        { type: 'highlightBold'},
+        { type: 'quote'},
+        { type: 'headline'},
+        { type: 'cardTiles'},
+        { type: 'stepCards'},
+        { type: 'cardTilesVertical'},
       ],
     },
   ]
