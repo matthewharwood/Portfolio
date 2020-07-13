@@ -1,11 +1,14 @@
 import { html } from "htm/preact";
 import { AH } from "../../components/component_map";
 import {PostHeader} from '../../components/post-header';
+import {Summary} from '../../components/summary';
 
 
 const WorkNikeJordanEditor = (props) => {
   const Render = {
     'postHeader': PostHeader,
+    'summary': Summary
+
   }
 
   return html`

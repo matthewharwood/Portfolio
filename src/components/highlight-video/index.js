@@ -1,12 +1,12 @@
 import { html } from "htm/preact";
-import {useStatic} from '../../hooks/use_static';
+import {Media} from '../media';
 
-export const VideoBlock = ({ videoSrc, title, text }) => {
+export const HightlightVideo = ({ src, title, text, poster }) => {
   return html`
     <section className="py-16">
       <div className="container sm:px-5 lg:px-16 grid grid-cols-3 gap-10">
         <div className="col-span-3 lg:col-span-2">
-          <video src="${useStatic(videoSrc)}" className="h-full w-full" controls></video>
+          <${Media} src="${poster}" video="${src}" className="h-full w-full" controls></video>
         </div>
         <div className="col-span-3 lg:col-span-1 flex flex-col px-5 sm:px-0">
           <h5 className="font-bold uppercase text-primary-lighter">${title}</h5>

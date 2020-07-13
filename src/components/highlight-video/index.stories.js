@@ -1,8 +1,9 @@
 import {h} from 'preact';
-import {VideoBlock} from './';
+import {HighlightVideo} from './';
+import {seed} from '../../_data/seed-data';
 
 export default {
-  title: 'VideoBlock'
+  title: 'Highlight Video'
 };
 
 const FIXTURE = {
@@ -12,5 +13,6 @@ const FIXTURE = {
 };
 
 export const Main = () => {
-  return (<VideoBlock {...FIXTURE} />)
+  const props = seed('video');
+  return (<HighlightVideo {...props} />)
 };

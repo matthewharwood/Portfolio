@@ -9,7 +9,7 @@ import labCard from '../../components/lab-card/lab-card.schema';
 import video from '../../components/media/video.schema';
 import img from '../../components/media/img.schema';
 import outline from '../../components/outline/outline.schema';
-import summary from '../../components/summary/summary.schema';
+import summary, {summaryMedia} from '../../components/summary/summary.schema';
 import highlightBold from '../../components/highlight-bold/highlight-bold.schema';
 import {cardTile, cardTiles} from '../../components/card-tiles/card-tiles.schema';
 import {stepCard, stepCards} from '../../components/step-cards/step-cards.schema';
@@ -22,6 +22,7 @@ import technology from './technology';
 import person from './person';
 import cloudinary from './cloudinary';
 import {cardTilesVertical} from '../../components/card-tiles-vertical/card-tiles-vertical.schema';
+import HighlightVideo from '../../components/highlight-video/highlight-video.schema';
 
 export default createSchema({
   name: 'default',
@@ -49,7 +50,9 @@ export default createSchema({
     highlight,
     quote,
     info,
-    postHeader
+    postHeader,
+    summaryMedia,
+    HighlightVideo,
   ])
 });
 
