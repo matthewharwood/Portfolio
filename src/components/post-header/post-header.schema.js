@@ -33,6 +33,7 @@ export const info = {
     }
   ]
 }
+
 export default {
   name: 'postHeader',
   title: 'PostHeader',
