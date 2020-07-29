@@ -23,11 +23,14 @@ import person from './person';
 import cloudinary from './cloudinary';
 import {cardTilesVertical} from '../../components/card-tiles-vertical/card-tiles-vertical.schema';
 import HighlightVideo from '../../components/highlight-video/highlight-video.schema';
-
+import company from './company';
+import dateSpan from './date-from-to';
+import summaryVideoGrid from '../../components/summary-video-grid/summary.schema';
 export default createSchema({
   name: 'default',
   types: schemaTypes.concat([
     img,
+    dateSpan,
     video,
     route,
     page,
@@ -53,6 +56,8 @@ export default createSchema({
     postHeader,
     summaryMedia,
     HighlightVideo,
+    company,
+    summaryVideoGrid,
   ])
 });
 

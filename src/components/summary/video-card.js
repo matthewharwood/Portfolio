@@ -1,6 +1,7 @@
 import {html} from 'htm/preact';
 import {useStatic} from '../../hooks/use_static';
 import {useState} from 'preact/hooks';
+import {Image} from '../media';
 
 const VideoCard = (props) => {
 
@@ -10,11 +11,7 @@ const VideoCard = (props) => {
   return html`
     <div className="w-full relative" onClick="${toggle}">
       <div className="relative">
-        <img
-          src="${useStatic(poster)}"
-          alt=""
-          className="h-64 w-full object-cover"
-        />
+        <${Image} src="${props.poster}"/>
         <h5 className="font-bold uppercase text-tertiary mt-2">${title}</h5>
       </div>
       <div

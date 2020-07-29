@@ -28,7 +28,9 @@ export const info = {
       title: 'Values',
       type: 'array',
       of: [
-        {type: 'reference', to: [{type: 'person'}, {type: 'technology'}]}
+        {name: 'person', type: 'reference', to: [{type: 'person'}]},
+        {name: 'technology',  type: 'reference', to: [{type: 'technology'}]},
+        {name: 'company',  type: 'reference', to: [{type: 'company'}]},
       ]
     }
   ]

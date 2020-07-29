@@ -11,12 +11,12 @@ export const Summary = ({
   return html`
     <section className="flex flex-col items-center">
       <div className="container py-16 px-5 lg:px-16 grid grid-cols-6">
-        <div className="col-span-6 lg:col-span-5 flex flex-col">
-          <span className="text-2xl text-accent">${number}</span>
-          <h2 className="text-5xl">${heading}</h2>
-          <p className="mt-5 leading-loose">${text}</p>
+        <div className="col-span-6 lg:col-span-4 flex flex-col">
+          <span className="text-xl text-accent font-mono">${number}</span>
+          <h2 className="text-5xl font-mono">${heading}</h2>
+          <p className="mt-5 leading-loose text-xl">${text}</p>
         </div>
-        <div className="lg:row-start-2 col-span-6 lg:col-span-5 grid grid-cols-1 lg:grid-cols-2 gap-10 mt-16">
+        <div className="lg:row-start-2 col-span-6 lg:col-span-4 grid grid-cols-1 lg:grid-cols-2 gap-10 mt-16">
           ${videos && videos.map(p => html`<${AH.VideoCard} ..${p} />`)}
         </div>
       </div>
