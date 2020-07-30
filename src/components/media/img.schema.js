@@ -6,7 +6,7 @@ export default {
     {
       name: 'src',
       title: 'Source',
-      type: 'string'
+      type: 'image'
     },
     {
       name: 'alt',

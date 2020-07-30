@@ -16,14 +16,7 @@ export const Summary = ({
           <h2 className="text-5xl font-mono">${heading}</h2>
           <p className="mt-5 leading-loose text-xl">${text}</p>
         </div>
-        <div className="lg:row-start-2 col-span-6 lg:col-span-4 grid grid-cols-1 lg:grid-cols-2 gap-10 mt-16">
-          ${videos && videos.map(p => html`<${AH.VideoCard} ..${p} />`)}
-        </div>
       </div>
-      ${hasBorder &&
-      html` <div className="container px-5 lg:px-16 w-full">
-        <div className="h-px w-full bg-border"></div>
-      </div>`}
     </section>
   `;
 };

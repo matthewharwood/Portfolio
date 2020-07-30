@@ -10,29 +10,6 @@
 };
  */
 
-export const summaryMedia = {
-  name: 'summaryMedia',
-  title: 'Summary Media',
-  type: 'document',
-  fields: [
-    {
-      name: 'poster',
-      title: 'poster',
-      type: 'image'
-    },
-    {
-      name: 'title',
-      title: 'title',
-      type: 'string',
-    },
-    {
-      name: 'video',
-      title: 'video',
-      type: 'string'
-    }
-  ]
-};
-
 export default {
   name: 'summary',
   title: 'Summary',
@@ -58,14 +35,6 @@ export default {
       name: 'alt',
       title: 'Alt',
       type: 'string'
-    },
-    {
-      name: 'videos',
-      title: 'Videos',
-      type: 'array',
-      of: [
-          {type: 'summaryMedia'}
-      ],
     },
   ]
 }

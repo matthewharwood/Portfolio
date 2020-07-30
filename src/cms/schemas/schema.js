@@ -9,7 +9,7 @@ import labCard from '../../components/lab-card/lab-card.schema';
 import video from '../../components/media/video.schema';
 import img from '../../components/media/img.schema';
 import outline from '../../components/outline/outline.schema';
-import summary, {summaryMedia} from '../../components/summary/summary.schema';
+import summary from '../../components/summary/summary.schema';
 import highlightBold from '../../components/highlight-bold/highlight-bold.schema';
 import {cardTile, cardTiles} from '../../components/card-tiles/card-tiles.schema';
 import {stepCard, stepCards} from '../../components/step-cards/step-cards.schema';
@@ -25,7 +25,7 @@ import {cardTilesVertical} from '../../components/card-tiles-vertical/card-tiles
 import HighlightVideo from '../../components/highlight-video/highlight-video.schema';
 import company from './company';
 import dateSpan from './date-from-to';
-import summaryVideoGrid from '../../components/summary-video-grid/summary.schema';
+
 export default createSchema({
   name: 'default',
   types: schemaTypes.concat([
@@ -54,10 +54,8 @@ export default createSchema({
     quote,
     info,
     postHeader,
-    summaryMedia,
     HighlightVideo,
     company,
-    summaryVideoGrid,
   ])
 });
 
