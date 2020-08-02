@@ -25,7 +25,9 @@ import {cardTilesVertical} from '../../components/card-tiles-vertical/card-tiles
 import HighlightVideo from '../../components/highlight-video/highlight-video.schema';
 import company from './company';
 import dateSpan from './date-from-to';
-
+import videoCard from '../../components/video-card/video-card.schema';
+import videoCardGrid from '../../components/video-card-grid/video-card-grid.schema';
+import customField from './custom-field';
 export default createSchema({
   name: 'default',
   types: schemaTypes.concat([
@@ -56,6 +58,10 @@ export default createSchema({
     postHeader,
     HighlightVideo,
     company,
+    customField,
+    videoCard,
+    videoCardGrid,
+
   ])
 });
 

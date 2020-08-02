@@ -1,12 +1,12 @@
 import { html } from "htm/preact";
 
-export const PostHeader = ({ heading, description, subtext, info }) => {
+export const PostHeader = ({ heading, description, tag, info }) => {
   return html`
     <section className="bg-black text-tertiary pt-12">
       <div className="container px-5 lg:px-16 py-16">
         <div className="flex flex-col">
           <span className="text-tertiary-lighter uppercase font-bold text-xs tracking-widest">
-            ${subtext}
+            ${tag.name}
           </span>
           <h1 className="text-3xl lg:text-5xl pb-4 md:p-0 font-mono leading-normal">${heading}</h1>
           <p className="text-xl">${description}</p>

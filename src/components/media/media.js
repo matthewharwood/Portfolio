@@ -5,7 +5,7 @@ import {decode} from 'universal-base64';
 
 const Media = ({src, alt = '', classNames = '', video}) => {
   return video
-      ? html`<${Video} src="${video}" className="${classNames}" />`
+      ? html`<${Video} src="${video}" className="${classNames}"  />`
       : html`<${Image} src=${src} className="${classNames}"/>`
 };
 

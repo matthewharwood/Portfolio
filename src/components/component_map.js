@@ -7,7 +7,7 @@ import {Polymorph} from './polymorph';
 import {DateCounter} from './post-footer/date-counter';
 import {Span} from './logo/span';
 import {ThemeChange} from './post-footer/theme-change';
-import {VideoCard} from './summary/video-card';
+import {VideoCard} from './video-card';
 
 
 export const COMPONENT_MAP = {
@@ -18,7 +18,7 @@ export const COMPONENT_MAP = {
   DateCounter,
   Span,
   ThemeChange,
-  VideoCard
+  VideoCard,
 }
 
 const AH = {};

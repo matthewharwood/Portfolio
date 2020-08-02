@@ -1,14 +1,14 @@
 import { html } from "htm/preact";
-import { AH } from "../../components/component_map";
 import {PostHeader} from '../../components/post-header';
 import {Summary} from '../../components/summary';
+import {VideoCardGrid} from '../../components/video-card-grid';
 
 
 const WorkNikeJordanEditor = (props) => {
   const Render = {
     'postHeader': PostHeader,
-    'summary': Summary
-
+    'summary': Summary,
+    'videoCardGrid': VideoCardGrid
   }
 
   return html`

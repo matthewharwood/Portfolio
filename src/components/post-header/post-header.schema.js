@@ -31,6 +31,7 @@ export const info = {
         {name: 'person', type: 'reference', to: [{type: 'person'}]},
         {name: 'technology',  type: 'reference', to: [{type: 'technology'}]},
         {name: 'company',  type: 'reference', to: [{type: 'company'}]},
+        {name: 'customField', title: 'Custom Field', type: 'customField'},
       ]
     }
   ]
@@ -42,6 +43,11 @@ export default {
   type: 'document',
   fields: [
     {
+      name: 'tag',
+      title: 'Tag',
+      type: 'tag'
+    },
+    {
       name: 'heading',
       title: 'Heading',
       type: 'string'
@@ -49,11 +55,6 @@ export default {
     {
       name: 'description',
       title: 'Description',
-      type: 'string'
-    },
-    {
-      name: 'subtext',
-      title: 'Subtext',
       type: 'string'
     },
     {

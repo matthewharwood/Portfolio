@@ -99,6 +99,9 @@ body {
 .invert-0 {
   filter: invert(0);
 }
+.grayscale {
+  filter: grayscale(100%);
+}
 .lab-cards-aspect-ratio {
   height: 0;
   overflow: hidden;

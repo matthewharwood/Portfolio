@@ -40,6 +40,7 @@ export default {
         { type: 'cardTiles'},
         { type: 'stepCards'},
         { type: 'cardTilesVertical'},
+        { type: 'videoCardGrid'},
       ],
     },
   ]
