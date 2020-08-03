@@ -1,7 +1,7 @@
 import { html } from "htm/preact";
 import {Media} from '../media';
 
-export const HightlightVideo = ({ src, title, text, poster }) => {
+export const HighlightVideo = ({ src, title, text, poster }) => {
   return html`
     <section className="py-16">
       <div className="container sm:px-5 lg:px-16 grid grid-cols-3 gap-10">

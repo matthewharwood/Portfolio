@@ -6,8 +6,7 @@ const VideoCard = (props) => {
   const {poster, title = 'sample', videoSrc = 'rorschach/rorschach.mp4'} = props;
   const [state, update] = useState(false);
   const toggle = () => update(!state);
-  console.log(state);
-  console.log(props)
+
   return html`
     <div className="w-full relative cursor-pointer group text-gray-800 hover:text-gray-700 transition duration-300 ease-in-out transition-opacity" onClick="${toggle}">
       <div className="relative">
@@ -26,14 +25,14 @@ const VideoCard = (props) => {
     </div>
     ${state && (
        html`<div className="${state ? 'block fixed inset-0 z-10 bg-primary' : 'hidden'}">
-        <button className="fixed right-6 top-24 z-10 py-2 px-4 rounded" onClick="${toggle}">
+        <button className="fixed right-6 top-24 z-10 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick="${toggle}">
          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M36 14.1L33.9 12L24 21.9L14.1 12L12 14.1L21.9 24L12 33.9L14.1 36L24 26.1L33.9 36L36 33.9L26.1 24L36 14.1Z" fill="white"/>
          </svg>
 
         </button>
         <div className="h-0 overflow-hidden pt-16/9">
-          <div className="left-0 absolute w-full h-full">
+          <div className="left-0 top-20 bottom-2 absolute w-full h-full">
             <${Video} src="${videoSrc}" className="flex h-full justify-center items-center mx-auto w-full"/>
           </div>
         </div>

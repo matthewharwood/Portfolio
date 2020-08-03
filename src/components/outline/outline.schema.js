@@ -12,7 +12,12 @@ export default {
       name: 'steps',
       title: 'Steps',
       type: 'array',
-      of: [{type: 'string'}],
+      of: [{type: 'customField'}],
     },
+    {
+      name: 'hasDescriptions',
+      title: 'Has Description?',
+      type: 'boolean',
+    }
   ]
 }

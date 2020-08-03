@@ -2,15 +2,21 @@ import { html } from "htm/preact";
 import {PostHeader} from '../../components/post-header';
 import {Summary} from '../../components/summary';
 import {VideoCardGrid} from '../../components/video-card-grid';
+import {Outline} from '../../components/outline';
+import {Highlight} from '../../components/highlight';
 
 
 const WorkNikeJordanEditor = (props) => {
   const Render = {
     'postHeader': PostHeader,
     'summary': Summary,
-    'videoCardGrid': VideoCardGrid
+    'videoCardGrid': VideoCardGrid,
+    'outline': Outline,
+    'highlight': Highlight,
   }
-
+  console.log('((('.repeat(10), '\n');
+  console.log(JSON.stringify(props, null, 2))
+  console.log(')))'.repeat(10), '\n');
   return html`
     ${props.content.map(c => {
         return html`

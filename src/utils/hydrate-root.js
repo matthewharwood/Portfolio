@@ -12,7 +12,7 @@ class HydrateRoot extends HTMLElement {
     let $end = this;
     let data = {};
 
-    whenVisible(this, () => {
+    // whenVisible(this, () => {
       while (($end = $end.nextSibling)) {
         if (
             $end.nodeName === "SCRIPT" &&
@@ -32,7 +32,7 @@ class HydrateRoot extends HTMLElement {
       };
       const Component = AH[this.getAttribute("name")];
       hydrate(h(Component, data.props), this.root);
-    });
+    // });
   }
 }
 export {HydrateRoot};

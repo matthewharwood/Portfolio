@@ -7,10 +7,10 @@ const OutlineList = (props) => {
   return html`
     <ul className="grid grid-rows gap-16">
       ${steps.map((step, i) => {
-          const text = step && step.text || 'Default Text';
+          const name = step && step.name || 'Default Text';
           const description = step && step.description;
           return html`
-            <${OutlineListItem} text="${text}" description="${description}" isLast="${i === props.steps.length - 1}"/>
+            <${OutlineListItem} name="${name}" description="${description}" isLast="${i === props.steps.length - 1}"/>
           `;
         }
       )}

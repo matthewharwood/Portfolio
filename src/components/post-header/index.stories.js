@@ -22,8 +22,8 @@ const FIXTURE = {
 
 export const Main = () => {
   const props = seed('postHeader');
-  console.log(props);
+
   return (
-      <PostHeader {...props} />
+      <PostHeader {...FIXTURE} />
   );
 };

@@ -1,7 +1,7 @@
 import {html} from 'htm/preact';
 
 const OutlineListItem = (props) => {
-  const text = props &&  props.text || 'hello';
+  const name = props &&  props.name || 'hello';
   const description = props && props.description;
 
   return html`
@@ -9,7 +9,7 @@ const OutlineListItem = (props) => {
       <h4
         className="font-bold capitalize text-primary leading-none text-2xl"
       >
-        ${text}
+        ${name}
       </h4>
       <p >
         ${description}
