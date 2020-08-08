@@ -1,24 +1,11 @@
+import {Header} from '../_parts/header';
 
 export default {
   name: 'highlight',
   title: 'Highlight',
   type: 'document',
   fields: [
-    {
-      name: 'title',
-      title: 'Title',
-      type: 'string'
-    },
-    {
-      name: 'subtitle',
-      title: 'Subtitle',
-      type: 'string'
-    },
-    {
-      name: 'text',
-      title: 'Text',
-      type: 'text'
-    },
+    ...Header,
     {
       name: 'image',
       title: 'Image',

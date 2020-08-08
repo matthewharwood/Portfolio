@@ -8,7 +8,6 @@ import dot from "dotty";
 
 const main = async () => {
   const {result} = await axios.get('https://0eq54p9g.api.sanity.io/v1/data/query/production?query=*').then(d => d.data);
-  console.log(result);
   let final = [...result];
   const unwrap = () => {
     const dotKeys = dot.deepKeys(result);
@@ -17,10 +16,8 @@ const main = async () => {
       const id = dot.get(result, path);
       const parent = path.slice(0, -1);
 
-      console.log(id, path, parent);
       for (let d of result) {
         if (d._id === id) {
-          console.log(d);
           dot.put(final, parent, d);
         }
       }
@@ -30,7 +27,7 @@ const main = async () => {
   const SEED_PATH = join(__dirname, '_data', 'sanity.json');
   try {
     unwrap()
-    await fs.writeJson(SEED_PATH, final);
+    await fs.writeJson(SEED_PATH, result);
     console.log('success!')
   } catch (err) {
     console.error(err)

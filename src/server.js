@@ -54,6 +54,9 @@ server.get('/work', function (req, res) {
 server.get('/work/nike-jordan-editor', function (req, res) {
   const props = seed('page');
 
+  console.log('props'.repeat(100), '\n')
+  console.log(props);
+  console.log('props'.repeat(100), '\n')
   res.send(renderPage('Nike Jordan Editor', withFooterAndRouter({title: 'nike-jordan-editor'})(() => WorkNikeJordanEditor(props))));
 });
 

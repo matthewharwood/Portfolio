@@ -4,6 +4,7 @@ import {Summary} from '../../components/summary';
 import {VideoCardGrid} from '../../components/video-card-grid';
 import {Outline} from '../../components/outline';
 import {Highlight} from '../../components/highlight';
+import {HighlightBold} from '../../components/highlight-bold';
 
 
 const WorkNikeJordanEditor = (props) => {
@@ -13,10 +14,9 @@ const WorkNikeJordanEditor = (props) => {
     'videoCardGrid': VideoCardGrid,
     'outline': Outline,
     'highlight': Highlight,
+    'highlightBold': HighlightBold,
   }
-  console.log('((('.repeat(10), '\n');
-  console.log(JSON.stringify(props, null, 2))
-  console.log(')))'.repeat(10), '\n');
+
   return html`
     ${props.content.map(c => {
         return html`

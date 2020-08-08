@@ -1,19 +1,11 @@
+import {Header} from '../_parts/header';
 
 export default {
   name: 'HighlightVideo',
   title: 'Highlight Video',
   type: 'document',
   fields: [
-    {
-      name: 'title',
-      title: 'Title',
-      type: 'string'
-    },
-    {
-      name: 'text',
-      title: 'Text',
-      type: 'text'
-    },
+    ...Header,
     {
       name: 'video',
       title: 'Video',
