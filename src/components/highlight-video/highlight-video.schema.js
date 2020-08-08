@@ -1,4 +1,4 @@
-import {Header} from '../_parts/header';
+import {Header, UI} from '../_parts/header';
 
 export default {
   name: 'HighlightVideo',
@@ -10,6 +10,6 @@ export default {
       name: 'video',
       title: 'Video',
       type: 'video',
-    }
+    },
   ]
 }

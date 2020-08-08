@@ -1,4 +1,4 @@
-import {Header} from '../_parts/header';
+import {Header, UI} from '../_parts/header';
 
 export default {
   name: 'highlightBold',
@@ -6,5 +6,13 @@ export default {
   type: 'document',
   fields: [
     ...Header,
+    {
+      name: 'ui',
+      title: 'UI',
+      type: 'object',
+      fields: [
+        ...UI,
+      ]
+    }
   ]
 }

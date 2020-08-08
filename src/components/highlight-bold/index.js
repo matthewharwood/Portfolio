@@ -4,11 +4,13 @@ export const HighlightBold= ({
   number,
   title,
   text,
+  ui,
 }) => {
+  const applyBgColor = ui && ui.hasBackground ? 'bg-tertiary' : '';
   return html`
     <section className="py-16 px-5 lg:px-0">
       <div
-        className="container px-5 lg:px-16 grid grid-cols-12 lg:gap-10 py-16"
+        className="container px-5 lg:px-16 grid grid-cols-12 lg:gap-10 py-16 ${applyBgColor}"
       >
         <div className="flex flex-col col-span-8">
           <span className="text-2xl text-accent font-mono">${number}</span>

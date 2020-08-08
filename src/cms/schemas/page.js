@@ -1,3 +1,27 @@
+import {UI} from '../../components/_parts/header';
+
+const Content = {
+  name: 'content',
+  title: 'Content',
+  type: 'array',
+  of: [
+    {type: 'video'},
+    {type: 'interest'},
+    {type: 'postHeader'},
+    {type: 'summary'},
+    {type: 'outline'},
+    {type: 'highlight'},
+    {type: 'highlightBold'},
+    {type: 'quote'},
+    {type: 'headline'},
+    {type: 'cardTiles'},
+    {type: 'stepCards'},
+    {type: 'cardTilesVertical'},
+    {type: 'videoCardGrid'},
+  ],
+};
+
+
 export default {
   name: 'page',
   title: 'Page',
@@ -7,7 +31,7 @@ export default {
       name: 'route',
       title: 'Route',
       type: 'reference',
-      to: { type: 'route' },
+      to: {type: 'route'},
     },
     {
       name: 'slug',
@@ -24,24 +48,18 @@ export default {
       type: 'string',
     },
     {
-      name: 'content',
-      title: 'Content',
+      name: 'section',
+      title: 'Section',
       type: 'array',
-      of: [
-        { type: 'video' },
-        { type: 'interest' },
-        { type: 'postHeader'},
-        { type: 'summary'},
-        { type: 'outline' },
-        { type: 'highlight'},
-        { type: 'highlightBold'},
-        { type: 'quote'},
-        { type: 'headline'},
-        { type: 'cardTiles'},
-        { type: 'stepCards'},
-        { type: 'cardTilesVertical'},
-        { type: 'videoCardGrid'},
-      ],
+      of: [{
+        name: 'wrapper',
+        title: 'Wrapper',
+        type: 'object',
+        fields: [
+          Content,
+        ]
+      }],
     },
+    Content,
   ]
-}
+};
