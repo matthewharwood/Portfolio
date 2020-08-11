@@ -47,16 +47,16 @@
     semver "^5.4.1"
     source-map "^0.5.0"
 
-"@babel/core@^7.11.0":
-  version "7.11.0"
-  resolved "https://unpm.uberinternal.com/@babel%2fcore/-/core-7.11.0.tgz#73b9c33f1658506887f767c26dae07798b30df76"
-  integrity sha1-c7nDPxZYUGiH92fCba4HeYsw33Y=
+"@babel/core@^7.11.1":
+  version "7.11.1"
+  resolved "https://unpm.uberinternal.com/@babel%2fcore/-/core-7.11.1.tgz#2c55b604e73a40dc21b0e52650b11c65cf276643"
+  integrity sha1-LFW2BOc6QNwhsOUmULEcZc8nZkM=
   dependencies:
     "@babel/code-frame" "^7.10.4"
     "@babel/generator" "^7.11.0"
     "@babel/helper-module-transforms" "^7.11.0"
     "@babel/helpers" "^7.10.4"
-    "@babel/parser" "^7.11.0"
+    "@babel/parser" "^7.11.1"
     "@babel/template" "^7.10.4"
     "@babel/traverse" "^7.11.0"
     "@babel/types" "^7.11.0"
@@ -336,6 +336,11 @@
   version "7.11.0"
   resolved "https://unpm.uberinternal.com/@babel%2fparser/-/parser-7.11.0.tgz#a9d7e11aead25d3b422d17b2c6502c8dddef6a5d"
   integrity sha1-qdfhGurSXTtCLReyxlAsjd3val0=
+
+"@babel/parser@^7.11.1":
+  version "7.11.3"
+  resolved "https://unpm.uberinternal.com/@babel%2fparser/-/parser-7.11.3.tgz#9e1eae46738bcd08e23e867bab43e7b95299a8f9"
+  integrity sha1-nh6uRnOLzQjiPoZ7q0PnuVKZqPk=
 
 "@babel/plugin-proposal-async-generator-functions@^7.10.4":
   version "7.10.4"
@@ -9300,10 +9305,10 @@ preact-render-to-string@^5.1.10:
   dependencies:
     pretty-format "^3.8.0"
 
-preact@^10.4.6:
-  version "10.4.6"
-  resolved "https://unpm.uberinternal.com/preact/-/preact-10.4.6.tgz#86cc43396e4bdd755726a2b4b1f0529e78067cd3"
-  integrity sha1-hsxDOW5L3XVXJqK0sfBSnngGfNM=
+preact@^10.4.7:
+  version "10.4.7"
+  resolved "https://unpm.uberinternal.com/preact/-/preact-10.4.7.tgz#5a530d34b4ba45f38234be8b1b3fe910098a165f"
+  integrity sha1-WlMNNLS6RfOCNL6LGz/pEAmKFl8=
 
 prelude-ls@~1.1.2:
   version "1.1.2"
@@ -11170,10 +11175,10 @@ symbol.prototype.description@^1.0.0:
     es-abstract "^1.17.0-next.1"
     has-symbols "^1.0.1"
 
-tailwindcss@^1.6.1:
-  version "1.6.1"
-  resolved "https://unpm.uberinternal.com/tailwindcss/-/tailwindcss-1.6.1.tgz#0fbd031848066665fe82dc89eeb30c3d9c4f83ba"
-  integrity sha1-D70DGEgGZmX+gtyJ7rMMPZxPg7o=
+tailwindcss@^1.6.2:
+  version "1.6.2"
+  resolved "https://unpm.uberinternal.com/tailwindcss/-/tailwindcss-1.6.2.tgz#352da9e1b0d9154c95ce12483daa1c2fa1f1eea8"
+  integrity sha1-NS2p4bDZFUyVzhJIPaocL6Hx7qg=
   dependencies:
     "@fullhuman/postcss-purgecss" "^2.1.2"
     autoprefixer "^9.4.5"

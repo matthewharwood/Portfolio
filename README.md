@@ -39,7 +39,7 @@ This is a working example of a SSG with partial(selective) hydration[⚡🧩💦
 - `npm run build`
 
 ## TODO:
-
+- Add search Algolia - https://www.algolia.com/pricing/
 - Outer Router Animations.
 - Think about how I can get client side console.logs during dev.
 - Set up production workflow for deployment. dotenv etc.

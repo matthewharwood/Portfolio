@@ -18,9 +18,14 @@ export const Header = [
 
 export const UI = [
   {
-    name: 'hasBackground',
-    title: 'has background?',
-    type: 'boolean'
+    name: 'backgroundColor',
+    title: 'Background Color',
+    type: 'string',
+    options: {
+      list: [
+        {value: 'primary', title: 'Primary'}, {value: 'secondary', title: 'Secondary'}, {value: 'tertiary', title: 'Tertiary'},
+      ]
+    }
   },
   {
     name: 'hasBorder',

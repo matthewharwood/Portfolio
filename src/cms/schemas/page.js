@@ -56,6 +56,12 @@ export default {
         title: 'Wrapper',
         type: 'object',
         fields: [
+          {
+            name: 'title',
+            title: 'title',
+            type: 'string',
+          },
+          ...UI,
           Content,
         ]
       }],

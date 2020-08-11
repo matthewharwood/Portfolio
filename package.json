@@ -77,13 +77,13 @@
     "animejs": "^3.2.0",
     "babel-jest": "^26.2.2",
     "htm": "^3.0.4",
-    "preact": "^10.4.6",
+    "preact": "^10.4.7",
     "quicklink": "^2.0.0-beta",
-    "tailwindcss": "^1.6.1",
+    "tailwindcss": "^1.6.2",
     "universal-base64": "^2.1.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.11.0",
+    "@babel/core": "^7.11.1",
     "@babel/plugin-transform-modules-commonjs": "^7.9.6",
     "@fullhuman/postcss-purgecss": "^2.1.2",
     "@storybook/html": "^5.3.18",
