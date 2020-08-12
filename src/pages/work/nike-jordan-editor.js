@@ -6,9 +6,7 @@ import {Outline} from '../../components/outline';
 import {Highlight} from '../../components/highlight';
 import {HighlightBold} from '../../components/highlight-bold';
 import {BackgroundColor} from '../../utils/background_colors';
-
-
-
+import {PrimaryButton} from '../../components/buttons';
 
 const WorkNikeJordanEditor = (props) => {
   const Render = {
@@ -18,8 +16,10 @@ const WorkNikeJordanEditor = (props) => {
     'outline': Outline,
     'highlight': Highlight,
     'highlightBold': HighlightBold,
+    'primaryButton': PrimaryButton,
   }
   return html`
+    ${console.log(props)}
     ${props.section.map((s) => {
       return html`
         <div className="${BackgroundColor[s.backgroundColor || 'secondary']}">
@@ -31,22 +31,7 @@ const WorkNikeJordanEditor = (props) => {
         </div>
       `;
     })}
-  
   `
-  // return html`
-  //   ${props.sections.map(s => {
-  //     return html`
-  //       <div>
-  //           <h1>section</h1>
-  //         ${s.content.map(c => {
-  //           return html`
-  //             <${Render[c._type]} ...${c} />
-  //           `;
-  //         })}
-  //       </div>
-  //     `
-  //   })
-  // `;
 };
 
 

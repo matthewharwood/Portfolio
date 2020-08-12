@@ -18,6 +18,7 @@ const Content = {
     {type: 'stepCards'},
     {type: 'cardTilesVertical'},
     {type: 'videoCardGrid'},
+    {type: 'primaryButton'},
   ],
 };
 

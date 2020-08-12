@@ -1,7 +1,7 @@
 const BackgroundColor = {
   primary: 'bg-primary',
   secondary: 'bg-secondary',
-  tertiary: 'bg-tertiary'
+  tertiary: 'bg-secondary-lighter'
 }
 
 export {

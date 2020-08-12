@@ -28,6 +28,8 @@ import dateSpan from './date-from-to';
 import videoCard from '../../components/video-card/video-card.schema';
 import videoCardGrid from '../../components/video-card-grid/video-card-grid.schema';
 import customField from './custom-field';
+import primaryButton from '../../components/buttons/button.schema';
+
 export default createSchema({
   name: 'default',
   types: schemaTypes.concat([
@@ -46,6 +48,7 @@ export default createSchema({
     outline,
     summary,
     highlightBold,
+    primaryButton,
     cardTile,
     cardTiles,
     cardTilesVertical,

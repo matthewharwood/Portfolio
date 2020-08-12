@@ -33,3 +33,21 @@ export const UI = [
     type: 'boolean'
   },
 ];
+
+export const Link = [
+  {
+    name: 'link',
+    title: 'Link',
+    type: 'string'
+  },
+  {
+    name: 'ariaLabel',
+    title: 'aria-label',
+    type: 'string'
+  },
+  {
+    name: 'href',
+    title: 'HREF',
+    type: 'string',
+  }
+]
