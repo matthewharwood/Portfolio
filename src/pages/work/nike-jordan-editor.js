@@ -7,6 +7,9 @@ import {Highlight} from '../../components/highlight';
 import {HighlightBold} from '../../components/highlight-bold';
 import {BackgroundColor} from '../../utils/background_colors';
 import {PrimaryButton} from '../../components/buttons';
+import {Quote} from '../../components/quote';
+import {Headline} from '../../components/headline';
+import {CardTileVertical} from '../../components/card-tiles-vertical';
 
 const WorkNikeJordanEditor = (props) => {
   const Render = {
@@ -17,6 +20,9 @@ const WorkNikeJordanEditor = (props) => {
     'highlight': Highlight,
     'highlightBold': HighlightBold,
     'primaryButton': PrimaryButton,
+    'quote': Quote,
+    'headline': Headline,
+    'cardTilesVertical': CardTileVertical,
   }
   return html`
     ${console.log(props)}

@@ -23,10 +23,10 @@ export const Quote = ({
           </div>
         </div>
       </div>
-      ${hasBorder &&
-      html` <div className="container px-5 lg:px-16 w-full">
-        <div className="h-px w-full bg-border"></div>
-      </div>`}
+      ${hasBorder && (html`
+        <div className="container px-5 lg:px-16 w-full">
+          <div className="h-px w-full bg-border"></div>
+        </div>`)}
     </section>
   `;
 };
