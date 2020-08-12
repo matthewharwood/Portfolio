@@ -1,4 +1,5 @@
 import { html } from "htm/preact";
+import {BackgroundColor} from '../../utils/background_colors';
 
 export const HighlightBold= ({
   number,
@@ -6,11 +7,11 @@ export const HighlightBold= ({
   text,
   ui,
 }) => {
-  const applyBgColor = ui && ui.hasBackground ? 'bg-tertiary' : '';
+  console.log(ui)
   return html`
     <section className="py-16 px-5 lg:px-0">
       <div
-        className="container px-5 lg:px-16 grid grid-cols-12 lg:gap-10 py-16 ${applyBgColor}"
+        className="container px-5 lg:px-16 grid grid-cols-12 lg:gap-10 py-16 ${BackgroundColor[ui.backgroundColor || 'primary']}"
       >
         <div className="flex flex-col col-span-8">
           <span className="text-2xl text-accent font-mono">${number}</span>
