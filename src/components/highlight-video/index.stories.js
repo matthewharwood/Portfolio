@@ -14,6 +14,5 @@ const FIXTURE = {
 
 export const Main = () => {
   const props = seed('highlightVideo');
-  console.log(props);
   return (<HighlightVideo {...props} />)
 };

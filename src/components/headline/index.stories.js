@@ -15,7 +15,6 @@ const FIXTURE = {
 
 export const Main = () => {
   const props = seed('headline');
-  console.log(props);
   return (
       <Headline {...props} />
   )

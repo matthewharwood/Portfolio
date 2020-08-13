@@ -9,6 +9,5 @@ export default {
 
 export const Main = () => {
   const FIXTURE = seed('videoCard');
-  console.log(FIXTURE);
   return (<VideoCard {...FIXTURE} />)
 };

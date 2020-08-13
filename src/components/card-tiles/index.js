@@ -20,7 +20,6 @@ const CardTile = ({ src, title, subtitle, text }) => {
 };
 
 export const CardTiles = ({ cards }) => {
-  console.log(cards);
   return html`
     <section className="py-5">
       <div className="container sm:px-5 lg:px-16 grid grid-cols-3">
@@ -28,7 +27,6 @@ export const CardTiles = ({ cards }) => {
           className="lg:col-start-2 col-span-3 lg:col-span-2 grid grid-cols-1 lg:grid-cols-2 gap-10"
         >
           ${cards.map((card) => {
-            console.log(card);
             return html`<${CardTile} ...${card} />`
           })}
         </div>

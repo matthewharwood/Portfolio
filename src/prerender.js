@@ -42,9 +42,9 @@ const pages = [
   {fileName: 'index', content: renderPage('Home Page', withFooterAndRouter({title: 'index'})(Index))  },
   {fileName: 'profile', content: renderPage('Profile Page', withFooterAndRouter({title: 'profile'})(Profile))},
   {fileName: 'work', content: renderPage('Work Page', withFooterAndRouter({title: 'work'})(Work))},
-  // {fileName: 'lab', content: renderPage('Lab Page', withFooterAndRouter({title: 'lab'})(Lab))},
-  // {fileName: 'lab/rorschach', content: renderPage('Rorschach', withFooterAndRouter({title: 'rorschach'})(Rorschach))},
-  // {fileName: 'work/nike-jordan-editor', content: renderPage('Nike Jordan Editor', withFooterAndRouter({title: 'nike-jordan-editor'})(WorkNikeJordanEditor(props)))},
+  {fileName: 'lab', content: renderPage('Lab Page', withFooterAndRouter({title: 'lab'})(Lab))},
+  {fileName: 'lab/rorschach', content: renderPage('Rorschach', withFooterAndRouter({title: 'rorschach'})(Rorschach))},
+  {fileName: 'work/nike-jordan-editor', content: renderPage('Nike Jordan Editor', withFooterAndRouter({title: 'nike-jordan-editor'})(() => WorkNikeJordanEditor(props)))},
   // {fileName: 'work/marketing-pathfinder', content: renderPage('Marketing Pathfinder',  withFooterAndRouter({title: 'marketing-path-finder'})(MarketingPathfinder))},
   // {fileName: 'work/uber-dotcom-performance', content: renderPage('Uber.com Performance', withFooterAndRouter({title: 'uber-com-performance'})(UberDotcomPerformance))},
 ];

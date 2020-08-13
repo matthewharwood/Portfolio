@@ -49,6 +49,5 @@ const FIXTURE = {
 
 export const Main = () => {
   const props = Data.filter(d => d._type === 'stepCards')[0];
-  console.log(props);
   return (<StepsCards {...props} />)
 };

@@ -8,6 +8,5 @@ export default {
 
 export const Main = () => {
   const FIXTURES =  seed('summary');
-  console.log(FIXTURES);
   return (<Summary {...FIXTURES} />)
 };

@@ -4,9 +4,7 @@ import {OutlineList} from './list';
 
 const Outline = (props) => {
   const title = props && props.title || 'default title';
-  console.log(props);
   const hasDescriptions = props.hasDescriptions ? ['lg:col-span-3', 'lg:col-span-9'] :  ['lg:col-span-6', 'lg:col-span-6']
-  console.log(hasDescriptions);
   return html`
     <section className="py-16">
       <div className="container px-5 lg:px-16 grid grid-cols-12 gap-6">

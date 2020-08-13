@@ -7,7 +7,6 @@ export const HighlightBold= ({
   text,
   ui,
 }) => {
-  console.log(ui)
   return html`
     <section className="py-16 px-5 lg:px-0">
       <div

@@ -9,6 +9,5 @@ export default {
 
 export const Main = () => {
   const FIXTURE = seed('videoCardGrid');
-  console.log(FIXTURE);
   return (<VideoCardGrid {...FIXTURE} />)
 };
