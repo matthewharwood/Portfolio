@@ -22,7 +22,7 @@ import technology from './technology';
 import person from './person';
 import cloudinary from './cloudinary';
 import {cardTilesVertical} from '../../components/card-tiles-vertical/card-tiles-vertical.schema';
-import HighlightVideo from '../../components/highlight-video/highlight-video.schema';
+import highlightVideo from '../../components/highlight-video/highlight-video.schema';
 import company from './company';
 import dateSpan from './date-from-to';
 import videoCard from '../../components/video-card/video-card.schema';
@@ -59,7 +59,7 @@ export default createSchema({
     quote,
     info,
     postHeader,
-    HighlightVideo,
+    highlightVideo,
     company,
     customField,
     videoCard,

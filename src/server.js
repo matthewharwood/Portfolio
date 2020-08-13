@@ -22,8 +22,7 @@ import {seed} from './_data/seed-data';
 
 const liveReloadServer = livereload.createServer();
 
-liveReloadServer.watch(join(__dirname, 'src', 'pages'));
-
+liveReloadServer.watch(join(__dirname, 'src'));
 
 liveReloadServer.server.once('connection', () => {
   setTimeout(() => {

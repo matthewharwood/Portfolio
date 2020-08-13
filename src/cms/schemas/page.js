@@ -19,6 +19,7 @@ const Content = {
     {type: 'cardTilesVertical'},
     {type: 'videoCardGrid'},
     {type: 'primaryButton'},
+    {type: 'highlightVideo'},
   ],
 };
 

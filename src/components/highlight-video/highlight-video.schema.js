@@ -1,7 +1,7 @@
 import {Header, UI} from '../_parts/header';
 
 export default {
-  name: 'HighlightVideo',
+  name: 'highlightVideo',
   title: 'Highlight Video',
   type: 'document',
   fields: [

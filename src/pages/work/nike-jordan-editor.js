@@ -10,6 +10,9 @@ import {PrimaryButton} from '../../components/buttons';
 import {Quote} from '../../components/quote';
 import {Headline} from '../../components/headline';
 import {CardTileVertical} from '../../components/card-tiles-vertical';
+import {HighlightVideo} from '../../components/highlight-video';
+import {StepsCards} from '../../components/step-cards';
+import {CardTiles} from '../../components/card-tiles';
 
 const WorkNikeJordanEditor = (props) => {
   const Render = {
@@ -23,7 +26,11 @@ const WorkNikeJordanEditor = (props) => {
     'quote': Quote,
     'headline': Headline,
     'cardTilesVertical': CardTileVertical,
+    'highlightVideo': HighlightVideo,
+    'stepCards': StepsCards,
+    'cardTiles': CardTiles,
   }
+
   return html`
     ${console.log(props)}
     ${props.section.map((s) => {

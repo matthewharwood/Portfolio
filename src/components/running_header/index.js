@@ -22,7 +22,7 @@ const RunningHeader = () => {
       <span className="text-xs pr-2 font-mh">
         Contact me about
       </span>
-      <button className="text-xs bg-primary text-secondary py-2 px-2 rounded-full capitalize font-mh">${_interests[count].name}</button>
+      <a href="mailto:matthhar12@gmail.com" className="text-xs bg-primary text-secondary py-2 px-2 rounded-full capitalize font-mh">${_interests[count].name}</a>
     </p>
   `
 }
