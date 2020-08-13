@@ -1,6 +1,6 @@
 import {html} from 'htm/preact';
 import {useLayoutEffect, useRef} from 'preact/hooks';
-import anime from 'animejs/lib/anime.es.js';
+import anime from 'animejs/lib/anime.es';
 import {isServer} from '../../utils/which_env';
 
 
