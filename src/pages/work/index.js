@@ -5,7 +5,7 @@ const articles = [
   {
     name: 'Uber.com Performance',
     description: 'A six month performance audit and refactor of uber.com',
-    href: '/work/uber-dotcom-performance',
+    href: '/work/uber-com',
     img: useStatic('uber.svg', 'f_svg')
   },
   {

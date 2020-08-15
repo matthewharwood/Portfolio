@@ -1,6 +1,6 @@
 import Data from './sanity.json';
 
 
-export const seed = (type) => {
-  return Data.filter(d => d._type === type)[0];
+export const seed = (type, idx = 0) => {
+  return Data.filter(d => d._type === type)[idx];
 }
