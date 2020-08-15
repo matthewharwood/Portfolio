@@ -13,9 +13,7 @@ import {AH} from './components/component_map';
 
 import {Rorschach} from './pages/lab/rorschach';
 import {withFooterAndRouter} from './layouts/with_footer_and_router';
-import {WorkNikeJordanEditor} from './pages/work/nike-jordan-editor';
-import {MarketingPathfinder} from './pages/work/marketing-pathfinder';
-import {UberDotcomPerformance} from './pages/work/uber-dotcom-performance';
+import {Renderer} from './pages/work/renderer';
 import {seed} from './_data/seed-data';
 
 const htmlMin = (temp) => minify(temp, {
@@ -37,6 +35,7 @@ const renderPage = (title, page) => {
 };
 
 const props = seed('page');
+const props2 = seed('page',1);
 
 const pages = [
   {fileName: 'index', content: renderPage('Home Page', withFooterAndRouter({title: 'index'})(Index))  },
@@ -44,9 +43,9 @@ const pages = [
   {fileName: 'work', content: renderPage('Work Page', withFooterAndRouter({title: 'work'})(Work))},
   {fileName: 'lab', content: renderPage('Lab Page', withFooterAndRouter({title: 'lab'})(Lab))},
   {fileName: 'lab/rorschach', content: renderPage('Rorschach', withFooterAndRouter({title: 'rorschach'})(Rorschach))},
-  {fileName: 'work/nike-jordan-editor', content: renderPage('Nike Jordan Editor', withFooterAndRouter({title: 'nike-jordan-editor'})(() => WorkNikeJordanEditor(props)))},
+  {fileName: 'work/nike-jordan-editor', content: renderPage('Nike Jordan Editor', withFooterAndRouter({title: 'nike-jordan-editor'})(() => Renderer(props)))},
+  {fileName: 'work/uber-com', content: renderPage('Uber.com', withFooterAndRouter({title: 'uber-com'})(() => Renderer(props2)))},
   // {fileName: 'work/marketing-pathfinder', content: renderPage('Marketing Pathfinder',  withFooterAndRouter({title: 'marketing-path-finder'})(MarketingPathfinder))},
-  // {fileName: 'work/uber-dotcom-performance', content: renderPage('Uber.com Performance', withFooterAndRouter({title: 'uber-com-performance'})(UberDotcomPerformance))},
 ];
 
 const DIST_DIR = join(__dirname, '../', 'dist');

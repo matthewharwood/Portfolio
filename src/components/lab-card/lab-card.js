@@ -19,7 +19,6 @@ const LabCardTags = ({tags}) => {
 };
 
 const LabCard = ({name, href, src, tags, description, alt, video}) => {
-
   return html`
   <a className="transition cursor-pointer ease-in duration-100 bg-secondary-lighter flex flex-col rounded overflow-hidden shadow text-primary hover:underline hover:shadow-lg m-10 no-underline" href="${href}">
     <div className="lab-cards-aspect-ratio relative">

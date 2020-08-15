@@ -12,13 +12,12 @@ import livereload from 'livereload';
 import connectLivereload from 'connect-livereload';
 import {join} from 'path';
 
-import {WorkNikeJordanEditor} from './pages/work/nike-jordan-editor';
 import {MarketingPathfinder} from './pages/work/marketing-pathfinder';
-import {UberDotcomPerformance} from './pages/work/uber-dotcom-performance';
 
 import {Rorschach} from './pages/lab/rorschach';
 import {withFooterAndRouter} from './layouts/with_footer_and_router';
 import {seed} from './_data/seed-data';
+import {Renderer} from './pages/work/renderer';
 
 const liveReloadServer = livereload.createServer();
 
@@ -53,15 +52,16 @@ server.get('/work', function (req, res) {
 server.get('/work/nike-jordan-editor', function (req, res) {
   const props = seed('page');
 
-  res.send(renderPage('Nike Jordan Editor', withFooterAndRouter({title: 'nike-jordan-editor'})(() => WorkNikeJordanEditor(props))));
+  res.send(renderPage('Nike Jordan Editor', withFooterAndRouter({title: 'nike-jordan-editor'})(() => Renderer(props))));
 });
 
 server.get('/work/marketing-pathfinder', function (req, res) {
   res.send(renderPage('Marketing Pathfinder', withFooterAndRouter({title: 'marketing-path-finder'})(MarketingPathfinder)));
 });
 
-server.get('/work/uber-dotcom-performance', function (req, res) {
-  res.send(renderPage('Uber.com Performance', withFooterAndRouter({title: 'uber-com-performance'})(UberDotcomPerformance)));
+server.get('/work/uber-com', function (req, res) {
+  const props = seed('page', 1);
+  res.send(renderPage('Uber.com', withFooterAndRouter({title: 'uber-com'})(() => Renderer(props))));
 });
 
 server.get('/profile', function (req, res) {
