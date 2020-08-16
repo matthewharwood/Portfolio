@@ -34,6 +34,13 @@ export const HtmlPage = ({ title, content, navigation, polymorph }) => {
         <main data-router-wrapper>
           ${content}
         </main>
+        <script>
+        if ('serviceWorker' in navigator) {
+          window.addEventListener('load', () => {
+            navigator.serviceWorker.register('static/service-worker.js');
+          });
+        }
+        </script>
       </body>
     </html>
   `;

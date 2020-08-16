@@ -3,13 +3,17 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Matthew Harwood -- Design Engineer -- @matty0187
 
 # THANKS
 
-    <name>
+    Mike Ngo - Front-end Engineer
+
 
 # TECHNOLOGY COLOPHON
 
-    CSS3, HTML5
-    Apache Server Configs, jQuery, Modernizr, Normalize.css
+    Preact
+    Unistore
+    Web Components
+    Tailwindcss
+    Storybook
