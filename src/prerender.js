@@ -50,10 +50,12 @@ const pages = [
 
 const DIST_DIR = join(__dirname, '../', 'dist');
 const STATIC = join(__dirname, 'static');
+const ROOT_FILES = join(__dirname, '_root');
 
 async function main() {
   await ensureDir(DIST_DIR);
   await copy(STATIC, join(DIST_DIR, 'static'));
+  await copy(ROOT_FILES, DIST_DIR);
   for await (const p of pages) {
     if (p.fileName === 'index') {
       await writeFile(join(DIST_DIR, 'index.html'), htmlMin(p.content));

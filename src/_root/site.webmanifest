@@ -1,0 +1,15 @@
+{
+  "short_name": "Morningharwood",
+  "name": "Morningharwood: Portfolio by Matthew Harwood",
+  "description": "Portfolio and digital playground for Matthew Harwood",
+  "icons": [{
+    "src": "icon.png",
+    "type": "image/png",
+    "sizes": "192x192"
+  }],
+  "start_url": "https://portfolio-morningharwood.onrender.com/",
+  "background_color": "#3367D6",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#3367D6"
+}

@@ -24,7 +24,9 @@ export const HtmlPage = ({ title, content, navigation, polymorph }) => {
         <meta property="og:image:width" content="600" />
         <meta property="og:image:height" content="314" />
         <meta property="og:image:alt" content="Morning Harwood: A Portfolio for Matthew Harwood" />
-        <meta name="generator" content="htm Preact" />
+        <meta name="generator" content="Preact" />
+
+        <meta name="theme-color" content="#fafafa">
         <script type="module" src="/static/bundle.modern.js" defer></script>
       </head>
       <body class="transition-colors ease-in-out duration-1000">
