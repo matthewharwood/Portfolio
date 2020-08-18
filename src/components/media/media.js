@@ -9,7 +9,7 @@ const Media = ({src, alt = '', classNames = '', video}) => {
       : html`<${Image} src=${src} className="${classNames}"/>`
 };
 
-const Image = ({src, alt = '', className = '', flags}) => {
+const Image = ({src, alt = '', className = '', flags = ''}) => {
   const id = src && src.asset && src.asset.source && src.asset.source.id;
   const decodedId = id ? JSON.parse(decode(id)).public_id : '';
   const atobSrc = decodedId + '.jpg';

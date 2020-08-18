@@ -14,6 +14,7 @@ import {HighlightVideo} from '../../components/highlight-video';
 import {StepsCards} from '../../components/step-cards';
 import {CardTiles} from '../../components/card-tiles';
 import {TeamBubbles} from '../../components/team-bubbles';
+import {HighlightVertical} from '../../components/highlight-vertical';
 
 
 const RenderMap = {
@@ -31,6 +32,7 @@ const RenderMap = {
   'stepCards': StepsCards,
   'cardTiles': CardTiles,
   'teamBubbles': TeamBubbles,
+  'highlightVertical': HighlightVertical,
 };
 
 const Renderer = (props) => {

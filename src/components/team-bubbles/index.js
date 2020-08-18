@@ -20,7 +20,6 @@ const Teammate = (props) =>{
   `
 }
 
-
 const TeamBubbles = (props) => {
   return html`
     <section className="">

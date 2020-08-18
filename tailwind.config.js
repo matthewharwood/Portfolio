@@ -16,6 +16,7 @@ module.exports = {
       },
       fontSize: {
         xxs: ".625rem",
+        huge: "10rem",
       },
       height: {
         "50vh": "50vh",

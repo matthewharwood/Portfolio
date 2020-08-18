@@ -30,7 +30,7 @@ import videoCardGrid from '../../components/video-card-grid/video-card-grid.sche
 import customField from './custom-field';
 import primaryButton from '../../components/buttons/button.schema';
 import teamBubbles from '../../components/team-bubbles/schema';
-
+import highlightVertical from '../../components/highlight-vertical/schema'
 export default createSchema({
   name: 'default',
   types: schemaTypes.concat([
@@ -66,6 +66,7 @@ export default createSchema({
     videoCard,
     videoCardGrid,
     teamBubbles,
+    highlightVertical,
   ])
 });
 
