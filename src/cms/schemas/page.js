@@ -20,9 +20,9 @@ const Content = {
     {type: 'videoCardGrid'},
     {type: 'primaryButton'},
     {type: 'highlightVideo'},
+    {type: 'teamBubbles'},
   ],
 };
-
 
 export default {
   name: 'page',

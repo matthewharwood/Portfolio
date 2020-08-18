@@ -19,11 +19,11 @@ const Teammate = (props) =>{
 
 const TeamBubbles = (props) => {
   return html`
-    <div className="container">
-      <div class="grid grid-cols-3 gap-20">
-          ${props.teammates.map(i => html`<${Teammate} ...${i} />`)}
+    <section className="">
+      <div className="container grid grid-cols-3 gap-20  px-5 lg:px-16 py-8 lg:py-16 ">
+        ${props.teammates.map(i => html`<${Teammate} ...${i} />`)}
       </div>
-    </div>
+    </section>
   `;
 }
 

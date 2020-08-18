@@ -1,4 +1,4 @@
-import { html } from "htm/preact";
+import {html} from 'htm/preact';
 import {PostHeader} from '../../components/post-header';
 import {Summary} from '../../components/summary';
 import {VideoCardGrid} from '../../components/video-card-grid';
@@ -13,7 +13,7 @@ import {CardTileVertical} from '../../components/card-tiles-vertical';
 import {HighlightVideo} from '../../components/highlight-video';
 import {StepsCards} from '../../components/step-cards';
 import {CardTiles} from '../../components/card-tiles';
-
+import {TeamBubbles} from '../../components/team-bubbles';
 
 
 const RenderMap = {
@@ -30,27 +30,22 @@ const RenderMap = {
   'highlightVideo': HighlightVideo,
   'stepCards': StepsCards,
   'cardTiles': CardTiles,
-}
-
+  'teamBubbles': TeamBubbles,
+};
 
 const Renderer = (props) => {
-
-
   return html`
-    ${console.log(props)}
     ${props.section.map((s) => {
     return html`
         <div className="${BackgroundColor[s.backgroundColor || 'secondary']}">
-            ${s.content.map(c => {
-      return html`
-                <${RenderMap[c._type]} ...${c} />
-              `
+          ${s.content.map(c => {
+      return html`<${RenderMap[c._type]} ...${c} />`;
     })}
         </div>
       `;
   })}
-  `
+  `;
 };
 
 
-export { Renderer };
+export {Renderer};
