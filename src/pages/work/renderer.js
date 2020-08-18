@@ -35,15 +35,17 @@ const RenderMap = {
 
 const Renderer = (props) => {
   return html`
+    <article>
     ${props.section.map((s) => {
     return html`
-        <div className="${BackgroundColor[s.backgroundColor || 'secondary']}">
+        <section className="${BackgroundColor[s.backgroundColor || 'secondary']}">
           ${s.content.map(c => {
       return html`<${RenderMap[c._type]} ...${c} />`;
     })}
-        </div>
+        </section>
       `;
   })}
+    </article>
   `;
 };
 

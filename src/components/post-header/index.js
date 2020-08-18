@@ -3,7 +3,7 @@ import { html } from "htm/preact";
 export const PostHeader = ({ heading, description, tag, info }) => {
   return html`
     <section className="bg-primary text-secondary pt-12">
-      <div className="container px-5 lg:px-16 py-16">
+      <header className="container px-5 lg:px-16 py-16">
         <div className="flex flex-col">
           <span className="text-tertiary-lighter uppercase font-bold text-xs tracking-widest">
             ${tag.name}
@@ -20,7 +20,7 @@ export const PostHeader = ({ heading, description, tag, info }) => {
           )}
         </div>
         </div>
-      </div>
+      </header>
     </section>
   `;
 };
@@ -31,7 +31,7 @@ const PostHeaderColumn = ({ heading, values }) => {
       <span className="text-xxs tracking-widest opacity-75 text-tertiary-lighter uppercase font-bold"
         >${heading}</span
       >
- 
+
       ${values.map(({name}) => {
         return html`<p className="">${name}</p>`
       })}

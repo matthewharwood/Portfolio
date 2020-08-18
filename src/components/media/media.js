@@ -9,11 +9,12 @@ const Media = ({src, alt = '', classNames = '', video}) => {
       : html`<${Image} src=${src} className="${classNames}"/>`
 };
 
-const Image = ({src, alt = '', className = ''}) => {
+const Image = ({src, alt = '', className = '', flags}) => {
   const id = src && src.asset && src.asset.source && src.asset.source.id;
   const decodedId = id ? JSON.parse(decode(id)).public_id : '';
   const atobSrc = decodedId + '.jpg';
 
-  return html`<img className="${className}" src="${useStatic(atobSrc)}" alt="${alt}" />`;
+  return html`<img className="${className}" src="${useStatic(atobSrc, flags)}" alt="${alt}" />`;
 };
+
 export {Media, Image};
