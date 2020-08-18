@@ -1,15 +1,12 @@
 import {h} from 'preact';
 import {TeamBubbles} from './';
+import {seed} from '../../_data/seed-data';
 
 export default {
   title: 'Team Bubbles'
 };
 
-const FIXTURES = {
-
-}
-
-
 export const Main = () => {
-  return (<TeamBubbles {...FIXTURES} />)
+  const props = seed('teamBubbles');
+  return (<TeamBubbles {...props} />)
 };

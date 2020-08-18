@@ -7,7 +7,7 @@ import dot from "dotty";
 
 
 const main = async () => {
-  const {result} = await axios.get('https://0eq54p9g.api.sanity.io/v1/data/query/production?query=*').then(d => d.data);
+  const {result} = await axios.get('https://0eq54p9g.api.sanity.io/v1/data/query/dev?query=*').then(d => d.data);
   let final = [...result];
   const unwrap = () => {
     const dotKeys = dot.deepKeys(result);

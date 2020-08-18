@@ -3,7 +3,11 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 module.exports = {
   theme: {
     extend: {
-      padding: {
+      spacing: {
+        '1/1': '100%',
+        '1/2': '50%',
+        "80vh": "80vh",
+        "1/5": "20%",
         '16/9': '56.25%'
       },
       transitionDuration: {
@@ -11,10 +15,6 @@ module.exports = {
       },
       fontSize: {
         xxs: ".625rem",
-      },
-      margin: {
-        "80vh": "80vh",
-        "1/5": "20%",
       },
       height: {
         "50vh": "50vh",
@@ -37,6 +37,10 @@ module.exports = {
         '48':	'12rem',
         '56':	'14rem',
         '64':	'16rem',
+        '1/1': '100%',
+        '1/2': '50%',
+        '1/3': '33.333334%',
+        '1/5': '20%',
       },
       fontFamily: {
         mh: "'Space Mono', monospace",

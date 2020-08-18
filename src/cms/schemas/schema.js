@@ -29,6 +29,7 @@ import videoCard from '../../components/video-card/video-card.schema';
 import videoCardGrid from '../../components/video-card-grid/video-card-grid.schema';
 import customField from './custom-field';
 import primaryButton from '../../components/buttons/button.schema';
+import teamBubbles from '../../components/team-bubbles/schema';
 
 export default createSchema({
   name: 'default',
@@ -64,7 +65,7 @@ export default createSchema({
     customField,
     videoCard,
     videoCardGrid,
-
+    teamBubbles,
   ])
 });
 
