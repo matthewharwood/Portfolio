@@ -7,18 +7,20 @@ export const HighlightVertical = ({
   title,
   image,
 }) => {
-  const imageOrder = isImageRight ? "lg:order-last" : "lg:order-first";
-  const imageColsClass = `lg:col-span-${imageCols}`;
-  const textColsClass = `lg:col-span-${12 - imageCols}`;
+  const imageOrder = isImageRight ? "order-last" : "order-first";
+  const imageColsClass = `col-span-6 lg:col-span-${imageCols}`;
+  const textColsClass = `col-span-6 lg:col-span-${12 - imageCols}`;
   return html`
     <section
-      className="container px-5 lg:px-16 grid grid-cols-12 lg:gap-10 py-16"
+      className="container md:px-5 lg:px-16 grid grid-cols-12 lg:gap-10 py-8 lg:py-16 items-center"
     >
-      <div className="flex flex-col col-span-12 ${textColsClass}">
-        <h2 className="text-4xl lg:text-huge transform whitespace-no-wrap lg:rotate-90">${title}</h2>
+      <div className="flex flex-col ${textColsClass} h-full items-center justify-center">
+        ${title.split("").map(char => char === " " ? "\xa0" : char).map(char => html`
+          <span className="text-3xl md:text-5xl lg:text-6xl transform rotate-90 leading-none font-mono">${char}</span>
+        `)}
       </div>
-      <div className="col-span-12 ${imageOrder} ${imageColsClass}">
-        <${Image} src="${image}" alt="" className="h-full w-full object-cover" />
+      <div className="${imageOrder} ${imageColsClass} bg-black h-full" style="min-height:500px">
+        <${Image} src="${image}" alt="" className="h-full w-full object-cover object-right" />
       </div>
     </section>
   `;
