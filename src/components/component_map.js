@@ -8,6 +8,7 @@ import {DateCounter} from './post-footer/date-counter';
 import {Span} from './logo/span';
 import {ThemeChange} from './post-footer/theme-change';
 import {VideoCard} from './video-card';
+import { InfiniteImageScroll } from './infinite-image-scroll'
 
 
 export const COMPONENT_MAP = {
@@ -19,6 +20,7 @@ export const COMPONENT_MAP = {
   Span,
   ThemeChange,
   VideoCard,
+  InfiniteImageScroll,
 }
 
 const AH = {};

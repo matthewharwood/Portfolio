@@ -6,6 +6,7 @@ import {join} from 'path';
 import {Profile} from './pages/profile';
 import {Work} from './pages/work';
 import {Lab} from './pages/lab';
+import {Test} from './pages/test';
 import {minify} from 'html-minifier';
 
 import {html} from 'htm/preact';
@@ -45,6 +46,7 @@ const pages = [
   {fileName: 'lab/rorschach', content: renderPage('Rorschach', withFooterAndRouter({title: 'rorschach'})(Rorschach))},
   {fileName: 'work/nike-jordan-editor', content: renderPage('Nike Jordan Editor', withFooterAndRouter({title: 'nike-jordan-editor'})(() => Renderer(props)))},
   {fileName: 'work/uber-com', content: renderPage('Uber.com', withFooterAndRouter({title: 'uber-com'})(() => Renderer(props2)))},
+  {fileName: 'test', content: renderPage('Test Page', withFooterAndRouter({title: 'test'})(Test))  },
   // {fileName: 'work/marketing-pathfinder', content: renderPage('Marketing Pathfinder',  withFooterAndRouter({title: 'marketing-path-finder'})(MarketingPathfinder))},
 ];
 
