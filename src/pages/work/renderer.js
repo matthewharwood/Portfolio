@@ -15,6 +15,7 @@ import {StepsCards} from '../../components/step-cards';
 import {CardTiles} from '../../components/card-tiles';
 import {TeamBubbles} from '../../components/team-bubbles';
 import {HighlightVertical} from '../../components/highlight-vertical';
+import {SandWichLayout} from '../../components/sandwich-layout';
 
 
 const RenderMap = {
@@ -33,6 +34,7 @@ const RenderMap = {
   'cardTiles': CardTiles,
   'teamBubbles': TeamBubbles,
   'highlightVertical': HighlightVertical,
+  'sandwichLayout': SandWichLayout,
 };
 
 const Renderer = (props) => {

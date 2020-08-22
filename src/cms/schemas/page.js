@@ -21,7 +21,8 @@ const Content = {
     {type: 'primaryButton'},
     {type: 'highlightVideo'},
     {type: 'teamBubbles'},
-    {type: 'highlightVertical'}
+    {type: 'highlightVertical'},
+    {type: 'sandwichLayout'}
   ],
 };
 

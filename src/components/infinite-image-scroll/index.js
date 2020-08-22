@@ -39,7 +39,7 @@ const ImagesLoop = () => {
   const numImages = 6;
   const size = useWindowSize();
   const height = 800;
-  const widthPerImage = size.width / numImages;
+  const widthPerImage = parseInt(size.width / numImages);
 
   const images = [
     "https://via.placeholder.com/1080x1920?text=1",
@@ -57,12 +57,22 @@ const ImagesLoop = () => {
 
   const draw = (ctx, frameCount) => {
     images.map((image, index) => {
-      let xPos = widthPerImage * index - ( frameCount % widthPerImage ); // 250*0 - 250
-      if (xPos < 1 - widthPerImage) {
+      let xPos = widthPerImage * index - (frameCount % widthPerImage) - 1; // 250*0 - 250
+      // index === 0 && console.log(xPos);
+      if (xPos + widthPerImage <= 0) {
+        drawImage(ctx, image, xPos, 0);
+        // alert(
+        //   JSON.stringify({
+        //     xPos,
+        //     widthPerImage,
+        //     frameCount,
+        //     diff: frameCount % widthPerImage,
+        //   })
+        // );
         const firstElement = images.shift();
         images.push(firstElement);
+        // xPos = widthPerImage * index - ( frameCount % widthPerImage ) - 1; // 250*0 - 250
         drawImage(ctx, image, xPos, 0);
-        xPos = widthPerImage * index - ( frameCount % widthPerImage ); // 250*0 - 250
       } else {
         drawImage(ctx, image, xPos, 0);
       }

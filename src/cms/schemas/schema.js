@@ -14,6 +14,8 @@ import highlightBold from '../../components/highlight-bold/highlight-bold.schema
 import {cardTile, cardTiles} from '../../components/card-tiles/card-tiles.schema';
 import {stepCard, stepCards} from '../../components/step-cards/step-cards.schema';
 import {info, default as postHeader} from '../../components/post-header/post-header.schema';
+import textContainer from '../../components/text-container/schema';
+import textNode from '../../components/text-container/text-node.schema';
 
 import headline from '../../components/headline/headline.schema';
 import highlight from '../../components/highlight/highlight.schema';
@@ -31,6 +33,7 @@ import customField from './custom-field';
 import primaryButton from '../../components/buttons/button.schema';
 import teamBubbles from '../../components/team-bubbles/schema';
 import highlightVertical from '../../components/highlight-vertical/schema'
+import sandwichLayout from '../../components/sandwich-layout/schema'
 export default createSchema({
   name: 'default',
   types: schemaTypes.concat([
@@ -67,6 +70,9 @@ export default createSchema({
     videoCardGrid,
     teamBubbles,
     highlightVertical,
+    sandwichLayout,
+    textContainer,
+    textNode,
   ])
 });
 

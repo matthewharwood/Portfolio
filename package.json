@@ -22,7 +22,8 @@
     "server:watch": "nodemon index.js --ext js --ignore dist",
     "bundle:watch": "cross-env microbundle src/main.js -f modern -o ./src/static/bundle.js --external none -w",
     "storybook": "start-storybook  -s ./src/static -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "just-server": "npm run seed && cross-env npm-run-all --parallel bundle:watch dev:css:watch server:watch"
   },
   "mangle": {
     "regex": "^_"
