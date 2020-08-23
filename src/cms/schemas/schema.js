@@ -16,6 +16,7 @@ import {stepCard, stepCards} from '../../components/step-cards/step-cards.schema
 import {info, default as postHeader} from '../../components/post-header/post-header.schema';
 import textContainer from '../../components/text-container/schema';
 import textNode from '../../components/text-container/text-node.schema';
+import animatedTextNode from '../../components/text-container/animated-text-node.schema';
 
 import headline from '../../components/headline/headline.schema';
 import highlight from '../../components/highlight/highlight.schema';
@@ -73,6 +74,7 @@ export default createSchema({
     sandwichLayout,
     textContainer,
     textNode,
+    animatedTextNode,
   ])
 });
 

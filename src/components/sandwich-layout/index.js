@@ -11,12 +11,13 @@ const SandWichLayout = (props) => {
       <div>
         <Image src="${leftImageSource}" className="mr-auto"/>
       </div>
-      <${ TextContainer } ...${props.textContainer}/>
+      <${TextContainer} ...${props.textContainer}/>
       <div>
         <Image src="${rightImageSource}" className="ml-auto"/>
       </div>
     </section>
   `;
 };
+
 
 export { SandWichLayout }
