@@ -8,9 +8,10 @@ const TextContainer = ({
   size = "",
   type = "",
   textNodes = [],
+  className=""
 }) => {
   return html`
-    <div className="flex flex-col ${align} ${leading} ${size} ${type}">
+    <div className="flex flex-col ${align} ${leading} ${size} ${type} ${className}">
       ${textNodes.map((node) => {
         if (node._type === "textNode") {
           return html`<${TextNode} ...${node} />`;

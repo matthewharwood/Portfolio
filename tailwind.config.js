@@ -60,6 +60,9 @@ module.exports = {
           ...defaultTheme.fontFamily.sans,
         ]
       },
+      minWidth: {
+        '64': '16rem',
+      },
       maxHeight: {
         '0': '0',
         '1/4': '25vh',

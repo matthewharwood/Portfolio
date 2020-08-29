@@ -16,6 +16,8 @@ export const TextProps = [
         { title: "5xl", value: "text-5xl" },
         { title: "6xl", value: "text-6xl" },
       ],
+      layout: "radio",
+      direction: "horizontal",
     },
   },
   {
@@ -27,6 +29,8 @@ export const TextProps = [
         { title: "mono", value: "font-mono" },
         { title: "sans", value: "font-sans" },
       ],
+      layout: "radio",
+      direction: "horizontal",
     },
   },
   {
@@ -39,6 +43,8 @@ export const TextProps = [
         { title: "right", value: "text-right" },
         { title: "center", value: "text-center" },
       ],
+      layout: "radio",
+      direction: "horizontal",
     },
   },
   {
@@ -54,6 +60,8 @@ export const TextProps = [
         { title: "relaxed", value: "leading-relaxed" },
         { title: "loose", value: "leading-loose" },
       ],
+      layout: "radio",
+      direction: "horizontal",
     },
   },
 ];

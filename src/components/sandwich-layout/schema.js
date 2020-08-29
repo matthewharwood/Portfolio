@@ -14,6 +14,11 @@ export default {
       title: "Right Image",
     },
     {
+      type: "img",
+      name: "mobileImage",
+      title: "Mobile Image",
+    },
+    {
       type: "video",
       name: "leftVideo",
       title: "Left Video",
