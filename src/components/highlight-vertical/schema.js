@@ -9,9 +9,10 @@ export default {
       type: 'string'
     },
     {
-      name: 'image',
-      title: 'Image',
-      type: 'image'
+      name: 'media',
+      title: 'Media',
+      type: "reference",
+      to: [{ type: "media" }]
     },
     {
       name: 'imageCols',

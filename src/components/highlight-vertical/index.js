@@ -1,11 +1,12 @@
 import { html } from "htm/preact";
 import {Image} from '../media';
+import {MediaNew} from '../media/media';
 
 export const HighlightVertical = ({
   isImageRight,
   imageCols = 6,
   title,
-  image,
+  media,
 }) => {
   const imageOrder = isImageRight ? "order-last" : "order-first";
   const imageColsClass = `col-span-6 lg:col-span-${imageCols}`;
@@ -20,7 +21,7 @@ export const HighlightVertical = ({
         `)}
       </div>
       <div className="${imageOrder} ${imageColsClass} bg-black h-full" style="min-height:500px">
-        <${Image} src="${image}" alt="" className="h-full w-full object-cover object-right" />
+        <${MediaNew} ...${media} alt="" className="h-full w-full object-cover object-right" />
       </div>
     </section>
   `;

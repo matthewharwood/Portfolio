@@ -4,29 +4,22 @@ export default {
   type: "document",
   fields: [
     {
-      type: "img",
-      name: "leftImage",
-      title: "Left Image",
+      name: "leftMedia",
+      title: "Left Media",
+      type: "reference",
+      to: [{ type: "media" }]
     },
     {
-      type: "img",
-      name: "rightImage",
-      title: "Right Image",
+      name: "rightMedia",
+      title: "Right Media",
+      type: "reference",
+      to: [{ type: "media" }]
     },
     {
-      type: "img",
-      name: "mobileImage",
-      title: "Mobile Image",
-    },
-    {
-      type: "video",
-      name: "leftVideo",
-      title: "Left Video",
-    },
-    {
-      type: "video",
-      name: "rightVideo",
-      title: "Right Video",
+      name: "mobileMedia",
+      title: "Mobile Media",
+      type: "reference",
+      to: [{ type: "media" }]
     },
     {
       type: "textContainer",

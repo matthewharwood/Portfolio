@@ -8,6 +8,7 @@ import blockContent from './blockContent';
 import labCard from '../../components/lab-card/lab-card.schema';
 import video from '../../components/media/video.schema';
 import img from '../../components/media/img.schema';
+import media from '../../components/media/media.schema';
 import outline from '../../components/outline/outline.schema';
 import summary from '../../components/summary/summary.schema';
 import highlightBold from '../../components/highlight-bold/highlight-bold.schema';
@@ -39,6 +40,7 @@ export default createSchema({
   name: 'default',
   types: schemaTypes.concat([
     img,
+    media,
     dateSpan,
     video,
     route,
