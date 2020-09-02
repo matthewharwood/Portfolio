@@ -22,7 +22,8 @@ const Content = {
     {type: 'highlightVideo'},
     {type: 'teamBubbles'},
     {type: 'highlightVertical'},
-    {type: 'sandwichLayout'}
+    {type: 'sandwichLayout'},
+    {type: 'textContainer'}
   ],
 };
 

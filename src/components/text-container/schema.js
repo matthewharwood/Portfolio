@@ -1,4 +1,6 @@
 import { TextProps } from "../_parts/text";
+import { Spacers } from "../_parts/spacer";
+import { Spans } from "../_parts/grid";
 
 export default {
   name: "textContainer",
@@ -6,6 +8,13 @@ export default {
   type: "document",
   fields: [
     ...TextProps,
+    ...Spacers,
+    ...Spans,
+    {
+      type: "boolean",
+      name: "hasContainer",
+      title: "Has Container?",
+    },
     {
       type: "array",
       name: "textNodes",
