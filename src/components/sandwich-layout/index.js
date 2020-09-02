@@ -5,7 +5,6 @@ import { TextNode } from "../text-container/text-node";
 import { MediaNew } from "../media/media"
 
 const SandWichLayout = (props) => {
-  // console.log(vars);
   return html`
     <section className="flex flex-col lg:flex-row items-center py-16 lg:py-0 px-5 lg:px-0">
       <div className="hidden lg:block min-w-64">

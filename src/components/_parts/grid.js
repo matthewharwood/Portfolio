@@ -21,8 +21,6 @@ const spansMobileMapped = Object.entries(spansList)
   .splice(0,5)
   .map(([key, val]) => ({ title: key, value: `col-${key}` }));
 
-console.log(spansMobileMapped);
-
 export const Spans = [
   {
     type: "string",

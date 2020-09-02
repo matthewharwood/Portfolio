@@ -10,7 +10,6 @@ const Media = ({src, alt = '', classNames = '', video}) => {
 };
 
 const MediaNew = ({ type, imgSrc, videoSrc, alt, poster,className }) => {
-  // console.log(imgSrc);
   const commonProps = {
     alt,
     className

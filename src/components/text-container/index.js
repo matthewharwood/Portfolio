@@ -16,7 +16,6 @@ const TextContainer = ({
   colSpanDesktop="col-span-12",
 }) => {
   const containerClass = hasContainer ? 'container' : '';
-  console.log(marginTop);
   return html`
     <div class="grid grid-cols-4 lg:grid-cols-12 ${containerClass}">
       <div className="${colSpanMobile} lg:${colSpanDesktop} flex flex-col ${align} ${leading} ${size} ${type} ${className} ${marginTop} ${marginBottom}">

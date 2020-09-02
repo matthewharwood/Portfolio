@@ -58,7 +58,6 @@ const ImagesLoop = () => {
   const draw = (ctx, frameCount) => {
     images.map((image, index) => {
       let xPos = widthPerImage * index - (frameCount % widthPerImage) - 1; // 250*0 - 250
-      // index === 0 && console.log(xPos);
       if (xPos + widthPerImage <= 0) {
         drawImage(ctx, image, xPos, 0);
         // alert(
@@ -83,7 +82,6 @@ const ImagesLoop = () => {
     const image =
       typeof window !== "undefined" ? new Image(widthPerImage, height) : {};
     image.src = imageSrc;
-    // console.log(image.height);
     ctx.drawImage(
       image,
       xCor,
