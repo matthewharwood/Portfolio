@@ -17,8 +17,8 @@ const TextContainer = ({
 }) => {
   const containerClass = hasContainer ? 'container' : '';
   return html`
-    <div class="grid grid-cols-4 lg:grid-cols-12 ${containerClass} ${className}">
-      <div className="${colSpanMobile} lg:${colSpanDesktop} flex flex-col ${align} ${leading} ${size} ${type} ${marginTop} ${marginBottom}">
+    <div class="grid grid-cols-4 lg:grid-cols-12 gap-10 ${containerClass} ${className} px-5 lg:px-16 my-10 lg:${marginTop} lg:${marginBottom}">
+      <div className="${colSpanMobile} lg:${colSpanDesktop} flex flex-col ${align} ${leading} ${size} ${type}">
         ${textNodes.map((node) => {
           if (node._type === "textNode") {
             return html`<${TextNode} ...${node} />`;
