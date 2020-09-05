@@ -1,5 +1,6 @@
 import { html } from "htm/preact";
 import { TextNode } from "./text-node";
+import { ComposedTextNode } from "./composed-text-node";
 import { AH } from "../component_map";
 
 const TextContainer = ({
@@ -25,6 +26,9 @@ const TextContainer = ({
           }
           if (node._type === "animatedTextNode") {
             return html`<${AH.AnimatedTextNode} ...${node} />`;
+          }
+          if (node._type === "composedTextNode") {
+            return html`<${ComposedTextNode} ...${node} />`;
           }
         })}
       </div>

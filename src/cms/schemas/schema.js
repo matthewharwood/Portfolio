@@ -15,9 +15,11 @@ import highlightBold from '../../components/highlight-bold/highlight-bold.schema
 import {cardTile, cardTiles} from '../../components/card-tiles/card-tiles.schema';
 import {stepCard, stepCards} from '../../components/step-cards/step-cards.schema';
 import {info, default as postHeader} from '../../components/post-header/post-header.schema';
+
 import textContainer from '../../components/text-container/schema';
-import textNode from '../../components/text-container/text-node.schema';
-import animatedTextNode from '../../components/text-container/animated-text-node.schema';
+import textNode from '../../components/text-container/text-node/schema';
+import animatedTextNode from '../../components/text-container/animated-text-node/schema';
+import composedTextNode from '../../components/text-container/composed-text-node/schema';
 
 import headline from '../../components/headline/headline.schema';
 import highlight from '../../components/highlight/highlight.schema';
@@ -77,6 +79,7 @@ export default createSchema({
     textContainer,
     textNode,
     animatedTextNode,
+    composedTextNode
   ])
 });
 

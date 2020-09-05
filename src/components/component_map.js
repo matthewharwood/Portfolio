@@ -8,7 +8,7 @@ import { Span } from "./logo/span";
 import { ThemeChange } from "./post-footer/theme-change";
 import { VideoCard } from "./video-card";
 import { InfiniteImageScroll } from "./infinite-image-scroll";
-import { AnimatedTextNode } from "./text-container/animated-text-node";
+import { AnimatedTextNode } from "./text-container/animated-text-node/index";
 
 export const COMPONENT_MAP = {
   RunningHeader,

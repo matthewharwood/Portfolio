@@ -19,7 +19,7 @@ export default {
       type: "array",
       name: "textNodes",
       title: "Text Nodes",
-      of: [{ type: "textNode" }, { type: "animatedTextNode" }],
+      of: [{ type: "textNode" }, { type: "animatedTextNode" }, { type: "composedTextNode" }],
     },
   ],
   initialValue: {

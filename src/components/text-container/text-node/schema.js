@@ -1,4 +1,4 @@
-import { TextProps } from '../_parts/text';
+import { TextProps } from '../../_parts/text';
 
 export default {
   name: "textNode",
