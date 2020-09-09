@@ -8,18 +8,10 @@ export const ComposedTextNode = ({
   size = "",
   type = "",
   textNodes = [],
-  flexDirectionMobile = "flex-row",
-  flexDirectionDesktop = "flex-row",
-  flexAlign = "",
-  flexJustify = ""
 }) => {
-  const mobileJustifyClass = (flexDirectionMobile === 'flex-row') ? flexJustify : "";
-  const desktopJustifyClass = (flexDirectionDesktop === 'flex-row') ? `lg:${flexJustify}` : "";
-  const mobileSpacerVisibleClass = (flexDirectionMobile === 'flex-row') ? 'inline' : 'hidden';
-  const desktopSpacerVisibleClass = (flexDirectionDesktop === 'flex-row') ? 'lg:inline' : 'lg:hidden';
-  const spacer = html`<span className="${size} ${mobileSpacerVisibleClass} ${desktopSpacerVisibleClass}">\xa0</span>`
+  const spacer = html`<span className="${size}">\xa0</span>`
   return html`
-    <div className="flex ${align} ${leading} ${size} ${type} ${flexDirectionMobile} lg:${flexDirectionDesktop} ${mobileJustifyClass} ${desktopJustifyClass} lg:items-baseline">
+    <div className="flex ${align} ${leading} ${size} ${type} lg:items-baseline">
       ${textNodes.map((node) => {
         if (node._type === "textNode") {
           return html`<${TextNode} ...${node} /> ${spacer}`;

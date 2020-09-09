@@ -1,4 +1,5 @@
 import { TextProps } from "../_parts/text";
+import { Flex } from "../_parts/flex";
 import { Spacers } from "../_parts/spacer";
 import { Spans } from "../_parts/grid";
 
@@ -10,6 +11,7 @@ export default {
     ...TextProps,
     ...Spacers,
     ...Spans,
+    ...Flex,
     {
       type: "boolean",
       name: "hasContainer",

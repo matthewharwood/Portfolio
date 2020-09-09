@@ -4,15 +4,15 @@ export default {
   type: 'document',
   fields: [
     {
-      name: 'title',
-      title: 'Title',
-      type: 'string'
-    },
-    {
       name: 'media',
       title: 'Media',
       type: "reference",
       to: [{ type: "media" }]
+    },
+    {
+      name: 'title',
+      title: 'Text',
+      type: 'textContainer'
     },
     {
       name: 'imageCols',

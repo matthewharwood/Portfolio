@@ -1,6 +1,7 @@
 import { html } from "htm/preact";
-import {Image} from '../media';
-import {MediaNew} from '../media/media';
+import { Image } from "../media";
+import { MediaNew } from "../media/media";
+import { TextContainer } from "../text-container";
 
 export const HighlightVertical = ({
   isImageRight,
@@ -9,20 +10,16 @@ export const HighlightVertical = ({
   media,
 }) => {
   const imageOrder = isImageRight ? "order-last" : "order-first";
-  const imageColsClass = `col-span-6 lg:col-span-${imageCols}`;
-  const textColsClass = `col-span-6 lg:col-span-${12 - imageCols}`;
   return html`
     <section
-      className="container md:px-5 lg:px-16 grid grid-cols-12 lg:gap-10 py-8 lg:py-16 items-center"
+      className="container md:px-5 lg:px-16 py-8 lg:py-16 flex flex-col items-center"
     >
-      <div className="flex flex-col ${textColsClass} h-full items-center justify-center">
-        ${title.split("").map(char => char === " " ? "\xa0" : char).map(char => html`
-          <span className="text-3xl md:text-5xl lg:text-6xl transform rotate-90 leading-none font-mono">${char}</span>
-        `)}
-      </div>
-      <div className="${imageOrder} ${imageColsClass} bg-black h-full" style="min-height:500px">
-        <${MediaNew} ...${media} alt="" className="h-full w-full object-cover object-right" />
-      </div>
+      <${MediaNew}
+        ...${media}
+        alt=""
+        className="object-contain object-right w-1/2"
+      />
+      <${TextContainer} ...${title}/>
     </section>
   `;
 };
