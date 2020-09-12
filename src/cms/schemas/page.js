@@ -23,7 +23,8 @@ const Content = {
     {type: 'teamBubbles'},
     {type: 'highlightVertical'},
     {type: 'sandwichLayout'},
-    {type: 'textContainer'}
+    {type: 'textContainer'},
+    {type: 'cardIcons'}
   ],
 };
 

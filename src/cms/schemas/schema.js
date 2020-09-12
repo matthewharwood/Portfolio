@@ -38,6 +38,7 @@ import primaryButton from '../../components/buttons/button.schema';
 import teamBubbles from '../../components/team-bubbles/schema';
 import highlightVertical from '../../components/highlight-vertical/schema'
 import sandwichLayout from '../../components/sandwich-layout/schema'
+import cardIcons from '../../components/card-icons/schema'
 export default createSchema({
   name: 'default',
   types: schemaTypes.concat([
@@ -79,7 +80,8 @@ export default createSchema({
     textContainer,
     textNode,
     animatedTextNode,
-    composedTextNode
+    composedTextNode,
+    cardIcons
   ])
 });
 
