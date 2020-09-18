@@ -9,8 +9,8 @@ export default {
       type: "textContainer",
     },
     {
-      name: "media",
-      title: "Media",
+      name: "icons",
+      title: "Icons",
       type: "array",
       of: [{ type: "media" }],
     },
