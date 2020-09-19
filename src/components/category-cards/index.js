@@ -1,5 +1,5 @@
 import { html } from "htm/preact";
-import {Media} from '../media/media';
+import {MediaNew} from '../media/media';
 
 export const CategoryCards = ({ categories, subtitle, title }) => {
   return html`
@@ -40,13 +40,13 @@ const CategoryLine = ({ title, cards }) => {
 
 const Card = ({ title, tags }) => {
   return html`
-    <div className="h-0 relative overflow-hidden pt-1/1">
+    <div className="h-0 relative overflow-hidden aspect-ratio-square">
       <div className="flex flex-col p-4 absolute inset-0">
         <h3 className="font-mono text-sm xl:text-base">${title}</h3>
         <ul className="flex flex-col mt-4">
           ${tags.map(tag => html`
             <li className="flex items-center mb-1">
-              <${Media} ...${tag} classNames="h-4 w-4 mr-2"/>
+              <${MediaNew} ...${tag} classNames="h-4 w-4 mr-2"/>
               <span className="text-xs">${tag.alt}</span>
             </li>
           `)}
