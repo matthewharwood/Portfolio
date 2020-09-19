@@ -39,6 +39,8 @@ import teamBubbles from '../../components/team-bubbles/schema';
 import highlightVertical from '../../components/highlight-vertical/schema'
 import sandwichLayout from '../../components/sandwich-layout/schema'
 import cardIcons from '../../components/card-icons/schema'
+import { category, categoryCard,categoryCards } from '../../components/category-cards/schema'
+
 export default createSchema({
   name: 'default',
   types: schemaTypes.concat([
@@ -81,7 +83,10 @@ export default createSchema({
     textNode,
     animatedTextNode,
     composedTextNode,
-    cardIcons
+    cardIcons,
+    category,
+    categoryCard,
+    categoryCards
   ])
 });
 

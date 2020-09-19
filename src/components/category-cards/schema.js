@@ -14,18 +14,37 @@ export const categoryCards = {
       type: "string",
     },
     {
+      name: "categories",
+      title: "Categories",
+      type: "array",
+      of: [{ type: "category" }],
+    },
+  ],
+};
+
+export const category = {
+  name: "category",
+  title: "Category",
+  type: "object",
+  fields: [
+    {
+      name: "title",
+      title: "Title",
+      type: "string",
+    },
+    {
       name: "cards",
       title: "Cards",
       type: "array",
       of: [{ type: "categoryCard" }],
     },
-  ],
-};
+  ]
+}
 
 export const categoryCard = {
   name: "categoryCard",
   title: "Category Card",
-  type: "document",
+  type: "object",
   fields: [
     {
       name: "title",
@@ -33,28 +52,10 @@ export const categoryCard = {
       type: "string",
     },
     {
-      name: "cards",
-      title: "Cards",
+      name: "tags",
+      title: "Tags",
       type: "array",
-      of: [{ type: "categoryCardTag" }],
-    },
-  ],
-};
-
-export const categoryCardTag = {
-  name: "categoryCardTag",
-  title: "Category Card Tag",
-  type: "document",
-  fields: [
-    {
-      name: "icon",
-      title: "Icon",
-      type: "media",
-    },
-    {
-      name: "title",
-      title: "Title",
-      type: "string",
+      of: [{ type: "media" }],
     },
   ],
 };

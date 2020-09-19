@@ -24,7 +24,8 @@ const Content = {
     {type: 'highlightVertical'},
     {type: 'sandwichLayout'},
     {type: 'textContainer'},
-    {type: 'cardIcons'}
+    {type: 'cardIcons'},
+    {type: 'categoryCards'}
   ],
 };
 

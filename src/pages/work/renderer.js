@@ -18,6 +18,7 @@ import {HighlightVertical} from '../../components/highlight-vertical';
 import {SandWichLayout} from '../../components/sandwich-layout';
 import {TextContainer} from '../../components/text-container';
 import {CardIcons} from '../../components/card-icons';
+import {CategoryCards} from '../../components/category-cards';
 
 const RenderMap = {
   'postHeader': PostHeader,
@@ -38,6 +39,7 @@ const RenderMap = {
   'sandwichLayout': SandWichLayout,
   'textContainer': TextContainer,
   'cardIcons': CardIcons,
+  'categoryCards': CategoryCards
 };
 
 const Renderer = (props) => {
