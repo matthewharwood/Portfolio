@@ -108,6 +108,13 @@ module.exports = {
       },
       borderColor: (theme) => ({ default: theme("colors.border") }),
     },
+    aspectRatio: { // defaults to {}
+      'none': 0,
+      'square': [1, 1], // or 1 / 1, or simply 1
+      '16/9': [16, 9],  // or 16 / 9
+      '4/3': [4, 3],    // or 4 / 3
+      '21/9': [21, 9],  // or 21 / 9
+    },
     container: {
       center: true,
     },
@@ -125,5 +132,7 @@ module.exports = {
     transitionTimingFunction: ['responsive', 'hover', 'focus','group-hover'],
     boxShadow: ['responsive', 'hover', 'focus', 'active', 'group-hover'],
   },
-  plugins: [],
+  plugins: [
+    require('tailwindcss-aspect-ratio'),
+  ],
 };
