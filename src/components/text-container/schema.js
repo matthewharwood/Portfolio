@@ -24,10 +24,4 @@ export default {
       of: [{ type: "textNode" }, { type: "animatedTextNode" }, { type: "composedTextNode" }],
     },
   ],
-  initialValue: {
-    size: "base",
-    type: "sans",
-    align: "left",
-    leading: "normal",
-  },
 };

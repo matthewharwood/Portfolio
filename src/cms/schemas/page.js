@@ -25,7 +25,8 @@ const Content = {
     {type: 'sandwichLayout'},
     {type: 'textContainer'},
     {type: 'cardIcons'},
-    {type: 'categoryCards'}
+    {type: 'categoryCards'},
+    {type: 'mediaSection'}
   ],
 };
 

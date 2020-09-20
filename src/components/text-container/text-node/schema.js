@@ -12,10 +12,4 @@ export default {
       title: "Text",
     }
   ],
-  initialValue: {
-    size: "base",
-    type: "sans",
-    align: "left",
-    leading: "normal",
-  },
 };

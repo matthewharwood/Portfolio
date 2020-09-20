@@ -13,13 +13,15 @@ const aspectRatiosMapped = Object.entries(aspectRatios).map(([key, val]) => ({
 
 console.log(aspectRatiosMapped);
 
-export const AspectRatios = {
-  type: "string",
-  name: "aspectRatio",
-  title: "Aspect Ratio",
-  options: {
-    list: [...aspectRatiosMapped],
-    layout: "radio",
-    direction: "horizontal",
+export const AspectRatios = [
+  {
+    type: "string",
+    name: "aspectRatio",
+    title: "Aspect Ratio",
+    options: {
+      list: [...aspectRatiosMapped],
+      layout: "radio",
+      direction: "horizontal",
+    },
   },
-};
+];

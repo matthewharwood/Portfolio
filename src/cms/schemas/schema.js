@@ -9,6 +9,7 @@ import labCard from '../../components/lab-card/lab-card.schema';
 import video from '../../components/media/video.schema';
 import img from '../../components/media/img.schema';
 import media from '../../components/media/media.schema';
+import mediaAspectRatio from '../../components/media-aspect-ratio/schema'
 import outline from '../../components/outline/outline.schema';
 import summary from '../../components/summary/summary.schema';
 import highlightBold from '../../components/highlight-bold/highlight-bold.schema';
@@ -39,13 +40,14 @@ import teamBubbles from '../../components/team-bubbles/schema';
 import highlightVertical from '../../components/highlight-vertical/schema'
 import sandwichLayout from '../../components/sandwich-layout/schema'
 import cardIcons from '../../components/card-icons/schema'
-import { category, categoryCard,categoryCards } from '../../components/category-cards/schema'
-
+import mediaSection from '../../components/media-section/schema'
+import { category, categoryCard,categoryCards } from '../../components/category-cards/schema' 
 export default createSchema({
   name: 'default',
   types: schemaTypes.concat([
     img,
     media,
+    mediaAspectRatio,
     dateSpan,
     video,
     route,
@@ -86,7 +88,8 @@ export default createSchema({
     cardIcons,
     category,
     categoryCard,
-    categoryCards
+    categoryCards,
+    mediaSection
   ])
 });
 
