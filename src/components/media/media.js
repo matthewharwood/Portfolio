@@ -6,7 +6,7 @@ import {decode} from 'universal-base64';
 const Media = ({src, alt = '', classNames = '', video}) => {
   return video
       ? html`<${Video} src="${video}" className="${classNames}"  />`
-      : html`<${Image} src=${src} className="${classNames}"/>`
+      : html`<${Image} src="${src}" className="${classNames}"/>`
 };
 
 const MediaNew = ({ type, imgSrc, videoSrc, alt, poster,className }) => {
@@ -14,7 +14,7 @@ const MediaNew = ({ type, imgSrc, videoSrc, alt, poster,className }) => {
     alt,
     className
   }
-  return type === 'image' ? html`<${Image} src="${imgSrc}" ...${commonProps}/>` : html`<${Video} src=${imgSrc} poster="${poster}" ...${commonProps}/>`
+  return type === 'video' ?  html`<${Video} src="${videoSrc}" poster="${poster}" ...${commonProps}/>` : html`<${Image} src="${imgSrc}" ...${commonProps}/>`
 }
 
 const Image = ({src, alt = '', className = '', flags = ''}) => {

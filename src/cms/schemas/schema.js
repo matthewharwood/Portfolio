@@ -37,11 +37,12 @@ import videoCardGrid from '../../components/video-card-grid/video-card-grid.sche
 import customField from './custom-field';
 import primaryButton from '../../components/buttons/button.schema';
 import teamBubbles from '../../components/team-bubbles/schema';
-import highlightVertical from '../../components/highlight-vertical/schema'
-import sandwichLayout from '../../components/sandwich-layout/schema'
-import cardIcons from '../../components/card-icons/schema'
-import mediaSection from '../../components/media-section/schema'
-import { category, categoryCard,categoryCards } from '../../components/category-cards/schema' 
+import highlightVertical from '../../components/highlight-vertical/schema';
+import sandwichLayout from '../../components/sandwich-layout/schema';
+import cardIcons from '../../components/card-icons/schema';
+import mediaSection from '../../components/media-section/schema';
+import mediaGrid from '../../components/media-grid/schema';
+import { category, categoryCard,categoryCards } from '../../components/category-cards/schema'; 
 export default createSchema({
   name: 'default',
   types: schemaTypes.concat([
@@ -89,7 +90,8 @@ export default createSchema({
     category,
     categoryCard,
     categoryCards,
-    mediaSection
+    mediaSection,
+    mediaGrid
   ])
 });
 

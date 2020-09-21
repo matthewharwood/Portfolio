@@ -26,7 +26,8 @@ const Content = {
     {type: 'textContainer'},
     {type: 'cardIcons'},
     {type: 'categoryCards'},
-    {type: 'mediaSection'}
+    {type: 'mediaSection'},
+    {type: 'mediaGrid'}
   ],
 };
 

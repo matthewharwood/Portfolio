@@ -20,6 +20,7 @@ import {TextContainer} from '../../components/text-container';
 import {CardIcons} from '../../components/card-icons';
 import {CategoryCards} from '../../components/category-cards';
 import {MediaSection} from '../../components/media-section';
+import {MediaGrid} from '../../components/media-grid';
 
 const RenderMap = {
   'postHeader': PostHeader,
@@ -41,7 +42,8 @@ const RenderMap = {
   'textContainer': TextContainer,
   'cardIcons': CardIcons,
   'categoryCards': CategoryCards,
-  'mediaSection': MediaSection
+  'mediaSection': MediaSection,
+  'mediaGrid': MediaGrid
 };
 
 const Renderer = (props) => {

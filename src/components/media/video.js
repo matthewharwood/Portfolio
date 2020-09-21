@@ -1,9 +1,14 @@
 import {html} from 'htm/preact';
 import {useStatic} from '../../hooks/use_static';
+import {decode} from 'universal-base64';
 
-const Video = ({src, playsInline, autoPlay}) => {
+const Video = ({src, playsInline, autoPlay, className="", poster}) => {
+  const id = poster && poster.asset && poster.asset.source && poster.asset.source.id;
+  const decodedId = id ? JSON.parse(decode(id)).public_id : '';
+  const atobSrc = decodedId + '.jpg';
+  const thumbSrc = useStatic(atobSrc);
   return html`
-    <video className="flex w-full h-full" autoplay playsinline>
+    <video className="flex w-full h-full ${className}" autoplay playsinline poster="${thumbSrc}">
       <source src="${useStatic(src)}" type="video/mp4" />
        Your browser does not support the video tag.
     </video>`;
