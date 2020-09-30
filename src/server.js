@@ -6,7 +6,7 @@ import {HtmlPage} from './pages/document';
 import {Work} from './pages/work';
 import {Profile} from './pages/profile';
 import {Lab} from './pages/lab';
-import {Test} from './pages/test';
+import {Alt} from './pages/alt';
 import {AH} from './components/component_map';
 import {html} from 'htm/preact';
 import livereload from 'livereload';
@@ -50,8 +50,8 @@ server.get('/work', function (req, res) {
   res.send(renderPage('Work', withFooterAndRouter({title: 'work'})(Work)));
 });
 
-server.get('/test', function (req, res) {
-  res.send(renderPage('Test', withFooterAndRouter({title: 'test'})(Test)));
+server.get('/alt', function (req, res) {
+  res.send(renderPage('Alt', withFooterAndRouter({title: 'alt'})(Alt)));
 });
 
 server.get('/work/nike-jordan-editor', function (req, res) {
