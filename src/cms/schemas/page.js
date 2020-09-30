@@ -23,11 +23,10 @@ const Content = {
     {type: 'teamBubbles'},
     {type: 'highlightVertical'},
     {type: 'sandwichLayout'},
-    {type: 'textContainer'},
     {type: 'cardIcons'},
     {type: 'categoryCards'},
     {type: 'mediaSection'},
-    {type: 'mediaGrid'}
+    {type: 'mediaGrid'},
   ],
 };
 

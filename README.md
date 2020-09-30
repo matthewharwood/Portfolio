@@ -59,3 +59,9 @@ This is a working example of a SSG with partial(selective) hydration[⚡🧩💦
 - PurgeCSS.
 - Put in hydration for clientside
 - html minification.
+
+## TextContainer Removal (Reference, needs manual custom addition):
+
+- highlight-vertical
+- sandwich-layout
+- card-icons

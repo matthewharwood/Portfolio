@@ -1,7 +1,6 @@
 import { html } from "htm/preact";
 import { Image } from "../media";
 import { MediaNew } from "../media/media";
-import { TextContainer } from "../text-container";
 
 export const HighlightVertical = ({
   isImageRight,
@@ -19,7 +18,6 @@ export const HighlightVertical = ({
         alt=""
         className="object-contain object-right w-1/2"
       />
-      <${TextContainer} ...${title}/>
     </section>
   `;
 };

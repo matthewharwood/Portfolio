@@ -4,11 +4,6 @@ export default {
   type: "document",
   fields: [
     {
-      name: "title",
-      title: "Text",
-      type: "textContainer",
-    },
-    {
       name: "icons",
       title: "Icons",
       type: "array",

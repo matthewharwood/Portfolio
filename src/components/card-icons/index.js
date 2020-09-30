@@ -1,11 +1,9 @@
 import { html } from "htm/preact";
-import { TextContainer } from "../text-container"
 import { MediaNew } from '../media/media'
 
 export const CardIcons = (props) => {
   return html`
     <section className="container md:px-5 lg:px-16 py-8 lg:py-16">
-      <${TextContainer} ...${props.title}/>
       <div className="flex lg:grid lg:grid-cols-5 lg:gap-20 lg:py-20 overflow-x-auto px-5 lg:px-0">
         ${ props.icons.map(icon => html`
           <div className="flex flex-col items-center justify-center mr-20 flex-shrink-0">

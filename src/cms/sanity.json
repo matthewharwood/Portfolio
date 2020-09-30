@@ -21,7 +21,8 @@
     "@sanity/default-layout",
     "@sanity/default-login",
     "@sanity/desk-tool",
-    "asset-source-cloudinary"
+    "asset-source-cloudinary",
+    "tabs"
   ],
   "parts": [
     {

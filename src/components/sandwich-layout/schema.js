@@ -21,10 +21,5 @@ export default {
       type: "reference",
       to: [{ type: "media" }]
     },
-    {
-      type: "textContainer",
-      name: "textContainer",
-      title: "Text Container",
-    },
   ],
 };

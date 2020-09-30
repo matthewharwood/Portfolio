@@ -16,7 +16,6 @@ import {CardTiles} from '../../components/card-tiles';
 import {TeamBubbles} from '../../components/team-bubbles';
 import {HighlightVertical} from '../../components/highlight-vertical';
 import {SandWichLayout} from '../../components/sandwich-layout';
-import {TextContainer} from '../../components/text-container';
 import {CardIcons} from '../../components/card-icons';
 import {CategoryCards} from '../../components/category-cards';
 import {MediaSection} from '../../components/media-section';
@@ -39,11 +38,10 @@ const RenderMap = {
   'teamBubbles': TeamBubbles,
   'highlightVertical': HighlightVertical,
   'sandwichLayout': SandWichLayout,
-  'textContainer': TextContainer,
   'cardIcons': CardIcons,
   'categoryCards': CategoryCards,
   'mediaSection': MediaSection,
-  'mediaGrid': MediaGrid
+  'mediaGrid': MediaGrid,
 };
 
 const Renderer = (props) => {

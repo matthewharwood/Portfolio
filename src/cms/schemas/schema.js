@@ -17,11 +17,6 @@ import {cardTile, cardTiles} from '../../components/card-tiles/card-tiles.schema
 import {stepCard, stepCards} from '../../components/step-cards/step-cards.schema';
 import {info, default as postHeader} from '../../components/post-header/post-header.schema';
 
-import textContainer from '../../components/text-container/schema';
-import textNode from '../../components/text-container/text-node/schema';
-import animatedTextNode from '../../components/text-container/animated-text-node/schema';
-import composedTextNode from '../../components/text-container/composed-text-node/schema';
-
 import headline from '../../components/headline/headline.schema';
 import highlight from '../../components/highlight/highlight.schema';
 import quote from '../../components/quote/quote.schema';
@@ -43,6 +38,7 @@ import cardIcons from '../../components/card-icons/schema';
 import mediaSection from '../../components/media-section/schema';
 import mediaGrid from '../../components/media-grid/schema';
 import { category, categoryCard,categoryCards } from '../../components/category-cards/schema'; 
+
 export default createSchema({
   name: 'default',
   types: schemaTypes.concat([
@@ -82,16 +78,12 @@ export default createSchema({
     teamBubbles,
     highlightVertical,
     sandwichLayout,
-    textContainer,
-    textNode,
-    animatedTextNode,
-    composedTextNode,
     cardIcons,
     category,
     categoryCard,
     categoryCards,
     mediaSection,
-    mediaGrid
+    mediaGrid,
   ])
 });
 

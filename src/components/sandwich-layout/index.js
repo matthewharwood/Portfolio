@@ -1,7 +1,5 @@
 import { html } from "htm/preact";
 import { Image } from "../media"
-import { TextContainer } from "../text-container";
-import { TextNode } from "../text-container/text-node";
 import { MediaNew } from "../media/media"
 
 const SandWichLayout = (props) => {
@@ -16,7 +14,6 @@ const SandWichLayout = (props) => {
           <${MediaNew} ...${props.rightMedia} alt="" className="h-full object-cover object-left"/>
         </div>
       </div>
-      <${TextContainer} ...${props.textContainer} className="container flex-shrink-0 z-10 relative"/>
       <div className="container lg:hidden mt-8">
         <${MediaNew} ...${props.mobileMedia} alt="" className="mx-auto"/>
       </div>

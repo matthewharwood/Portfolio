@@ -10,11 +10,6 @@ export default {
       to: [{ type: "media" }]
     },
     {
-      name: 'title',
-      title: 'Text',
-      type: 'textContainer'
-    },
-    {
       name: 'imageCols',
       title: 'Image Columns',
       type: 'number',
