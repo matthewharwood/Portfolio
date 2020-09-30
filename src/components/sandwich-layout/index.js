@@ -3,6 +3,7 @@ import { Image } from "../media"
 import { MediaNew } from "../media/media"
 
 const SandWichLayout = (props) => {
+  console.log(props);
   return html`
     <section className="flex flex-col lg:flex-row items-center py-16 lg:py-0 px-5 lg:px-0 relative">
       <div className="inset-0 h-full w-full absolute flex">
