@@ -1,11 +1,11 @@
 import { AH } from "../components/component_map";
 import { html } from "htm/preact";
-import { MediaGrid } from "../components/media-grid"
+import { HeadlineVertical } from "../components/headline-vertical"
 
 export const Test = () => {
   return html`
     <div className="pt-64 bg-gray-100">
-      <${MediaGrid}/>
+      <${HeadlineVertical}/>
     </div>
   `;
 };

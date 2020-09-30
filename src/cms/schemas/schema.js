@@ -38,6 +38,7 @@ import cardIcons from '../../components/card-icons/schema';
 import mediaSection from '../../components/media-section/schema';
 import mediaGrid from '../../components/media-grid/schema';
 import { category, categoryCard,categoryCards } from '../../components/category-cards/schema'; 
+import headlineVertical  from '../../components/headline-vertical/headline-vertical.schema';
 
 export default createSchema({
   name: 'default',
@@ -84,6 +85,7 @@ export default createSchema({
     categoryCards,
     mediaSection,
     mediaGrid,
+    headlineVertical
   ])
 });
 

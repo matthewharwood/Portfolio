@@ -27,6 +27,7 @@ const Content = {
     {type: 'categoryCards'},
     {type: 'mediaSection'},
     {type: 'mediaGrid'},
+    {type: 'headlineVertical'},
   ],
 };
 

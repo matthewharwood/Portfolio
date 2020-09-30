@@ -20,6 +20,7 @@ import {CardIcons} from '../../components/card-icons';
 import {CategoryCards} from '../../components/category-cards';
 import {MediaSection} from '../../components/media-section';
 import {MediaGrid} from '../../components/media-grid';
+import {HeadlineVertical} from '../../components/headline-vertical';
 
 const RenderMap = {
   'postHeader': PostHeader,
@@ -42,6 +43,7 @@ const RenderMap = {
   'categoryCards': CategoryCards,
   'mediaSection': MediaSection,
   'mediaGrid': MediaGrid,
+  'headlineVertical': HeadlineVertical,
 };
 
 const Renderer = (props) => {
