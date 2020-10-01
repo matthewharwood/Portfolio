@@ -40,6 +40,7 @@ import mediaGrid from '../../components/media-grid/schema';
 import { category, categoryCard,categoryCards } from '../../components/category-cards/schema';
 import headlineVertical  from '../../components/headline-vertical/headline-vertical.schema';
 import textOverShape from '../../components/text-over-shape/schema';
+import mediaGridArea from '../../components/media-grid-area/schema';
 
 export default createSchema({
   name: 'default',
@@ -87,7 +88,8 @@ export default createSchema({
     mediaSection,
     mediaGrid,
     headlineVertical,
-    textOverShape
+    textOverShape,
+    mediaGridArea
   ])
 });
 

@@ -1,5 +1,6 @@
 import {h} from 'preact';
 import {MediaGridArea} from './index';
+import {seed} from '../../_data/seed-data';
 
 export default {
   title: 'Media Grid Area'
@@ -8,5 +9,7 @@ export default {
 const FIXTURE = {};
 
 export const Main = () => {
-  return (<MediaGridArea {...FIXTURE} />)
+  const props = seed('mediaGridArea');
+  console.log(props);
+  return (<MediaGridArea {...FIXTURE} {...props} />)
 };
