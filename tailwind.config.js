@@ -22,6 +22,9 @@ module.exports = {
       height: {
         "50vh": "50vh",
       },
+      width: {
+        "50vh": "50vh",
+      },
       inset: {
         '1': '0.25rem',
         '2': '0.5rem',

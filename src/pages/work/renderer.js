@@ -21,6 +21,7 @@ import {CategoryCards} from '../../components/category-cards';
 import {MediaSection} from '../../components/media-section';
 import {MediaGrid} from '../../components/media-grid';
 import {HeadlineVertical} from '../../components/headline-vertical';
+import {TextOverShape} from '../../components/text-over-shape';
 
 const RenderMap = {
   'postHeader': PostHeader,
@@ -44,6 +45,7 @@ const RenderMap = {
   'mediaSection': MediaSection,
   'mediaGrid': MediaGrid,
   'headlineVertical': HeadlineVertical,
+  'textOverShape': TextOverShape,
 };
 
 const Renderer = (props) => {
