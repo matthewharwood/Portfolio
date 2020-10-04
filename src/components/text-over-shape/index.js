@@ -6,7 +6,7 @@ export const TextOverShape = (props) => {
     <section>
       <div className="rounded-full w-50vh  h-50vh bg-${props.backgroundColor} my-0 mx-auto flex justify-center items-center">
         <h3 className="text-primary text-3xl font-mono">
-          ${props.text[0].children.map(i => {
+          ${props.text && props.text[0] && props.text[0].children.map(i => {
             return html`
               <${i._type}>
                   ${i.marks[0] === 'strong' ? html`<b>${i.text}</b>` : i.text}

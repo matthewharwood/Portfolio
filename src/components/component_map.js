@@ -9,6 +9,8 @@ import { ThemeChange } from "./post-footer/theme-change";
 import { VideoCard } from "./video-card";
 import { InfiniteImageScroll } from "./infinite-image-scroll";
 import { MediaThumbnail } from "./media-thumbnail";
+import { MediaSection } from './media-section';
+import { AnimatedTextNode } from './text-nodes/animated'
 
 export const COMPONENT_MAP = {
   RunningHeader,
@@ -20,7 +22,9 @@ export const COMPONENT_MAP = {
   ThemeChange,
   VideoCard,
   InfiniteImageScroll,
-  MediaThumbnail
+  MediaThumbnail,
+  MediaSection,
+  AnimatedTextNode
 };
 
 const AH = {};

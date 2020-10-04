@@ -5,12 +5,12 @@ export default {
   title: 'Media Aspect Ratio',
   type: 'document',
   fields: [
-    ...AspectRatios,
     {
       name: 'alt',
       title: 'Alt (Title)',
       type: 'string'
     },
+    ...AspectRatios,
     {
       name: 'type',
       title: "Type",

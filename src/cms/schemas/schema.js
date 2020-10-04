@@ -42,6 +42,10 @@ import headlineVertical  from '../../components/headline-vertical/headline-verti
 import textOverShape from '../../components/text-over-shape/schema';
 import mediaGridArea from '../../components/media-grid-area/schema';
 
+import { textContainer } from '../../components/text-container/';
+import { regularTextNode } from '../../components/text-nodes/regularText';
+import { animatedTextNode } from '../../components/text-nodes/animated';
+
 export default createSchema({
   name: 'default',
   types: schemaTypes.concat([
@@ -89,7 +93,11 @@ export default createSchema({
     mediaGrid,
     headlineVertical,
     textOverShape,
-    mediaGridArea
+    mediaGridArea,
+
+    textContainer,
+    regularTextNode,
+    animatedTextNode
   ])
 });
 

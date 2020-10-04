@@ -4,6 +4,11 @@ export default {
   type: "document",
   fields: [
     {
+      name: "textNodes",
+      title: "Text Nodes",
+      type: "textContainer"
+    },
+    {
       name: "leftMedia",
       title: "Left Media",
       type: "reference",

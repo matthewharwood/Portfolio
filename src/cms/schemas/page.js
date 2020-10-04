@@ -28,6 +28,7 @@ const Content = {
     {type: 'mediaSection'},
     {type: 'mediaGrid'},
     {type: 'headlineVertical'},
+    {type: 'textOverShape'},
   ],
 };
 
