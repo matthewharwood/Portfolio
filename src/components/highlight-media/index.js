@@ -7,7 +7,7 @@ export const HighlightMedia = ({ mediaColSize="6", isMediaRight=true, media, tit
   const mediaOrder = isMediaRight ? "order-last" : "order-first";
   return html`
     <div className="container px-5 lg:px-16 grid grid-cols-12 gap-10">
-      <${TextContainer} nodes="${text.nodes}" className="col-spasn-12 lg:col-span-${12-mediaColSize}"/>
+      <${TextContainer} nodes="${text.nodes}" className="col-span-12 lg:col-span-${12-mediaColSize}"/>
       <div className="col-span-12 lg:col-span-${mediaColSize} ${mediaOrder}">
         ${mediaType === 'media' ? html`
           <${MediaAspectRatio} ...${media}/>
