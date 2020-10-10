@@ -22,6 +22,7 @@ import {MediaSection} from '../../components/media-section';
 import {MediaGrid} from '../../components/media-grid';
 import {HeadlineVertical} from '../../components/headline-vertical';
 import {TextOverShape} from '../../components/text-over-shape';
+import {HighlightMedia} from '../../components/highlight-media';
 
 const RenderMap = {
   'postHeader': PostHeader,
@@ -46,6 +47,7 @@ const RenderMap = {
   'mediaGrid': MediaGrid,
   'headlineVertical': HeadlineVertical,
   'textOverShape': TextOverShape,
+  'highlightMedia': HighlightMedia,
 };
 
 const Renderer = (props) => {

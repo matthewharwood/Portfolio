@@ -41,6 +41,11 @@ import { category, categoryCard,categoryCards } from '../../components/category-
 import headlineVertical  from '../../components/headline-vertical/headline-vertical.schema';
 import textOverShape from '../../components/text-over-shape/schema';
 import mediaGridArea from '../../components/media-grid-area/schema';
+import highlightMedia from '../../components/highlight-media/schema';
+
+import { textContainer } from '../../components/text-container/';
+import { regularTextNode } from '../../components/text-nodes/regularText';
+import { animatedTextNode } from '../../components/text-nodes/animated';
 
 export default createSchema({
   name: 'default',
@@ -89,7 +94,12 @@ export default createSchema({
     mediaGrid,
     headlineVertical,
     textOverShape,
-    mediaGridArea
+    mediaGridArea,
+    highlightMedia,
+
+    textContainer,
+    regularTextNode,
+    animatedTextNode
   ])
 });
 

@@ -7,7 +7,7 @@ export const HeadlineVertical = ({
 }) => {
   const gridColSpan = gridColsDesktop >= 12 ? "lg:col-span-12" : `lg:col-span-${gridColsDesktop}`;
   return html`
-    <div className="container grid grid-cols-12">
+    <div className="px-5 lg:px-16 container grid grid-cols-12">
       <div className="col-span-12 ${gridColSpan}">
         ${title && html`<h1 className="font-mono text-4xl leading-loose">${title}</h1>`}
         ${text && html`<p className="text-lg">${text}</p> `}
