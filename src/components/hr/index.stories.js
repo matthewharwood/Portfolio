@@ -10,5 +10,5 @@ const FIXTURE = {
 };
 
 export const Main = () => {
-  return (<HR {...FIXTURE} />)
+  return (<div className="mt-10"><HR {...FIXTURE} /></div>)
 };
