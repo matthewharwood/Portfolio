@@ -63,7 +63,10 @@ module.exports = {
         sans: [
           'Lato',
           ...defaultTheme.fontFamily.sans,
-        ]
+        ],
+        base: [
+          ...defaultTheme.fontFamily.sans,
+        ],
       },
       minHeight: {
         '64': '16rem',
