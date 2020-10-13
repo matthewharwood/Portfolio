@@ -19,14 +19,30 @@ export const PrimaryButton= ({
   icon = 'figma',
   href,
   ariaLabel,
+  onClick,
+  target,
   }) => {
+  if(href) {
+    return html`
+    <a
+      aria-label="${ariaLabel}"
+      href="${href}"
+      target="${target || '_self'}"
+      className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow inline-flex items-center">
+      <${Icons[icon]} />
+      <span>${link}</span>
+    </a>
+  `;
+  }
   return html`
-    <div className="container py-16 px-5 lg:px-16 grid grid-cols-6">
-      <a className="bg-tertiary font-bold py-2 px-4 rounded inline-flex items-center" href="${href}" aria-label="${ariaLabel}">
-        <${Icons[icon]} />
-        <span className="uppercase text-primary">${link}</span>
-      </a>
-    </div>
+    <button
+      aria-label="${ariaLabel}"
+      onClick="${onClick}"
+      className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow inline-flex items-center">
+      <${Icons[icon]} />
+      <span>${link}</span>
+    </button>
   `;
 };
+
 
