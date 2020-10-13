@@ -1,4 +1,5 @@
 import { html } from "htm/preact";
+import {Mono, Sans} from '../typography';
 
 export const Quote = ({
   hasBorder = false,
@@ -8,25 +9,19 @@ export const Quote = ({
   date,
 }) => {
   return html`
-    <section>
-      <div
-        className="container px-5 lg:px-16 py-16 lg:py-32 flex flex-col items-center"
-      >
-        <div className="w-full lg:w-1/2 flex flex-col">
-          <p className="relative italic text-lg">“${quote}”</p>
+    <section className="mx-auto container">
+      <div className="container mx-auto inline-grid grid-cols-12 gap-4 justify-center">
+        <div className="col-start-3 col-end-11">
+          <p className="relative italic ${Mono.xl}">${quote}</p>
           <div
             className="flex flex-col self-end text-xs justify-end text-right text-primary mt-5"
           >
-            <span>${person}</span>
-            <span>${title}</span>
-            <span>${date}</span>
+            <span className="${Mono.sm}">${person}</span>
+            <span className="${Mono.sm}">${title}</span>
+            <span className="${Mono.sm}">${date}</span>
           </div>
         </div>
       </div>
-      ${hasBorder && (html`
-        <div className="container px-5 lg:px-16 w-full">
-          <div className="h-px w-full bg-border"></div>
-        </div>`)}
     </section>
   `;
 };

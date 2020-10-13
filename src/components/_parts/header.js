@@ -49,5 +49,10 @@ export const Link = [
     name: 'href',
     title: 'HREF',
     type: 'string',
+  },
+  {
+    name: 'target',
+    title: 'target',
+    type: 'string'
   }
 ]

@@ -5,7 +5,12 @@ export default {
   title: 'Buttons Grid'
 };
 
-const FIXTURE = {};
+const FIXTURE = {
+  buttons: [
+    {},
+    {},
+  ]
+};
 
 export const Main = () => {
   return (<ButtonsGrid {...FIXTURE} />)
