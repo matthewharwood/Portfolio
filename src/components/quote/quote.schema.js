@@ -29,10 +29,5 @@ export default {
       title: 'Date',
       type: 'date'
     },
-    {
-      name: 'hasBorder',
-      title: 'has Boarders',
-      type: 'boolean'
-    }
   ]
 }

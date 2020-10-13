@@ -1,8 +1,7 @@
 import { html } from "htm/preact";
-import {Mono, Sans} from '../typography';
+import {Mono} from '../typography';
 
 export const Quote = ({
-  hasBorder = false,
   quote,
   person,
   title,
