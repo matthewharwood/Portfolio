@@ -115,11 +115,16 @@ module.exports = {
       borderColor: (theme) => ({ default: theme("colors.border") }),
     },
     aspectRatio: { // defaults to {}
-      'none': 0,
-      'square': [1, 1], // or 1 / 1, or simply 1
-      '16/9': [16, 9],  // or 16 / 9
-      '4/3': [4, 3],    // or 4 / 3
-      '21/9': [21, 9],  // or 21 / 9
+      none: 0,
+      square: [1, 1],
+      "16/9": [16, 9],
+      "4/3": [4, 3],
+      '3/4': [3, 4],
+      "21/9": [21, 9],
+      '3/2': [3, 2],
+      '2/1': [2, 1],
+      '6/1': [6, 1],
+      '6/7': [6, 7],
     },
     container: {
       center: true,

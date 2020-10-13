@@ -10,18 +10,16 @@ export const MediaGridArea = (props) => {
         gridTemplateColumns: templateColumns,
         gridTemplateRows: templateRows,
         gridGap: gap,
-
     }}>
       ${areas.map(a => {
-        return html
-          ` <div style=${{display: 'grid', gridArea: a.areaName}}>
- <div>
-                <h3>${a.title}</h3>
-                <${MediaAspectRatio} ...${a.media} />
-                </div>
+        return html`
+          <div style=${{display: 'grid', gridArea: a.areaName}}>
+            <div>
+              <h3>${a.title}</h3>
+              <${MediaAspectRatio} ...${a.media} />
             </div>
-          `
+          </div>
+        `
       })}
-
   </div>`;
 }
