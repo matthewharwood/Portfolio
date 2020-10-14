@@ -22,23 +22,4 @@ const TextContainer = ({ nodes = [], className="" }) => {
   `;
 };
 
-const textContainer = {
-  name: "textContainer",
-  title: "TextContainer",
-  type: "document",
-  fields: [
-    {
-      name: "title",
-      title: "Title",
-      type: "string",
-    },
-    {
-      name: "nodes",
-      title: "Nodes",
-      type: "array",
-      of: [{ type: "regularTextNode" }, { type: "animatedTextNode" }],
-    },
-  ],
-};
-
-export { TextContainer, textContainer };
+export { TextContainer };

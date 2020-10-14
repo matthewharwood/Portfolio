@@ -27,4 +27,9 @@ export default {
       to: [{ type: "media" }]
     },
   ],
+  preview: {
+    select: {
+      title: 'textNodes.title',
+    }
+  }
 };

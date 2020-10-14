@@ -43,7 +43,7 @@ import textOverShape from '../../components/text-over-shape/schema';
 import mediaGridArea from '../../components/media-grid-area/schema';
 import highlightMedia from '../../components/highlight-media/schema';
 
-import { textContainer } from '../../components/text-container/';
+import textContainer from '../../components/text-container/schema';
 import { regularTextNode } from '../../components/text-nodes/regularText';
 import { animatedTextNode } from '../../components/text-nodes/animated';
 import buttonsGrid from '../../components/buttons-grid/schema';

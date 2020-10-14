@@ -40,4 +40,9 @@ export default {
       type: 'image'
     },
   ],
+  preview: {
+    select: {
+      title: 'alt'
+    }
+  }
 }

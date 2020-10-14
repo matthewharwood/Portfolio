@@ -8,5 +8,10 @@ export default {
       title: "Media",
       type: "mediaAspectRatio",
     }
-  ]
+  ],
+  preview: {
+    select: {
+      title: 'media.alt'
+    }
+  }
 }
