@@ -30,6 +30,7 @@ const Content = {
     {type: 'headlineVertical'},
     {type: 'textOverShape'},
     {type: 'highlightMedia'},
+    {type: 'textSection'},
   ],
 };
 

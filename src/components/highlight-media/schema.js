@@ -1,13 +1,19 @@
+import { Spacers, SpacerFieldset } from '../_parts/spacer';
+
 export default {
   name: "highlightMedia",
   title: "Highlight Media",
   type: "object",
+  fieldsets: [
+    Spacers.fieldset,
+  ],
   fields: [
     {
       name: "title",
       title: "Title",
       type: "string",
     },
+    ...Spacers.fields,
     {
       name: "text",
       title: "Text",

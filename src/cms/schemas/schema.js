@@ -46,7 +46,9 @@ import highlightMedia from '../../components/highlight-media/schema';
 import textContainer from '../../components/text-container/schema';
 import { regularTextNode } from '../../components/text-nodes/regularText';
 import { animatedTextNode } from '../../components/text-nodes/animated';
+import textSection from '../../components/text-section/schema'
 import buttonsGrid from '../../components/buttons-grid/schema';
+
 export default createSchema({
   name: 'default',
   types: schemaTypes.concat([
@@ -100,7 +102,8 @@ export default createSchema({
     textContainer,
     regularTextNode,
     animatedTextNode,
-    buttonsGrid
+    buttonsGrid,
+    textSection
   ])
 });
 
