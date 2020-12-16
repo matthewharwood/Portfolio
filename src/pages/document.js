@@ -1,5 +1,5 @@
 // const DOMAIN = 'http://localhost:3000';
-export const HtmlPage = ({ title, content, navigation, polymorph }) => {
+export const HtmlPage = ({ title, content, navigation }) => {
   return `
     <!DOCTYPE html>
     <html lang="en">
