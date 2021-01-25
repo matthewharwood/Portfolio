@@ -64,10 +64,10 @@ server.get('/work/marketing-pathfinder', function (req, res) {
   res.send(renderPage('Marketing Pathfinder', withFooterAndRouter({title: 'marketing-path-finder'})(MarketingPathfinder)));
 });
 
-// server.get('/work/uber-com', function (req, res) {
-//   const props = seed('page', 1);
-//   res.send(renderPage('Uber.com', withFooterAndRouter({title: 'uber-com'})(() => Renderer(props))));
-// });
+server.get('/work/uber-com', function (req, res) {
+  const props = seed('page', 1);
+  res.send(renderPage('Uber.com', withFooterAndRouter({title: 'uber-com'})(() => Renderer(props))));
+});
 
 server.get('/profile', function (req, res) {
   res.send(renderPage('Profile', withFooterAndRouter({title: 'Profile'})(Profile)));
