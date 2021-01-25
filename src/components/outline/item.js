@@ -18,7 +18,7 @@ const OutlineListItemName = (props) => {
   }
 
   return html`
-    <h4 className="capitalize text-primary leading-none text-xl">
+    <h4 className="text-primary leading-none text-xl">
       ${props.name}
     </h4>
   `;
