@@ -12,6 +12,7 @@ const main = async () => {
   const unwrap = () => {
     const dotKeys = dot.deepKeys(result);
     const refPaths = dotKeys.filter(d => d.includes("_ref"));
+
     for (let path of refPaths) {
       const id = dot.get(result, path);
       const parent = path.slice(0, -1);
