@@ -1,81 +1,70 @@
 import { html } from "htm/preact";
-import { useRef, useState, useEffect } from "preact/hooks";
+
 import { useCanvas } from "../../hooks/use_canvas";
 import { useWindowSize } from "../../hooks/use_window_size";
+import { useEffect, useState } from "preact/hooks";
 
 export const InfiniteImageScroll = () => {
   const images = [
-    "https://via.placeholder.com/1080x1920",
-    "https://via.placeholder.com/768x1366",
-    "https://via.placeholder.com/1024x1280",
-    "https://via.placeholder.com/1080x1920",
-    "https://via.placeholder.com/768x1366",
-    "https://via.placeholder.com/1024x1280",
-    "https://via.placeholder.com/1080x1920",
-    "https://via.placeholder.com/768x1366",
-    "https://via.placeholder.com/1024x1280",
+    "https://placebear.com/200/300",
+    "https://placebear.com/300/400",
+    "https://placebear.com/400/400",
+    "https://placebear.com/450/300",
   ];
+  const [completed, update] = useState(false);
+  let imagesInMemory = images.map((item) => {
+    const image = new Image();
+    image.src = item;
+    return image;
+  });
+
+  useEffect(() => {
+    update(imagesInMemory.every((i) => i.complete));
+  }, [completed, imagesInMemory, completed, update]);
+
+
+  if(!completed) {
+    return;
+  }
+
   return html`
-    <div className="flex flex-col">
-      <div
-        className="container flex flex-col items-center text-center font-bold text-xl"
-      >
-        <span>With about</span>
-        <h2 className="text-6xl my-5">
-          <span>4,000,000</span>
-          <span
-            className="inline-block text-3xl transform rotate-45 -translate-y-5 translate-x-3"
-            >'ish</span
-          >
-        </h2>
-        <span>Pages</span>
-      </div>
-      <${ImagesLoop} />
-    </div>
+    <${ImagesLoop} images="${imagesInMemory}"/>
   `;
 };
 
-const ImagesLoop = () => {
+const ImagesLoop = (props) => {
   const numImages = 6;
   const size = useWindowSize();
   const height = 800;
   const widthPerImage = parseInt(size.width / numImages);
-
-  const images = [
-    "https://via.placeholder.com/1080x1920?text=1",
-    "https://via.placeholder.com/768x1366?text=2",
-    "https://via.placeholder.com/1024x1280?text=3",
-    "https://via.placeholder.com/1080x1920?text=4",
-    "https://via.placeholder.com/768x1366?text=5",
-    "https://via.placeholder.com/1024x1280?text=6",
-    "https://via.placeholder.com/1080x1920?text=7",
-    "https://via.placeholder.com/768x1366?text=8",
-    "https://via.placeholder.com/1024x1280?text=9",
-  ];
-
-  const totalImagesWidth = images.length * widthPerImage;
-
+  const {images} = props;
+  const widths = images.reduce((acc, val, idx) => {
+    if(acc.length === 0) {
+      return acc.concat(val.naturalWidth);
+    }
+    const total = acc[idx - 1] + val.naturalWidth
+    return acc.concat(total);
+  }, []);
+  console.log(widths);
   const draw = (ctx, frameCount) => {
-    images.map((image, index) => {
-      let xPos = widthPerImage * index - (frameCount % widthPerImage) - 1; // 250*0 - 250
-      if (xPos + widthPerImage <= 0) {
-        drawImage(ctx, image, xPos, 0);
-        // alert(
-        //   JSON.stringify({
-        //     xPos,
-        //     widthPerImage,
-        //     frameCount,
-        //     diff: frameCount % widthPerImage,
-        //   })
-        // );
-        const firstElement = images.shift();
-        images.push(firstElement);
-        // xPos = widthPerImage * index - ( frameCount % widthPerImage ) - 1; // 250*0 - 250
-        drawImage(ctx, image, xPos, 0);
-      } else {
-        drawImage(ctx, image, xPos, 0);
-      }
-    });
+    images.forEach((img, index) => {
+      const dx = index ? widths[index-1] : index;
+      const dy = 0;
+      ctx.drawImage(img, dx, dy);
+    })
+
+
+    // images.map((image, index) => {
+    //   let xPos = widthPerImage * index - (frameCount % widthPerImage) - 1; // 250*0 - 250
+    //   if (xPos + widthPerImage <= 0) {
+    //     drawImage(ctx, image, xPos, 0);
+    //     const firstElement = images.shift();
+    //     images.push(firstElement);
+    //     drawImage(ctx, image, xPos, 0);
+    //   } else {
+    //     drawImage(ctx, image, xPos, 0);
+    //   }
+    // });
   };
 
   const drawImage = (ctx, imageSrc, xCor = 0, yCor = 0) => {
@@ -92,8 +81,6 @@ const ImagesLoop = () => {
   };
 
   return html`
-    <span>${JSON.stringify(size)}</span>
-    <span>${JSON.stringify(widthPerImage)}</span>
     <${Canvas}
       draw="${draw}"
       options="${{}}"

@@ -3,9 +3,9 @@ import { useState } from "preact/hooks";
 import { useInterval } from "../../hooks/use_interval";
 import { useIsVisible } from "../../hooks/use_is_visible";
 
-const RegularTextNode = ({ text="", className="" }) => {
+const RegularTextNode = ({ text="", classNameRegular="" }) => {
   return html`
-    <span className="${className}">${text}</span>
+    <span className="${classNameRegular}">${text}</span>
   `
 }
 
@@ -20,7 +20,7 @@ const regularTextNode = {
       type: "string",
     },
     {
-      name: "className",
+      name: "classNameRegular",
       title: "Class Names",
       type: "string",
     },

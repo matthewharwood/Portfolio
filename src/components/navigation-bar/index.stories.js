@@ -3,7 +3,7 @@ import {h} from 'preact';
 import {NavigationBar} from './';
 
 export default {
-  title: 'Navigation'
+  title: 'Navigation Bar'
 };
 
 const FIXTURE = {
