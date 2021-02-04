@@ -11,12 +11,14 @@ export const InfiniteImageScroll = () => {
     "https://placebear.com/400/400",
     "https://placebear.com/450/300",
   ];
+
   const [completed, update] = useState(false);
-  let imagesInMemory = images.map((item) => {
+  const iInMemory = images.map((item) => {
     const image = new Image();
     image.src = item;
     return image;
   });
+  const imagesInMemory = [iInMemory].flat();
 
   useEffect(() => {
     update(imagesInMemory.every((i) => i.complete));
@@ -33,10 +35,8 @@ export const InfiniteImageScroll = () => {
 };
 
 const ImagesLoop = (props) => {
-  const numImages = 6;
   const size = useWindowSize();
   const height = 800;
-  const widthPerImage = parseInt(size.width / numImages);
   const {images} = props;
   const widths = images.reduce((acc, val, idx) => {
     if(acc.length === 0) {
@@ -45,39 +45,14 @@ const ImagesLoop = (props) => {
     const total = acc[idx - 1] + val.naturalWidth
     return acc.concat(total);
   }, []);
-  console.log(widths);
+
   const draw = (ctx, frameCount) => {
+    // ctx.clearRect(0, 0, size.width , size.height);
     images.forEach((img, index) => {
       const dx = index ? widths[index-1] : index;
       const dy = 0;
       ctx.drawImage(img, dx, dy);
-    })
-
-
-    // images.map((image, index) => {
-    //   let xPos = widthPerImage * index - (frameCount % widthPerImage) - 1; // 250*0 - 250
-    //   if (xPos + widthPerImage <= 0) {
-    //     drawImage(ctx, image, xPos, 0);
-    //     const firstElement = images.shift();
-    //     images.push(firstElement);
-    //     drawImage(ctx, image, xPos, 0);
-    //   } else {
-    //     drawImage(ctx, image, xPos, 0);
-    //   }
-    // });
-  };
-
-  const drawImage = (ctx, imageSrc, xCor = 0, yCor = 0) => {
-    const image =
-      typeof window !== "undefined" ? new Image(widthPerImage, height) : {};
-    image.src = imageSrc;
-    ctx.drawImage(
-      image,
-      xCor,
-      yCor,
-      widthPerImage,
-      Math.min(widthPerImage * 1.77, height)
-    );
+    });
   };
 
   return html`
@@ -92,7 +67,7 @@ const ImagesLoop = (props) => {
 
 const Canvas = (props) => {
   const { draw, options, ...rest } = props;
-  const { context, ...moreConfig } = options;
+  const { context} = options;
   const canvasRef = useCanvas(draw, { context });
   return html`<canvas ref="${canvasRef}" ...${rest} className="w-full" />`;
 };

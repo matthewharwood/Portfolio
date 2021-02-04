@@ -1,8 +1,14 @@
+import {Spacers} from '../_parts/spacer';
+
 export default {
   name: "sandwichLayout",
   title: "SandWich Layout",
   type: "document",
+  fieldsets: [
+    Spacers.fieldset,
+  ],
   fields: [
+    ...Spacers.fields,
     {
       name: "textNodes",
       title: "Text Nodes",

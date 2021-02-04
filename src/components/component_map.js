@@ -11,6 +11,7 @@ import { InfiniteImageScroll } from "./infinite-image-scroll";
 import { MediaThumbnail } from "./media-thumbnail";
 import { MediaSection } from './media-section';
 import { AnimatedTextNode } from './text-nodes/animated'
+import {Slideshow} from './slideshow';
 
 export const COMPONENT_MAP = {
   RunningHeader,
@@ -24,7 +25,8 @@ export const COMPONENT_MAP = {
   InfiniteImageScroll,
   MediaThumbnail,
   MediaSection,
-  AnimatedTextNode
+  AnimatedTextNode,
+  Slideshow,
 };
 
 const AH = {};

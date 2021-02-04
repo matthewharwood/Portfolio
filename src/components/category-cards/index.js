@@ -46,8 +46,8 @@ const Card = ({ title, tags }) => {
         <ul className="flex flex-col mt-4">
           ${tags.map(tag => html`
             <li className="flex items-center mb-1">
-              <${MediaNew} ...${tag} classNames="h-4 w-4 mr-2"/>
-              <span className="text-xs">${tag.alt}</span>
+              <${MediaNew} ...${tag} extension="${'.svg'}" classNames="h-4 w-4 mr-2"/>
+              <span className="text-xs ml-2">${tag.alt}</span>
             </li>
           `)}
         </ul>

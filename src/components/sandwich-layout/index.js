@@ -1,11 +1,13 @@
 import { html } from "htm/preact";
-import { Image } from "../media";
 import { MediaNew } from "../media/media";
 import { TextContainer } from "../text-container";
+import {generateSpacingClassString} from '../_parts/spacer';
 
-const SandWichLayout = ({ leftMedia, rightMedia, mobileMedia, textNodes }) => {
+const SandWichLayout = (props) => {
+  const {leftMedia, rightMedia, mobileMedia, textNodes} = props;
+  const spacingClasses = generateSpacingClassString(props);
   return html`
-    <section className="flex flex-col lg:flex-row items-center py-16 lg:py-0 px-5 lg:px-0 relative">
+    <section data-comp-name="sandwhich-layout" className="flex flex-col lg:flex-row items-center relative ${spacingClasses}">
       <div className="h-full w-full hidden lg:flex z-0 absolute inset-0">
         <div className="h-full w-full">
           <${MediaNew} ...${leftMedia} className="w-full h-full object-cover object-right"/>
@@ -17,7 +19,7 @@ const SandWichLayout = ({ leftMedia, rightMedia, mobileMedia, textNodes }) => {
         </div>
       </div>
       <div className="relative z-10 min-h-64 w-full flex justify-center items-center">
-        <div className="container text-center py-32">
+        <div className="container text-center">
           <${TextContainer} nodes="${textNodes.nodes}"/>
         </div>
       </div>

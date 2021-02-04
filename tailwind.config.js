@@ -6,6 +6,15 @@ module.exports = {
   ],
   theme: {
     extend: {
+      animation: {
+        'scroller': 'scroller 12s linear infinite',
+      },
+      keyframes: {
+        scroller: {
+          '0%': {transform: 'translateX(0)'},
+          '100%': {transform: 'translateX(-100%)'},
+        },
+      },
       spacing: {
         '1/1': '100%',
         '1/2': '50%',
@@ -131,6 +140,7 @@ module.exports = {
       '2/1': [2, 1],
       '6/1': [6, 1],
       '6/7': [6, 7],
+      '5/2': [5,2],
     },
     container: {
       center: true,

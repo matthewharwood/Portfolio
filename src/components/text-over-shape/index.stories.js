@@ -9,7 +9,6 @@ export default {
 
 export const Main = () => {
   const props = seed('textOverShape');
-  console.log(props);
   return (
     <TextOverShape {...props} />
   )

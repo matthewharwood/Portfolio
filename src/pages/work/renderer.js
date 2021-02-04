@@ -23,7 +23,9 @@ import {MediaGrid} from '../../components/media-grid';
 import {HeadlineVertical} from '../../components/headline-vertical';
 import {TextOverShape} from '../../components/text-over-shape';
 import {HighlightMedia} from '../../components/highlight-media';
-import{TextSection } from '../../components/text-section';
+import {TextSection} from '../../components/text-section';
+// import {Slideshow} from '../../components/slideshow';
+import {AH} from '../../components/component_map';
 
 const RenderMap = {
   'postHeader': PostHeader,
@@ -50,15 +52,21 @@ const RenderMap = {
   'textOverShape': TextOverShape,
   'highlightMedia': HighlightMedia,
   'textSection': TextSection,
+  'slideshow': AH.Slideshow,
 };
 
 const Renderer = (props) => {
+
   return html`
     <article>
     ${props.section.map((s) => {
     return html`
         <section className="${BackgroundColor[s.backgroundColor || 'secondary']}">
           ${s.content.map(c => {
+            // if(c._type === 'slideshow') {
+            //   return html`<h1>HELLO SLIDESHOW</h1>`;
+            //
+            // }
       return html`<${RenderMap[c._type]} ...${c} />`;
     })}
         </section>

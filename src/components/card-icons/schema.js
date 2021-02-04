@@ -1,8 +1,14 @@
+import {Spacers} from '../_parts/spacer';
+
 export default {
   name: "cardIcons",
   title: "Card Icons",
   type: "document",
+  fieldsets: [
+    Spacers.fieldset,
+  ],
   fields: [
+    ...Spacers.fields,
     {
       name: "icons",
       title: "Icons",

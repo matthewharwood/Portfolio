@@ -10,7 +10,7 @@ const NavigationItem = ({link, index}) => {
       href="${link.href}">
       <div className="relative text-right py-1 md:py-2 overflow-hidden">
         <div>
-          <span ref="${animeRef}" className="navigation-start block text-3xl md:text-6xl text-right font-mh leading-none mr-8 md:mr-16 capitalize font-bold ">${link.text}</span>
+          <span ref="${animeRef}" className="navigation-start block text-3xl md:text-6xl text-right font-mh leading-none mr-8 md:mr-16 capitalize font-bold opacity-0">${link.text}</span>
         </div>
       </div>
     </a>

@@ -31,6 +31,7 @@ const Content = {
     {type: 'textOverShape'},
     {type: 'highlightMedia'},
     {type: 'textSection'},
+    {type: 'slideshow'},
   ],
 };
 

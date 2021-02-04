@@ -48,6 +48,7 @@ import { regularTextNode } from '../../components/text-nodes/regularText';
 import { animatedTextNode } from '../../components/text-nodes/animated';
 import textSection from '../../components/text-section/schema'
 import buttonsGrid from '../../components/buttons-grid/schema';
+import slideshow from '../../components/slideshow/schema';
 
 export default createSchema({
   name: 'default',
@@ -98,12 +99,12 @@ export default createSchema({
     textOverShape,
     mediaGridArea,
     highlightMedia,
-
     textContainer,
     regularTextNode,
     animatedTextNode,
     buttonsGrid,
-    textSection
+    textSection,
+    slideshow
   ])
 });
 

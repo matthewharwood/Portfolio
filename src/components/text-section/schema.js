@@ -1,4 +1,4 @@
-import { Spacers, SpacerFieldset } from '../_parts/spacer';
+import {Spacers} from '../_parts/spacer';
 
 export default {
   name: "textSection",

@@ -1,11 +1,10 @@
 import { html } from "htm/preact";
-import { useState } from "preact/hooks";
-import { useInterval } from "../../hooks/use_interval";
-import { useIsVisible } from "../../hooks/use_is_visible";
+import {generateSpacingClassString, Spacers} from '../_parts/spacer';
 
 const RegularTextNode = ({ text="", classNameRegular="" }) => {
+  const spacingClasses = generateSpacingClassString(props);
   return html`
-    <span className="${classNameRegular}">${text}</span>
+    <span className="${classNameRegular} ${spacingClasses}">${text}</span>
   `
 }
 
@@ -13,7 +12,11 @@ const regularTextNode = {
   name: "regularTextNode",
   title: "Regular Text Node",
   type: "object",
+  fieldsets: [
+    Spacers.fieldset,
+  ],
   fields: [
+    ...Spacers.fields,
     {
       name: "text",
       title: "Text",

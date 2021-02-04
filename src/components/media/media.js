@@ -9,18 +9,18 @@ const Media = ({src, alt = '', classNames = '', video}) => {
       : html`<${Image} src="${src}" className="${classNames}"/>`
 };
 
-const MediaNew = ({ type, imgSrc, videoSrc, alt, poster,className }) => {
+const MediaNew = ({ type, imgSrc, videoSrc, alt, poster,className, extension = '.jpg' }) => {
   const commonProps = {
     alt,
-    className
+    className,
   }
-  return type === 'video' ?  html`<${Video} src="${videoSrc}" poster="${poster}" ...${commonProps}/>` : html`<${Image} src="${imgSrc}" ...${commonProps}/>`
+  return type === 'video' ?  html`<${Video} src="${videoSrc}" poster="${poster}" ...${commonProps}/>` : html`<${Image} src="${imgSrc}" extension="${extension}"  ...${commonProps}/>`
 }
 
-const Image = ({src, alt = '', className = '', flags = ''}) => {
+const Image = ({src, alt = '', className = '', flags = '', extension='.jpg'}) => {
   const id = src && src.asset && src.asset.source && src.asset.source.id;
   const decodedId = id ? JSON.parse(decode(id)).public_id : '';
-  const atobSrc = decodedId + '.jpg';
+  const atobSrc = decodedId + extension;
   return html`<img className="${className}" src="${useStatic(atobSrc, flags)}" alt="${alt}" />`;
 };
 

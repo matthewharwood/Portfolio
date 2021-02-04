@@ -2,6 +2,7 @@ import { html } from "htm/preact";
 import { useState } from "preact/hooks";
 import { useInterval } from "../../hooks/use_interval";
 import { useIsVisible } from "../../hooks/use_is_visible";
+import {generateSpacingClassString, Spacers} from '../_parts/spacer';
 
 
 
@@ -20,7 +21,7 @@ const AnimatedTextNodeEdges = (props) => {
 const AnimatedTextNode = (props) => {
   const [count, setCount] = useState(0);
   const [ref, inView] = useIsVisible();
-
+  const spacingClasses = generateSpacingClassString(props);
   useInterval(() => {
     if (inView && count !== props.end) {
       setCount(count + props.step);
@@ -28,7 +29,7 @@ const AnimatedTextNode = (props) => {
   }, 80);
 
   return html`
-    <span ref="${ref}" className="pt-20 text-center">
+    <span ref="${ref}" className="text-center ${spacingClasses}">
       <${AnimatedTextNodeEdges} cn="${props.classNameEdges}" text="${props.beforeText}"/>
       <${AnimatedTextNodeCount} cn="${props.classNameCount}" count="${count}" />
       <${AnimatedTextNodeEdges} cn="${props.classNameEdges}" text="${props.afterText}" />
@@ -40,7 +41,11 @@ const animatedTextNode = {
   name: "animatedTextNode",
   title: "Animated Text Node",
   type: "document",
+  fieldsets: [
+    Spacers.fieldset,
+  ],
   fields: [
+    ...Spacers.fields,
     {
       type: "string",
       name: "beforeText",
