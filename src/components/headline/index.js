@@ -11,6 +11,7 @@ const HeadlineNumber = (props) => {
     <span>${props.span}</span>
   `;
 };
+
 const HeadlineTitle = (props) => {
   if(!props.title) {
     return null;
@@ -22,7 +23,7 @@ const HeadlineTitle = (props) => {
 
 const HeadlineText = (props) => {
   if(!props.text) {
-    return text;
+    return null;
   }
 
   return html`
@@ -41,7 +42,7 @@ const HeadlineBorder = (props) => {
   return null;
 };
 
- const Headline = ({ hasBorder, number, title, text }) => {
+ const Headline = ({ hasBorder, number, title, text= '' }) => {
   return html`
     <section>
       <div className="container px-5 lg:px-16 py-8 lg:py-16 grid grid-cols-3">

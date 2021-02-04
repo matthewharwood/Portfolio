@@ -17,8 +17,6 @@ const aspectRatiosMapped = Object.entries(aspectRatios).map(([key, val]) => ({
   value: `aspect-ratio-${key}`,
 }));
 
-console.log(aspectRatiosMapped);
-
 export const AspectRatios = [
   {
     type: "string",

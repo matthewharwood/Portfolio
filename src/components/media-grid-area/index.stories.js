@@ -10,6 +10,5 @@ const FIXTURE = {};
 
 export const Main = () => {
   const props = seed('mediaGridArea');
-  console.log(props);
   return (<MediaGridArea {...FIXTURE} {...props} />)
 };

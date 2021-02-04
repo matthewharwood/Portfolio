@@ -5,7 +5,7 @@ export const HighlightBold= ({
   number,
   title,
   text,
-  ui,
+  ui = {},
 }) => {
   return html`
     <section className="py-16 px-5 lg:px-0">

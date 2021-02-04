@@ -1,5 +1,6 @@
 import { html } from "htm/preact";
 import {Image} from '../media';
+import {Mono, Sans} from '../typography';
 
 export const Highlight = ({
   isImageRight,
@@ -17,9 +18,9 @@ export const Highlight = ({
       className="container px-5 lg:px-16 grid grid-cols-12 lg:gap-10 py-16"
     >
       <div className="flex flex-col col-span-12 ${textColsClass}">
-        <span className="text-2xl text-accent">${subtitle}</span>
-        <h2 className="text-5xl">${title}</h2>
-        <p className="mt-5 leading-loose">${text}</p>
+        <span className="${Sans.xl2} text-accent">${subtitle}</span>
+        <h2 className="${Mono.xl4}">${title}</h2>
+        <p className="mt-5 leading-loose ${Sans.base}">${text}</p>
       </div>
       <div className="col-span-12 ${imageOrder} ${imageColsClass}">
         <${Image} src="${image}" alt="" className="h-full w-full object-cover" />

@@ -62,13 +62,9 @@ const Renderer = (props) => {
     ${props.section.map((s) => {
     return html`
         <section className="${BackgroundColor[s.backgroundColor || 'secondary']}">
-          ${s.content.map(c => {
-            // if(c._type === 'slideshow') {
-            //   return html`<h1>HELLO SLIDESHOW</h1>`;
-            //
-            // }
-      return html`<${RenderMap[c._type]} ...${c} />`;
-    })}
+         ${s.content.map(c => {
+             return html`<fade-in><${RenderMap[c._type]} ...${c} /></fade-in>`;
+         })}
         </section>
       `;
   })}

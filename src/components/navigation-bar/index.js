@@ -5,7 +5,11 @@ import {isServer} from '../../utils/which_env';
 
 const calcActiveLink = (s, pathname) => s.map(i => {
   if (isServer) return;
-  if (i.href === pathname) {
+
+  // || i.childrenLinks.some(cl => cl.href === pathname)
+  // TODO will activate navigation link for children pages; however, I need to design out what that interaction does.
+  // Maybe dropdown tooltip will help this.
+  if (i.href === pathname ) {
     i.isActive = true;
   } else {
     i.isActive = false;
@@ -20,16 +24,19 @@ export const NavigationBar = () => {
       title: 'Work',
       href: '/work',
       isActive: false,
+      childrenLinks: [{href: '/work/uber-com'}]
     },
     {
       title: 'Lab',
       href: '/lab',
       isActive: false,
+      childrenLinks: [{}]
     },
     {
       title: 'Profile',
       href: '/profile',
       isActive: false,
+      childrenLinks: [{}]
     },
   ];
 

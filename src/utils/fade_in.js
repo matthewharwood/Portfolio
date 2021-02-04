@@ -8,7 +8,6 @@ class FadeIn extends HTMLElement {
     this.style.opacity = 0;
     this.style.display = 'block';
     whenVisible(this, () => {
-      console.log(this, 'inside')
       anime({
         targets: this,
 
