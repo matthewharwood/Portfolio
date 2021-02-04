@@ -1,5 +1,5 @@
 import { html } from "htm/preact";
-import { PostLayout } from "../layouts/post-layout";
+import { PostLayout, PostLayoutWithoutFooter } from './post-layout';
 
 const withFooterAndRouter = (props) => (Component) => {
   return html`
@@ -9,4 +9,12 @@ const withFooterAndRouter = (props) => (Component) => {
   `;
 };
 
-export { withFooterAndRouter };
+const withRouter = (props) => (Component) => {
+  return html`
+    <${PostLayoutWithoutFooter} ...${props}>
+        <${Component} />
+    <//>
+  `;
+};
+
+export { withFooterAndRouter, withRouter };

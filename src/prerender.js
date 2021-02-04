@@ -13,10 +13,10 @@ import {html} from 'htm/preact';
 import {AH} from './components/component_map';
 
 import {Rorschach} from './pages/lab/rorschach';
-import {withFooterAndRouter} from './layouts/with_footer_and_router';
+import {withFooterAndRouter,withRouter} from './layouts/with_footer_and_router';
 import {Renderer} from './pages/work/renderer';
 import {seed} from './_data/seed-data';
-import {RouterLayout} from './layouts/router-layout';
+
 
 const htmlMin = (temp) => minify(temp, {
   removeAttributeQuotes: true,
@@ -40,7 +40,7 @@ const props = seed('page');
 const props2 = seed('page',1);
 
 const pages = [
-  {fileName: 'index', content: renderPage('Home Page', RouterLayout({title: 'index'})(Index))  },
+  {fileName: 'index', content: renderPage('Home Page', withRouter({title: 'index'})(Index))  },
   {fileName: 'profile', content: renderPage('Profile Page', withFooterAndRouter({title: 'profile'})(Profile))},
   {fileName: 'work', content: renderPage('Work Page', withFooterAndRouter({title: 'work'})(Work))},
   {fileName: 'lab', content: renderPage('Lab Page', withFooterAndRouter({title: 'lab'})(Lab))},

@@ -8,6 +8,13 @@ const FooterLayout = ({children}) => {
   `;
 }
 
+const HomeLayout = ({children}) => {
+  return html`
+     ${children}
+  `;
+}
+
 export {
+  HomeLayout,
   FooterLayout
 }
