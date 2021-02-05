@@ -26,6 +26,7 @@ import {HighlightMedia} from '../../components/highlight-media';
 import {TextSection} from '../../components/text-section';
 // import {Slideshow} from '../../components/slideshow';
 import {AH} from '../../components/component_map';
+import {HR} from '../../components/hr';
 
 const RenderMap = {
   'postHeader': PostHeader,
@@ -53,6 +54,7 @@ const RenderMap = {
   'highlightMedia': HighlightMedia,
   'textSection': TextSection,
   'slideshow': AH.Slideshow,
+  'hr': HR,
 };
 
 const Renderer = (props) => {

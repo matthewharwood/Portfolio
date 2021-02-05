@@ -37,7 +37,8 @@ const renderPage = (title, page) => {
 };
 
 const props = seed('page');
-const props2 = seed('page',1);
+const props1 = seed('page',1);
+const props2 = seed('page',2);
 
 const pages = [
   {fileName: 'index', content: renderPage('Home Page', withRouter({title: 'index'})(Index))  },
@@ -46,9 +47,9 @@ const pages = [
   {fileName: 'lab', content: renderPage('Lab Page', withFooterAndRouter({title: 'lab'})(Lab))},
   {fileName: 'lab/rorschach', content: renderPage('Rorschach', withFooterAndRouter({title: 'rorschach'})(Rorschach))},
   {fileName: 'work/nike-jordan-editor', content: renderPage('Nike Jordan Editor', withFooterAndRouter({title: 'nike-jordan-editor'})(() => Renderer(props)))},
-  {fileName: 'work/uber-com', content: renderPage('Uber.com', withFooterAndRouter({title: 'uber-com'})(() => Renderer(props2)))},
+  {fileName: 'work/uber-com', content: renderPage('Uber.com', withFooterAndRouter({title: 'uber-com'})(() => Renderer(props1)))},
   {fileName: 'alt', content: renderPage('Alt Page', withFooterAndRouter({title: 'Alt'})(Alt))  },
-  // {fileName: 'work/marketing-pathfinder', content: renderPage('Marketing Pathfinder',  withFooterAndRouter({title: 'marketing-path-finder'})(MarketingPathfinder))},
+  {fileName: 'work/marketing-pathfinder', content: renderPage('Marketing Pathfinder',  withFooterAndRouter({title: 'marketing-path-finder'})(() => Renderer(props2)))},
 ];
 
 const DIST_DIR = join(__dirname, '../', 'dist');

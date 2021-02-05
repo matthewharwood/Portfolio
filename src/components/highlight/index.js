@@ -20,7 +20,7 @@ export const Highlight = ({
       <div className="flex flex-col col-span-12 ${textColsClass}">
         <span className="${Sans.xl2} text-accent">${subtitle}</span>
         <h2 className="${Mono.xl4}">${title}</h2>
-        <p className="mt-5 leading-loose ${Sans.base}">${text}</p>
+        <p className="mt-5 leading-loose ${Sans.lg}">${text}</p>
       </div>
       <div className="col-span-12 ${imageOrder} ${imageColsClass}">
         <${Image} src="${image}" alt="" className="h-full w-full object-cover" />

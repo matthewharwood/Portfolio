@@ -61,7 +61,8 @@ server.get('/work/nike-jordan-editor', function (req, res) {
 });
 
 server.get('/work/marketing-pathfinder', function (req, res) {
-  res.send(renderPage('Marketing Pathfinder', withFooterAndRouter({title: 'marketing-path-finder'})(MarketingPathfinder)));
+  const props = seed('page', 2);
+  res.send(renderPage('Marketing Pathfinder', withFooterAndRouter({title: 'marketing-path-finder'})(() => Renderer(props))));
 });
 
 server.get('/work/uber-com', function (req, res) {
