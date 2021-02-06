@@ -1,5 +1,5 @@
 import {html} from 'htm/preact';
-import {Media} from '../media';
+import {MediaNew} from '../media/media';
 
 
 const LabCardName = ({name}) => {
@@ -23,7 +23,7 @@ const LabCard = ({name, href, src, tags, description, alt, video}) => {
   <a className="transition cursor-pointer ease-in duration-100 bg-secondary-lighter flex flex-col rounded overflow-hidden shadow text-primary hover:underline hover:shadow-lg m-10 no-underline" href="${href}">
     <div className="lab-cards-aspect-ratio relative">
       <div className="absolute top-0 left-0 w-full h-full">
-        <${Media} src="${src}" video="${video}" alt="${alt}" />
+        <${MediaNew} type="video" videoSrc="${src}" alt="${alt}" />
       </div>
     </div>
 

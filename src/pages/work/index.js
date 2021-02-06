@@ -20,21 +20,18 @@ const articles = [
     href: '/work/nike-jordan-editor',
     img: useStatic('jordan.svg', 'f_svg')
   },
-
-
 ];
 
-/**
- *  <ul className="items-center flex justify-center list-none m-0 p-0">
-       <li className="rounded h-6 w-6 bg-gray-200 my-2" />
-    </ul>
- */
+
 export const Work = () => {
   return html`
-    <div>
-    ${articles.map((nl, index) =>
-      html`<${WorkItem} ...${nl} index="${index}" />`
-    )}
+    <div className="relative">
+      ${articles.map((nl, index) =>
+        html`<${WorkItem} ...${nl} index="${index}" />`
+      )}
+      <hide-when-bottom>
+          <img src="${useStatic('arrow_atbrrm.svg')}" alt="Scroll down arrow" className="fixed animate-bounce opacity-25 z-10 bottom-0 right-0">
+      </hide-when-bottom>
     </div>
   `;
 };

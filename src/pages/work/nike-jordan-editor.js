@@ -32,14 +32,13 @@ const WorkNikeJordanEditor = (props) => {
   }
 
   return html`
-    ${console.log(props)}
     ${props.section.map((s) => {
       return html`
         <div className="${BackgroundColor[s.backgroundColor || 'secondary']}">
             ${s.content.map(c => {
               return html`
                 <${Render[c._type]} ...${c} />
-              `  
+              `
             })}
         </div>
       `;

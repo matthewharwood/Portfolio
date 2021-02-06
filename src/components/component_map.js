@@ -24,7 +24,6 @@ export const COMPONENT_MAP = {
   VideoCard,
   InfiniteImageScroll,
   MediaThumbnail,
-  MediaSection,
   AnimatedTextNode,
   Slideshow,
 };

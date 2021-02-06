@@ -8,7 +8,7 @@ const Video = ({src, playsInline, autoPlay, className="", poster}) => {
   const atobSrc = decodedId + '.jpg';
   const thumbSrc = useStatic(atobSrc);
   return html`
-    <video className="flex w-full h-full ${className}" autoplay playsinline poster="${thumbSrc}">
+    <video className="flex w-full h-full ${className}" muted loop autoplay playsinline poster="${thumbSrc}">
       <source src="${useStatic(src)}" type="video/mp4" />
        Your browser does not support the video tag.
     </video>`;

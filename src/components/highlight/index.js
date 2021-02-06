@@ -1,21 +1,24 @@
 import { html } from "htm/preact";
 import {Image} from '../media';
 import {Mono, Sans} from '../typography';
+import {generateSpacingClassString} from '../_parts/spacer';
 
-export const Highlight = ({
-  isImageRight,
-  imageCols = 6,
-  subtitle,
-  title,
-  text,
-  image,
-}) => {
+export const Highlight = (props) => {
+  const {
+    isImageRight,
+    imageCols = 6,
+    subtitle,
+    title,
+    text,
+    image,
+  } = props;
   const imageOrder = isImageRight ? "order-last" : "order-first";
   const imageColsClass = `lg:col-span-${imageCols}`;
   const textColsClass = `lg:col-span-${12 - imageCols}`;
+  const spacingClasses = generateSpacingClassString(props);
   return html`
     <section
-      className="container px-5 lg:px-16 grid grid-cols-12 lg:gap-10 py-16"
+      className="container ${spacingClasses}"
     >
       <div className="flex flex-col col-span-12 ${textColsClass}">
         <span className="${Sans.xl2} text-accent">${subtitle}</span>
