@@ -19,6 +19,7 @@ import {Rorschach} from './pages/lab/rorschach';
 import {withFooterAndRouter} from './layouts/with_footer_and_router';
 import {seed} from './_data/seed-data';
 import {Renderer} from './pages/work/renderer';
+import {MonkeyMech} from './pages/lab/monkey-mech';
 
 const liveReloadServer = livereload.createServer();
 
@@ -81,6 +82,10 @@ server.get('/lab', function (req, res) {
 
 server.get('/lab/rorschach', function (req, res) {
   res.send(renderPage('Rorschach', withFooterAndRouter({title: 'rorschach'})(Rorschach)));
+});
+
+server.get('/lab/monkey-mech', function (req, res) {
+  res.send(renderPage('Monkey Mech', withFooterAndRouter({title: 'Monkey Mech'})(MonkeyMech)));
 });
 
 

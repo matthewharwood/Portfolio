@@ -9,11 +9,13 @@ const Media = ({src, alt = '', classNames = '', video}) => {
       : html`<${Image} src="${src}" className="${classNames}"/>`
 };
 
-const MediaNew = ({ type, imgSrc, videoSrc, alt, poster,className, extension = '.jpg' }) => {
+const MediaNew = (props) => {
+  const { type, imgSrc, videoSrc, alt, poster,className, extension = '.jpg' } = props;
   const commonProps = {
     alt,
     className,
   }
+
   return type === 'video' ?  html`<${Video} src="${videoSrc}" poster="${poster}" ...${commonProps}/>` : html`<${Image} src="${imgSrc}" extension="${extension}"  ...${commonProps}/>`
 }
 
