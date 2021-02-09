@@ -29,7 +29,7 @@ const Row = ({links}) => {
             <div className="lg:mb-10">
 
                 <${LabCard} ...${card} />
-              
+
               <div className="mb-2" />
             </div>
 
