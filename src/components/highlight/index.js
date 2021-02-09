@@ -18,7 +18,7 @@ export const Highlight = (props) => {
   const spacingClasses = generateSpacingClassString(props);
   return html`
     <section
-      className="container ${spacingClasses}"
+      className="container grid grid-cols-12 lg:gap-10 ${spacingClasses}"
     >
       <div className="flex flex-col col-span-12 ${textColsClass}">
         <span className="${Sans.xl2} text-accent">${subtitle}</span>

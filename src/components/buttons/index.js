@@ -45,4 +45,22 @@ export const PrimaryButton= ({
   `;
 };
 
+export const SecondaryButton = ({
+  link = 'Design System',
+  icon = 'figma',
+  href,
+  ariaLabel,
+  onClick,
+  target,
+}) => {
+  return html`
+    <button
+      aria-label="${ariaLabel}"
+      onClick="${onClick}"
+      className="bg-purple-700 hover:bg-purple-900 text-gray-100  py-2 px-4 border border-gray-100 rounded shadow inline-flex items-center">
+        <span>${link}</span>
+    </button>
+  `;
+}
+
 

@@ -135,4 +135,23 @@ body {
   }
 }
 
+.pull-1 {
+  transform: none;
+}
+
+.push-1 {
+  transform: none;
+}
+
+@media (min-width: 1024px) {
+  .push-1 {
+    transform: translateX(122px);
+
+  }
+  .pull-1 {
+    transform: translateX(-122px);
+
+  }
+}
+
 /* purgecss end ignore */

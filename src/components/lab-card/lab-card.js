@@ -1,5 +1,6 @@
 import {html} from 'htm/preact';
 import {MediaNew} from '../media/media';
+import {useStatic} from '../../hooks/use_static';
 
 
 const LabCardName = ({name}) => {
@@ -13,17 +14,25 @@ const LabCardDescription = ({description}) => {
 };
 const LabCardTags = ({tags}) => {
   return tags && tags.map((tag) => html`
-    <span className="inline-block border-solid border-1 bg-tertiary rounded-full px-3 py-1 text-sm font-semibold shadow-inner mr-2 mb-2 ">#${tag.name}</span>
+    <span className="inline-block border-solid border-1 bg-tertiary rounded-full px-3 py-1 text-sm font-semibold shadow-inner mr-2 mb-2 ">#${tag}</span>
   `
   );
 };
 
 const LabCard = ({name, href, src, tags, description, alt, video}) => {
+  const type = src.endsWith('.mp4');
+  const MediaSwitcher = () => {
+    if(type) {
+      return html`<${MediaNew} type="video" videoSrc="${src}" alt="${alt}" />`
+    }
+    return html`<img src="${useStatic(src)}" alt=""/>`;
+  }
+
   return html`
   <a className="transition cursor-pointer ease-in duration-100 bg-secondary-lighter flex flex-col rounded overflow-hidden shadow text-primary hover:underline hover:shadow-lg m-10 no-underline" href="${href}">
     <div className="lab-cards-aspect-ratio relative">
       <div className="absolute top-0 left-0 w-full h-full">
-        <${MediaNew} type="video" videoSrc="${src}" alt="${alt}" />
+        <${MediaSwitcher} />
       </div>
     </div>
 
