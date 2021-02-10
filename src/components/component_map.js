@@ -12,6 +12,8 @@ import { MediaThumbnail } from "./media-thumbnail";
 import { MediaSection } from './media-section';
 import { AnimatedTextNode } from './text-nodes/animated'
 import {Slideshow} from './slideshow';
+import {HumbleBeginnings} from '../pages/profile';
+
 
 export const COMPONENT_MAP = {
   RunningHeader,
@@ -26,6 +28,7 @@ export const COMPONENT_MAP = {
   MediaThumbnail,
   AnimatedTextNode,
   Slideshow,
+  HumbleBeginnings,
 };
 
 const AH = {};
