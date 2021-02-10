@@ -1,6 +1,6 @@
 const me = {
   name: 'Matthew Harwood',
-  title: 'Developer + Multidisciplinary Designer',
+  title: 'User Experience Engineer',
   description:
     'I am a generalist; slowly becoming a specialist in Web Development. I mix art, design, and technology, to create effective experiences that deliver value at scale. My professional goals are simple: surround myself by smart, energetic, creative people while working on solving problems that matter.',
   phone: '1.415.486.6018',

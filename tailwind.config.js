@@ -130,6 +130,9 @@ module.exports = {
       },
       borderColor: (theme) => ({ default: theme("colors.border") }),
     },
+    gridTemplateColumns: {
+      '24': 'repeat(24, minmax(0, 1fr))',
+    },
     aspectRatio: { // defaults to {}
       none: 0,
       square: [1, 1],

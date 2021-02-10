@@ -11,32 +11,57 @@ import {
   visited,
 } from "../../content/profile";
 import {useStatic} from '../../hooks/use_static';
+import {Mono, Sans} from '../../components/typography';
+import {HR} from '../../components/hr';
+import {VideoLoop, VideoOmitLoop} from '../../components/media/video';
+
 
 export const Profile = () => {
   return html`
-    <${IntroSection} />
-    <${ProfileSection} />
-  `;
-};
+    <${IntroSectionRe} />
 
-const IntroSection = () => {
-  return html`
-    <section
-      className="lg:h-screen flex flex-col lg:flex-row items-center inset-0 z-0"
-    >
-      <div className="w-full lg:w-1/2 p-10 lg:p-20 flex flex-col">
-        <h1 className="text-4xl font-bold mb-5">${me.name}</h1>
-        <h2 className="text-3xl font-bold mb-5">${me.title}</h2>
-        <p>${me.description}</p>
-      </div>
-      <img
-        src="${useStatic('me.jpg')}"
-        alt=""
-        className="h-50vh lg:h-full w-full lg:w-1/2 object-cover order-first lg:order-none"
-      />
-    </section>
   `;
 };
+//   <${ProfileSection} />
+
+
+const IntroSectionRe = () => {
+  return html`
+    <section className="container grid grid-cols-12 lg:grid-cols-24 lg:gap-4 mb-48">
+
+        <header className="col-span-12 lg:col-span-11 items-center flex order-3 lg:order-none">
+          <div className="p-4 lg:p-0">
+            <h2 className="${Mono.xl3} mb-5">${me.title}</h2>
+            <p className="${Sans.lg}">My name is <u>Matthew Harwood</u> and I am a <em>generalist</em> ; slowly becoming a specialist in Software Engineering. I mix art, design, and technology, to create effective experiences that deliver value at scale. My professional goals are simple: surround myself by smart, energetic, creative people while working on solving problems that matter.</p>
+            <div className="flex mt-10">
+              <div className="pr-4">
+                <a
+                  href="#"
+                  aria-label="Email Me"
+                  className="bg-primary text-secondary hover:bg-gray-800 py-2 px-10 shadow inline-flex items-center ${Sans.lg}">
+                  <span>Email Me</span>
+                </a>
+              </div>
+              <div className="flex items-center">
+                <a href="" className="underline">or 1.415.483.6018</a>
+              </div>
+            </div>
+          </div>
+        </header>
+        <div className="h-4 col-span-12 lg:h-0 lg:col-span-1 order-2 lg:order-none"/>
+        <div className="col-span-12 order-1 lg:order-none">
+          <${VideoLoop} className="w-full" type="video" src="Profile/matthew-harwood-wavy_q68pdb.mp4" />
+        </div>
+
+    </section>
+    <${HR} title="What is UX Engineering" omitMargin />
+    <fade-in>
+      <section className="container">
+        <${VideoOmitLoop} className="w-full" type="video" src="Profile/continuum.mp4" omitLoop />
+      </section>
+    </fade-in>
+  `
+}
 
 const ProfileSection = () => {
   return html`
@@ -157,3 +182,28 @@ const ProfileColumnVisited = ({ title, data }) => {
     </div>
   `;
 };
+
+
+// OLD STYLES
+/**
+ *
+
+const IntroSection = () => {
+  return html`
+    <section
+      className="lg:h-screen flex flex-col lg:flex-row items-center inset-0 z-0"
+    >
+      <div className="w-full lg:w-1/2 p-10 lg:p-20 flex flex-col">
+        <h1 className="text-4xl font-bold mb-5">${me.name}</h1>
+        <h2 className="text-3xl font-bold mb-5">${me.title}</h2>
+        <p>${me.description}</p>
+      </div>
+      <img
+        src="${useStatic('Profile/matthew-harwood_acf0ft.jpg')}"
+        alt=""
+        className="h-50vh lg:h-full w-full lg:w-1/2 object-cover order-first lg:order-none"
+      />
+    </section>
+  `;
+};
+ */
