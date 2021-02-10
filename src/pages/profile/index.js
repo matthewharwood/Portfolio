@@ -71,13 +71,13 @@ const IntroSectionRe = () => {
 const ProfileSectionRe = () => {
   return html`
     <section className="container relative grid grid-cols-12 lg:grid-cols-24 lg:gap-4">
-      <div className="lg:col-span-7">
+      <div className="col-span-12 lg:col-span-7">
         <h3 className="${Mono.xl3}">Experiences</h3>
         <${AH.HumbleBeginnings} />
 
       </div>
-      <div className="lg:col-span-1" />
-      <div className="lg:col-span-7">
+      <div className="col-span-12 lg:col-span-1" />
+      <div className="col-span-12 lg:col-span-7">
         <h3 className="${Mono.xl3}">Education</h3>
 
         <ul>
@@ -106,8 +106,8 @@ const ProfileSectionRe = () => {
           )}
         </ul>
       </div>
-      <div className="lg:col-span-1" />
-      <div className="lg:col-span-7">
+      <div className="col-span-12 lg:col-span-1" />
+      <div className="col-span-12 lg:col-span-7">
         <h3 className="${Mono.xl3}">Technical</h3>
         <p className="my-8">${techniques.join(", ")}</p>
         <h3 className="${Mono.xl3}">Interests</h3>
