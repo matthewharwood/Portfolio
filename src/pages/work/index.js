@@ -35,7 +35,7 @@ export const Work = () => {
     </div>
   `;
 };
-//
+
 const WorkItem = ({name, description, href, img}) => {
 
   return html`
