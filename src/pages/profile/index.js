@@ -22,7 +22,7 @@ export const Profile = () => {
     <${IntroSectionRe} />
     <${ProfileSectionRe} />
     <${HR} title="Recent Activity" omitMargin />
-    <p>TBD - Thanks covid </p>
+    <p className="container">Nothing to see here - Thanks covid ☹️ </p>
   `;
 };
 //   <${ProfileSection} />
@@ -30,6 +30,7 @@ export const Profile = () => {
 
 const IntroSectionRe = () => {
   return html`
+    <fade-in>
     <section className="container grid grid-cols-12 lg:grid-cols-24 lg:gap-4 mb-48">
 
         <header className="col-span-12 lg:col-span-11 items-center flex order-3 lg:order-none">
@@ -52,11 +53,12 @@ const IntroSectionRe = () => {
           </div>
         </header>
         <div className="h-4 col-span-12 lg:h-0 lg:col-span-1 order-2 lg:order-none"/>
-        <div className="col-span-12 order-1 lg:order-none">
+        <div className="col-span-12 order-1 lg:order-none ">
           <${VideoLoop} className="w-full" type="video" src="Profile/matthew-harwood-wavy_q68pdb.mp4" />
         </div>
 
     </section>
+    </fade-in>
     <${HR} title="What is UX Engineering" omitMargin />
     <fade-in>
       <section className="container mb-48">
