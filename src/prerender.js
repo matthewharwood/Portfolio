@@ -16,7 +16,8 @@ import {Rorschach} from './pages/lab/rorschach';
 import {withFooterAndRouter,withRouter} from './layouts/with_footer_and_router';
 import {Renderer} from './pages/work/renderer';
 import {seed} from './_data/seed-data';
-import {MonkeyMech} from './pages/lab/monkey-mech';
+import {Index as MonkeyMechIndex} from './pages/lab/monkey-mech';
+import {Index as MonkeyMechLevelDesign} from './pages/lab/monkey-mech/level-design';
 
 
 const htmlMin = (temp) => minify(temp, {
@@ -47,7 +48,8 @@ const pages = [
   {fileName: 'work', content: renderPage('Work Page', withFooterAndRouter({title: 'work'})(Work))},
   {fileName: 'lab', content: renderPage('Lab Page', withFooterAndRouter({title: 'lab'})(Lab))},
   {fileName: 'lab/rorschach', content: renderPage('Rorschach', withFooterAndRouter({title: 'rorschach'})(Rorschach))},
-  {fileName: 'lab/monkey-mech', content: renderPage('Monkey Mech', withFooterAndRouter({title: 'Monkey Mech'})(MonkeyMech))},
+  {fileName: 'lab/monkey-mech', content: renderPage('Monkey Mech', withFooterAndRouter({title: 'Monkey Mech'})(MonkeyMechIndex))},
+  {fileName: 'lab/monkey-mech/level-design', content: renderPage('Monkey Mech: Level Design', withFooterAndRouter({title: 'Monkey Mech: Level Design'})(MonkeyMechLevelDesign))},
   {fileName: 'work/nike-jordan-editor', content: renderPage('Nike Jordan Editor', withFooterAndRouter({title: 'nike-jordan-editor'})(() => Renderer(props)))},
   {fileName: 'work/uber-com', content: renderPage('Uber.com', withFooterAndRouter({title: 'uber-com'})(() => Renderer(props1)))},
   {fileName: 'alt', content: renderPage('Alt Page', withFooterAndRouter({title: 'Alt'})(Alt))  },

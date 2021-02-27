@@ -13,13 +13,12 @@ import livereload from 'livereload';
 import connectLivereload from 'connect-livereload';
 import {join} from 'path';
 
-import {MarketingPathfinder} from './pages/work/marketing-pathfinder';
-
 import {Rorschach} from './pages/lab/rorschach';
 import {withFooterAndRouter} from './layouts/with_footer_and_router';
 import {seed} from './_data/seed-data';
 import {Renderer} from './pages/work/renderer';
-import {MonkeyMech} from './pages/lab/monkey-mech';
+import {Index as MonkeyMechIndex} from './pages/lab/monkey-mech';
+import {Index as MonkeyMechLevelDesign} from './pages/lab/monkey-mech/level-design';
 
 const liveReloadServer = livereload.createServer();
 
@@ -85,7 +84,11 @@ server.get('/lab/rorschach', function (req, res) {
 });
 
 server.get('/lab/monkey-mech', function (req, res) {
-  res.send(renderPage('Monkey Mech', withFooterAndRouter({title: 'Monkey Mech'})(MonkeyMech)));
+  res.send(renderPage('Monkey Mech', withFooterAndRouter({title: 'Monkey Mech'})(MonkeyMechIndex)));
+});
+
+server.get('/lab/monkey-mech/level-design', function (req, res) {
+  res.send(renderPage('Monkey Mech: Level Design', withFooterAndRouter({title: 'Monkey Mech'})(MonkeyMechLevelDesign)));
 });
 
 

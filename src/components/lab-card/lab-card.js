@@ -23,9 +23,9 @@ const LabCard = ({name, href, src, tags, description, alt, video}) => {
   const type = src.endsWith('.mp4');
   const MediaSwitcher = () => {
     if(type) {
-      return html`<${MediaNew} type="video" videoSrc="${src}" alt="${alt}" />`
+      return html`<${MediaNew} type="video" className="object-cover" videoSrc="${src}" alt="${alt}" />`
     }
-    return html`<img src="${useStatic(src)}" alt=""/>`;
+    return html`<img src="${useStatic(src)}" className="object-cover h-full" alt=""/>`;
   }
 
   return html`

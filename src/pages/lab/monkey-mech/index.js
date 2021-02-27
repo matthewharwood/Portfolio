@@ -1,7 +1,7 @@
 import {html} from 'htm/preact';
-import {Mono, Sans} from '../../components/typography';
-import {SecondaryButton} from '../../components/buttons';
-import {HR} from '../../components/hr';
+import {Mono, Sans} from '../../../components/typography';
+import {SecondaryButton} from '../../../components/buttons';
+import {HR} from '../../../components/hr';
 
 const Highlight = (props) => {
   const {
@@ -82,7 +82,7 @@ const combat = {
   weighted: true,
 }
 
-const MonkeyMech = () => {
+const Index = () => {
   return html`
     <article className="pt-nav">
       <header className="bg-purple-700 py-64">
@@ -185,5 +185,5 @@ const MonkeyMech = () => {
 };
 
 export {
-  MonkeyMech
+  Index
 }
