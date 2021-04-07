@@ -36,6 +36,8 @@ const server = express();
 server.use(connectLivereload());
 server.use(express.static('/'));
 
+
+
 server.use('/static', express.static(join(__dirname + '/static')));
 
 const renderPage = (title, page) => {

@@ -9,13 +9,10 @@ const TextContainer = ({ nodes = [], className="" }) => {
         switch (node._type) {
           case "regularTextNode":
             return html`<${RegularTextNode} ...${node} />`;
-            break;
           case "animatedTextNode":
             return html`<${AH.AnimatedTextNode} ...${node} />`;
-            break;
           default:
             return html`<span></span>`;
-            break;
         }
       })}
     </div>

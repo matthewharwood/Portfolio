@@ -1,16 +1,18 @@
 import { html } from "htm/preact";
 import {MediaNew} from '../media/media';
+import {SpacingContainer} from '../_parts/spacer';
 
-export const CategoryCards = ({ categories, subtitle, title }) => {
+export const CategoryCards = (props) => {
+  const { categories } = props;
   return html`
-    <div className="bg-gray-100">
-      <section className="container py-4 px-5 lg:px-16">
+    <${SpacingContainer} name="CategoryCards" ...${props}>
+      <section className="container">
         ${categories.map(category => html`
           <${CategoryLine} ...${category} />
         `)}
       </section>
-    </div>
-  `
+    <//>
+  `;
 }
 
 const CategoryLine = ({ title, cards }) => {
@@ -28,11 +30,15 @@ const CategoryLine = ({ title, cards }) => {
         `)}
       </div>
       <div className="md:hidden col-span-12 items-start flex overflow-x-auto absolute left-0 right-0 pl-48">
-        ${cards.map(card => html`
-          <div className="w-40 bg-white flex-shrink-0 mr-5">
-            <${Card} ...${card}/>
-          </div>
-        `)}
+
+          ${cards.map(card => html`
+              <div className="bg-secondary-lighter">
+            <div className="w-40 bg-white flex-shrink-0 mr-5">
+              <${Card} ...${card}/>
+            </div>
+              </div>
+          `)}
+
       </div>
     </div>
   `

@@ -5,7 +5,7 @@ const Teammate = (props) =>{
   const gridClasses = `lg:col-start-${(props.colIndex * 3) + 1} col-span-3 lg:row-start-${props.rowIndex+1} lg:grid grid-cols-3`
   return html`
       ${props.name && props.title && html`
-        <div class="w-40 sm:w-64 lg:w-full flex-shrink-0 relative mx-5 lg:mx-0 lg:my-5 ${gridClasses}">
+        <div class="w-40 sm:w-64 lg:w-full flex-shrink-0 relative ${props.colIndex === 0 ? 'ml-0' : 'ml-5'} mr-5 lg:mx-0 lg:my-5 ${gridClasses}">
           <div className="h-0 pt-1/1 relative col-span-2">
             <div className="inset-0 absolute w-full h-full rounded-full overflow-hidden">
               <${Image} src="${props.image}" flags="e_grayscale" className="object-cover h-full min-w-full" />
@@ -20,12 +20,12 @@ const Teammate = (props) =>{
   `
 }
 
-const TeamBubbles = ({ teammates, gridCols = 9 }) => {
+const TeamBubbles = ({ teammates }) => {
   const rows = arrangeTeamIntoRows(teammates.slice(0));
   return html`
     <section>
-      <div className="container lg:px-16 flex lg:grid lg:grid-cols-9 xl:grid-cols-12 lg:gap-4 overflow-x-auto">
-        ${rows.map((row, rowIndex) => 
+      <div className="max-w-full md:container flex pl-5 md:pl-0 lg:grid lg:grid-cols-9 xl:grid-cols-12 lg:gap-4 overflow-x-auto ">
+        ${rows.map((row, rowIndex) =>
           row.map((teammate, colIndex) => html`
             <${ Teammate } ...${teammate} rowIndex="${rowIndex}" colIndex="${colIndex}"/>
           `)

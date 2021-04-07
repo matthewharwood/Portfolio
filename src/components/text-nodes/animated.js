@@ -8,13 +8,13 @@ import {generateSpacingClassString, Spacers} from '../_parts/spacer';
 
 const AnimatedTextNodeCount = (props) => {
   return html`
-    <span className="${props.cn}">${props.count}</span>
+    <span className="block lg:inline ${props.cn}">${props.count}</span>
   `;
 };
 
 const AnimatedTextNodeEdges = (props) => {
   return html`
-    <span className="${props.cn}">${props.text}</span>
+    <span className="block lg:inline ${props.cn}">${props.text}</span>
   `;
 };
 

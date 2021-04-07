@@ -1,8 +1,14 @@
+import {Spacers} from '../_parts/spacer';
+
 export const categoryCards = {
   name: "categoryCards",
   title: "Category Cards",
   type: "document",
+  fieldsets: [
+    Spacers.fieldset,
+  ],
   fields: [
+    ...Spacers.fields,
     {
       name: "title",
       title: "Title",

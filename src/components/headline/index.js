@@ -1,5 +1,6 @@
 import { html } from "htm/preact";
 import {Mono, Sans} from '../typography';
+import {SpacingContainer} from '../_parts/spacer';
 
 
 const HeadlineNumber = (props) => {
@@ -42,18 +43,21 @@ const HeadlineBorder = (props) => {
   return null;
 };
 
- const Headline = ({ hasBorder, number, title, text= '' }) => {
+ const Headline = (props) => {
+  const { hasBorder, number, title, text= '' } = props;
   return html`
-    <section>
-      <div className="container px-5 lg:px-16 py-8 lg:py-16 grid grid-cols-3">
-        <div className="col-span-3">
-          <${HeadlineNumber} number="${number}" />
-          <${HeadlineTitle} title="${title}" />
+    <${SpacingContainer} ...${props} name="Headline">
+      <section>
+        <div className="container grid grid-cols-3">
+          <div className="col-span-3">
+            <${HeadlineNumber} number="${number}" />
+            <${HeadlineTitle} title="${title}" />
+          </div>
+          <${HeadlineText} text="${text}" />
         </div>
-        <${HeadlineText} text="${text}" />
-      </div>
-      <${HeadlineBorder} hasBorder="${hasBorder}" />
-    </section>
+        <${HeadlineBorder} hasBorder="${hasBorder}" />
+      </section>
+    <//>
   `;
 };
 

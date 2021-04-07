@@ -1,8 +1,14 @@
+import {Spacers} from '../_parts/spacer';
+
 export default {
   name: 'summary',
   title: 'Summary',
   type: 'document',
+  fieldsets: [
+    Spacers.fieldset,
+  ],
   fields: [
+    ...Spacers.fields,
     {
       name: 'number',
       title: 'Name',

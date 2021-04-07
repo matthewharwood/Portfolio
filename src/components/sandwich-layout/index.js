@@ -18,7 +18,7 @@ const SandWichLayout = (props) => {
           <${MediaNew} ...${rightMedia} alt="" className="w-full object-cover object-left"/>
         </div>
       </div>
-      <div className="relative z-10 min-h-64 w-full flex justify-center items-center">
+      <div className="relative z-10 lg:min-h-64 w-full flex justify-center items-center">
         <div className="container text-center">
           <${TextContainer} nodes="${textNodes.nodes}"/>
         </div>

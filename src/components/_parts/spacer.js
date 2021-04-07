@@ -1,5 +1,4 @@
-// const config = require("../../../tailwind.config");
-// import * as config from "../../../tailwind.config";
+import {html} from 'htm/preact';
 
 const defaultSpacing = {
   px: "1px",
@@ -81,9 +80,15 @@ export const Spacers = {
 export const generateSpacingClassString = ( props ) => {
   const classString = SpacerFields.map(field => {
     if(props.hasOwnProperty(field.name)){
-      return `${field.prefix}${props[field.name]}` 
+      return `${field.prefix}${props[field.name]}`
     }
   }).join(" ");
   return classString;
 }
 
+export const SpacingContainer = (props) => {
+  const spacingClasses = generateSpacingClassString(props);
+  return html`
+    <div className="${spacingClasses}" data-name="${props.name}">${props.children}</div>
+`;
+}
