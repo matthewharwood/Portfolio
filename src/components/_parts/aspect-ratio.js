@@ -1,8 +1,10 @@
 const aspectRatios = {
   none: 0,
   square: [1, 1],
+  "9/16": [9, 16],
   "16/9": [16, 9],
   "4/3": [4, 3],
+  "4/5": [4, 5],
   '3/4': [3, 4],
   '5/2': [5, 2],
   "21/9": [21, 9],
@@ -14,6 +16,11 @@ const aspectRatios = {
 
 const aspectRatiosMapped = Object.entries(aspectRatios).map(([key, val]) => ({
   title: key,
+  value: `lg:aspect-ratio-${key}`,
+}));
+
+const aspectRatiosMobileMapped = Object.entries(aspectRatios).map(([key, val]) => ({
+  title: key,
   value: `aspect-ratio-${key}`,
 }));
 
@@ -24,6 +31,16 @@ export const AspectRatios = [
     title: "Aspect Ratio",
     options: {
       list: [...aspectRatiosMapped],
+      layout: "radio",
+      direction: "horizontal",
+    },
+  },
+  {
+    type: "string",
+    name: "aspectRatioMobile",
+    title: "Aspect Ratio Mobile",
+    options: {
+      list: [...aspectRatiosMobileMapped],
       layout: "radio",
       direction: "horizontal",
     },

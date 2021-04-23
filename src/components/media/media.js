@@ -10,20 +10,48 @@ const Media = ({src, alt = '', classNames = '', video}) => {
 };
 
 const MediaNew = (props) => {
-  const { type, imgSrc, videoSrc, alt, poster,className, extension = '.jpg' } = props;
+  const { type, imgSrc, imgSrcMobile, videoSrc, videoSrcMobile, alt, poster,className, extension = '.jpg' } = props;
+
   const commonProps = {
     alt,
     className,
   }
 
-  return type === 'video' ?  html`<${Video} src="${videoSrc}" poster="${poster}" ...${commonProps}/>` : html`<${Image} src="${imgSrc}" extension="${extension}"  ...${commonProps}/>`
+  return type === 'video'
+    ?  html`<${Video} loop="${props.loop}" src="${videoSrc}" srcMobile="${videoSrcMobile}" poster="${poster}" ...${commonProps}/>`
+    : html`<${Image} src="${imgSrc}" srcMobile="${imgSrcMobile}" extension="${extension}"  ...${commonProps}/>`
 }
 
-const Image = ({src, alt = '', className = '', flags = '', extension='.jpg'}) => {
+const Image = ({src, alt = '', className = '', flags = '',srcMobile,  extension='.jpg'}) => {
   const id = src && src.asset && src.asset.source && src.asset.source.id;
   const decodedId = id ? JSON.parse(decode(id)).public_id : '';
   const atobSrc = decodedId + extension;
-  return html`<img className="${className}" src="${useStatic(atobSrc, flags)}" alt="${alt}" />`;
+
+  const MobileTemplate = () => {
+    const idMobile = srcMobile && srcMobile.asset && srcMobile.asset.source && srcMobile.asset.source.id;
+    const decodedIdMobile = id ? JSON.parse(decode(idMobile)).public_id : '';
+    const atobSrcMobile = decodedIdMobile + extension;
+
+    return html`
+      <div className="${className}">
+        <picture >
+          <source media="(min-width:1024px)" srcset="${useStatic(atobSrc, flags)}" />
+          <img src="${useStatic(atobSrcMobile, flags)}" alt="${alt}" />
+        </picture>
+      </div>
+   `;
+  }
+
+  const DefaultTemplate = () => {
+    return html`
+      <img className="${className}" src="${useStatic(atobSrc, flags)}" alt="${alt}" />
+    `;
+  }
+
+  if(srcMobile) {
+    return html`<${MobileTemplate} />`
+  }
+  return html`<${DefaultTemplate} />`
 };
 
 export {Media, MediaNew, Image};

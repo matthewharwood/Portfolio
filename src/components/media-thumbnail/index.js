@@ -11,11 +11,11 @@ export const MediaThumbnail = (props) => {
       ${ props.aspectRatio ? html`
         <button onClick="${() => setModalOpen(true)}" className="w-full relative z-0">
           <div className="${props.aspectRatio} relative"></div>
-          <${Image} src="${posterImage}" className="absolute inset-0 h-full w-full object-contain"/>
+          <${MediaNew} ...${props.media} className="absolute inset-0 h-full w-full object-contain"/>
         </button>
       ` : html`
         <button onClick="${() => setModalOpen(true)}" className="w-full">
-          <${Image} src="${posterImage}" className="w-full z-0"/>
+          <${MediaNew} ...${props.media} className="absolute inset-0 h-full w-full object-contain"/>
         </button>
       ` }
       ${isModalOpen && html`

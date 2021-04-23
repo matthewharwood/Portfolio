@@ -136,8 +136,10 @@ module.exports = {
     aspectRatio: { // defaults to {}
       none: 0,
       square: [1, 1],
+      "9/16": [9, 16],
       "16/9": [16, 9],
       "4/3": [4, 3],
+      "4/5": [4, 5],
       '3/4': [3, 4],
       "21/9": [21, 9],
       '3/2': [3, 2],
@@ -151,6 +153,7 @@ module.exports = {
     },
   },
   variants: {
+    aspectRatio: ['responsive', 'hover'],
     textColor: ['responsive', 'hover', 'focus', 'group-hover'],
     backgroundColor: ['responsive', 'hover', 'focus', 'group-hover'],
     textDecoration: ['responsive', 'hover', 'focus', 'active', 'group-hover'],

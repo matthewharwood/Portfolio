@@ -30,9 +30,24 @@ export default {
       type: 'image'
     },
     {
+      name: 'imgSrcMobile',
+      title: 'Image Source Mobile',
+      type: 'image'
+    },
+    {
       name: 'videoSrc',
       title: 'Video Source',
       type: 'string'
+    },
+    {
+      name: 'videoSrcMobile',
+      title: 'Video Source Mobile',
+      type: 'string'
+    },
+    {
+      name: 'loop',
+      title: 'loop video?',
+      type: 'boolean',
     },
     {
       name: 'poster',

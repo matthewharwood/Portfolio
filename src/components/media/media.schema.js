@@ -27,6 +27,11 @@ export default {
       type: 'image'
     },
     {
+      name: 'imgSrcMobile',
+      title: 'Image Source Mobile',
+      type: 'image'
+    },
+    {
       name: 'videoSrc',
       title: 'Video Source',
       type: 'string'
