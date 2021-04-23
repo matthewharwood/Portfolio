@@ -39,7 +39,6 @@ server.use(express.static('/'));
 server.use('/static', express.static(join(__dirname + '/static')));
 
 
-
 const renderPage = (title, page) => {
   return HtmlPage({title, content: render(page), navigation: render(html`<${AH.NavigationBar} />`)});
 };
