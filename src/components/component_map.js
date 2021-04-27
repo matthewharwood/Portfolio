@@ -9,10 +9,9 @@ import { ThemeChange } from "./post-footer/theme-change";
 import { VideoCard } from "./video-card";
 import { InfiniteImageScroll } from "./infinite-image-scroll";
 import { MediaThumbnail } from "./media-thumbnail";
-import { MediaSection } from './media-section';
 import { AnimatedTextNode } from './text-nodes/animated'
 import {Slideshow} from './slideshow';
-import {HumbleBeginnings} from '../pages/profile';
+import {HumbleBeginnings} from './humble-beginnings';
 
 
 export const COMPONENT_MAP = {

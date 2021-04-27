@@ -1,4 +1,5 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
+const {ASPECT_RATIOS} = require('./src/_data/aspect-ratios')
 
 module.exports = {
   purge: [
@@ -104,6 +105,8 @@ module.exports = {
         "primary-hover": "var(--color-primary-hover)",
         "primary-active": "var(--color-primary-active)",
 
+        "on-primary": "var(--color-secondary)",
+
         secondary: "var(--color-secondary)",
         "secondary-lighter": "var(--color-secondary-lighter)",
         "secondary-hover": "var(--color-secondary-hover)",
@@ -134,19 +137,7 @@ module.exports = {
       borderColor: (theme) => ({ default: theme("colors.border") }),
     },
     aspectRatio: { // defaults to {}
-      none: 0,
-      square: [1, 1],
-      "9/16": [9, 16],
-      "16/9": [16, 9],
-      "4/3": [4, 3],
-      "4/5": [4, 5],
-      '3/4': [3, 4],
-      "21/9": [21, 9],
-      '3/2': [3, 2],
-      '2/1': [2, 1],
-      '6/1': [6, 1],
-      '6/7': [6, 7],
-      '5/2': [5,2],
+      ...ASPECT_RATIOS,
     },
     container: {
       center: true,

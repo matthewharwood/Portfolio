@@ -50,6 +50,9 @@ import textSection from '../../components/text-section/schema'
 import buttonsGrid from '../../components/buttons-grid/schema';
 import slideshow from '../../components/slideshow/schema';
 import HRSchema from '../../components/hr/schema'
+import ResponsiveImage from '../../components/responsive-image/schema';
+import ResponsiveMedia from '../../components/responsive-media/schema';
+import SectionContainer from '../../components/section-container/schema';
 
 export default createSchema({
   name: 'default',
@@ -107,6 +110,9 @@ export default createSchema({
     textSection,
     slideshow,
     HRSchema,
+    ResponsiveImage,
+    ResponsiveMedia,
+    SectionContainer
   ])
 });
 

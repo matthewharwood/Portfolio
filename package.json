@@ -81,6 +81,7 @@
     "autoprefixer": "9",
     "babel-jest": "^26.2.2",
     "htm": "^3.0.4",
+    "just-omit": "^1.1.0",
     "postcss": "7",
     "preact": "^10.4.7",
     "quicklink": "^2.0.0-beta",

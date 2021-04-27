@@ -7426,6 +7426,11 @@ jsprim@^1.2.2:
     json-schema "0.2.3"
     verror "1.10.0"
 
+just-omit@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/just-omit/-/just-omit-1.1.0.tgz#ea507d3a251a36383d09e47324181d7f4acb2ea6"
+  integrity sha512-MBDr0a1Yyzht8KK3RS2oUKtJSKRrm+6txDuEFJOXoALnX4h+FcQyWSKVNDlZiClOSIRf1PkzJ+QkKm0pjLS7Mw==
+
 keyv@^3.0.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/keyv/-/keyv-3.1.0.tgz#ecc228486f69991e49e9476485a5be1e8fc5c4d9"
