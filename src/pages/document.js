@@ -10,9 +10,7 @@ export const HtmlPage = ({ title, content, navigation }) => {
         <meta name="description" content="A digital portfolio created by and for Matthew Harwood to showcase his thoughts and his interests" />
         <meta name="author" content="Matthew Harwood" />
         <link rel="preload" href="https://fonts.googleapis.com/css2?family=Lato&family=Space+Mono:wght@400;700&display=swap" crossorigin>
-        <link rel="preload" href="https://fonts.gstatic.com/s/spacemono/v6/i7dMIFZifjKcF5UAWdDRaPpZUFWaHi6WZ3Q.woff2" crossorigin>
-        <link rel="preload" href="https://fonts.gstatic.com/s/spacemono/v6/i7dPIFZifjKcF5UAWdDRYEF8RXi4EwQ.woff2" crossorigin>
-        <link rel="preload" href="https://fonts.gstatic.com/s/lato/v17/S6uyw4BMUTPHjx4wXiWtFCc.woff2" crossorigin>
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
         <link rel="preconnect" href="https://res.cloudinary.com/" crossorigin>
         <link rel="preconnect" href="https://stats.g.doubleclick.net/" crossorigin>
         <link rel="preconnect" href="https://www.google-analytics.com/" crossorigin>
