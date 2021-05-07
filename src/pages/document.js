@@ -12,6 +12,7 @@ export const HtmlPage = ({ title, content, navigation }) => {
         <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
         <link rel="preconnect" href="https://fonts.googleapis.com/" crossorigin>
         <link rel="preconnect" href="https://res.cloudinary.com/" crossorigin>
+        <link rel="preconnect" href="https://stats.g.doubleclick.net/" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lato&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
         <link href="/static/styles.bundle.css" rel="stylesheet" />
         <meta name="description" content="A front-end engineer that mixes art, design, and technology, to create effective experiences that deliver value at scale">
