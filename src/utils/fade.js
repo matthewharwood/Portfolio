@@ -10,6 +10,7 @@ class Fade extends Highway.Transition {
     if(isServer) return;
     window.scrollTo(0, 0);
 
+
     //
     // const keyframeTo = [
     //   {  opacity: 0},

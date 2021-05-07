@@ -9,6 +9,9 @@ export const HtmlPage = ({ title, content, navigation }) => {
         <title>${title}</title>
         <meta name="description" content="A digital portfolio created by and for Matthew Harwood to showcase his thoughts and his interests" />
         <meta name="author" content="Matthew Harwood" />
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+        <link rel="preconnect" href="https://fonts.googleapis.com/" crossorigin>
+        <link rel="preconnect" href="https://res.cloudinary.com/" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lato&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
         <link href="/static/styles.bundle.css" rel="stylesheet" />
         <meta name="description" content="A front-end engineer that mixes art, design, and technology, to create effective experiences that deliver value at scale">
@@ -16,7 +19,7 @@ export const HtmlPage = ({ title, content, navigation }) => {
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:site" content="Matty0187" />
         <meta name="twitter:creator" content="@Matty0187" />
-        <meta property="og:url" content="https://portfolio-morningharwood.onrender.com/" />
+        <meta property="og:url" content="https://morningharwood.com/" />
         <meta property="og:title" content="Good Morning Harwood" />
         <meta property="og:description" content="A digital portfolio created by and for Matthew Harwood to showcase his thoughts and his interests" />
         <meta property="og:image:type" content="image/jpeg" />

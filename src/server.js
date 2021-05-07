@@ -13,6 +13,7 @@ import livereload from 'livereload';
 import connectLivereload from 'connect-livereload';
 import {join} from 'path';
 
+
 import {Rorschach} from './pages/lab/rorschach';
 import {withFooterAndRouter} from './layouts/with_footer_and_router';
 import {seed} from './_data/seed-data';
@@ -22,12 +23,12 @@ import {Index as MonkeyMechLevelDesign} from './pages/lab/monkey-mech/level-desi
 
 const liveReloadServer = livereload.createServer();
 
-liveReloadServer.watch(join(__dirname, 'src'));
+liveReloadServer.watch(join(__dirname, 'src/_data'));
 
 liveReloadServer.server.once('connection', () => {
   setTimeout(() => {
     liveReloadServer.refresh('/');
-  }, 100);
+  }, 1500);
 });
 
 const port = parseInt(process.env.PORT, 10) || 3000;
@@ -55,6 +56,7 @@ server.get('/alt', function (req, res) {
   res.send(renderPage('Alt', withFooterAndRouter({title: 'alt'})(Alt)));
 });
 
+
 server.get('/work/nike-jordan-editor', function (req, res) {
   const props = seed('page');
 
@@ -65,6 +67,7 @@ server.get('/work/marketing-pathfinder', function (req, res) {
   const props = seed('page', 2);
   res.send(renderPage('Marketing Pathfinder', withFooterAndRouter({title: 'marketing-path-finder'})(() => Renderer(props))));
 });
+
 
 server.get('/work/uber-com', function (req, res) {
   const props = seed('page', 1);
