@@ -2,8 +2,6 @@ import omit from 'just-omit';
 
 const IMAGE_FIXTURE = {
   altText: 'hello world',
-  lgAspectRatio: 'lg:aspect-ratio-16/9',
-  defaultAspectRatio: 'aspect-ratio-4/5',
   defaultSrc: {
     "_type": "image",
     "asset": {

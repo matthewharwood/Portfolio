@@ -2,37 +2,38 @@ import {h} from 'preact';
 
 import {ResponsiveMedia} from './';
 import {fixtures} from './fixtures';
-
+import {SectionContainer} from '../section-container';
+import {fixtures as sFixtures} from '../section-container/fixtures';
 export default {
   title: 'ResponsiveMedia'
 };
 
 export const MainLooping = () => {
   return (
-    <div className={'container'}>
+    <SectionContainer {...sFixtures.MainSectionContainer} >
       <ResponsiveMedia  {...fixtures.MainLooping} />
-    </div>
+    </SectionContainer>
   );
 }
 export const MainPlayOnce= () => {
   return (
-    <div className={'container'}>
+    <SectionContainer {...sFixtures.MainSectionContainer} >
       <ResponsiveMedia  {...fixtures.MainPlayOnce}  />
-    </div>
+    </SectionContainer>
   );
 };
 export const MainIsControls = () => {
   return (
-    <div className={'container'}>
+    <SectionContainer {...sFixtures.MainSectionContainer} >
       <ResponsiveMedia  {...fixtures.MainIsControls}  />
-    </div>
+    </SectionContainer>
   );
 };
 
 export const MainIsImage = () => {
   return (
-    <div className={'container'}>
+    <SectionContainer {...sFixtures.MainSectionContainer} >
       <ResponsiveMedia  {...fixtures.MainIsImage}  />
-    </div>
+    </SectionContainer>
   );
 };

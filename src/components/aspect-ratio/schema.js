@@ -1,4 +1,5 @@
 import { calcForSanity } from '../../_data/aspect-ratios';
+import {BlockColor} from '../_parts/block-color';
 
 export default {
   name: 'aspectRatio',
@@ -27,5 +28,6 @@ export default {
       },
       initialValue: 'lg:aspect-ratio-16/9'
     },
+    ...BlockColor,
   ]
 };

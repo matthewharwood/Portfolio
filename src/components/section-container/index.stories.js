@@ -1,27 +1,32 @@
 import {h} from 'preact'
 import {SectionContainer} from './';
-import {ConditionalWrapper} from '../conditional-wrapper';
+import {fixtures} from './fixtures';
 
 export default {
   title: 'SectionContainer'
 }
-const FIXTURES = {
-  paddingClasses: 'py-12 px-8 lg:py-48 lg:px-5',
-  backgroundColorClasses: 'bg-primary',
-  textColorClasses: 'text-on-primary',
-  displayClasses: 'flex',
-  marginClasses: 'mx-auto',
-  boxSizing: 'border-box',
-  positionClasses: 'relative',
-  placementClasses: '',
 
-  hasContainer: true,
-  hasFadeIn: true,
-}
-export const Main = () => {
+export const MainSectionContainer = () => {
 
   return (
-    <SectionContainer {...FIXTURES}>
+    <SectionContainer {...fixtures.MainSectionContainer}>
+        <p>hello world</p>
+    </SectionContainer>
+  );
+};
+export const MainSectionContainerSecondary = () => {
+
+  return (
+    <SectionContainer {...fixtures.MainSectionContainerSecondary}>
+        <p>hello world</p>
+    </SectionContainer>
+  );
+};
+
+export const MainSectionContainerTertiary = () => {
+
+  return (
+    <SectionContainer {...fixtures.MainSectionContainerTertiary}>
         <p>hello world</p>
     </SectionContainer>
   );

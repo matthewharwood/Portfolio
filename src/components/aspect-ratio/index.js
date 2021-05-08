@@ -9,8 +9,10 @@ const AspectRatioBox = (props) => {
       wrapper=${
         ({children}) => html`
           <div className="relative">
-            <div className="${props.defaultAspectRatio} ${props.lgAspectRatio} relative">
-              ${children}
+            <div className="${props.defaultAspectRatio} ${props.lgAspectRatio} ${props.backgroundColorClasses} ${props.textColorClasses} relative">
+              <div className="${hasAspectRatios ? 'absolute' : ''} w-full">
+                ${children}
+              </div>
             </div>
           </div>
         `

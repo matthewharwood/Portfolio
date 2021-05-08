@@ -4,9 +4,12 @@ import {
   calculatePostersFromCloudinaryVideo,
   calculateVideoSrcFromCloudinary
 } from '../../utils/calculate-src';
+import {AspectRatioBox} from '../aspect-ratio';
 
 const ResponsiveMedia = (props) => {
   const {isVideo, defaultVideoSrc, lgVideoSrc, responsiveImage, playState = 'loop'} = props;
+  const {aspectRatios} = responsiveImage || {};
+  const hasAspectRatios = aspectRatios.defaultAspectRatio || aspectRatios.lgAspectRatio;
 
   const playStateMap = {
     playOnce: {loop: false, muted: true, autoplay: true, playsinline: true},
@@ -16,14 +19,18 @@ const ResponsiveMedia = (props) => {
 
   if(isVideo) {
     return html`
-      <video className="lg:hidden flex w-full h-full" ...${playStateMap[playState]} poster="${calculatePostersFromCloudinaryVideo(defaultVideoSrc)}">
-        <source src="${calculateVideoSrcFromCloudinary(defaultVideoSrc)}" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      <video className="hidden lg:flex w-full h-full" ...${playStateMap[playState]} poster="${calculatePostersFromCloudinaryVideo(lgVideoSrc)}">
-        <source src="${calculateVideoSrcFromCloudinary(lgVideoSrc)}" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+      <${AspectRatioBox} ...${aspectRatios}>
+        <div  className="${hasAspectRatios ? 'absolute' : ''} w-full">
+          <video className="lg:hidden flex w-full h-full" ...${playStateMap[playState]} poster="${calculatePostersFromCloudinaryVideo(defaultVideoSrc)}">
+            <source src="${calculateVideoSrcFromCloudinary(defaultVideoSrc)}" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <video className="hidden lg:flex w-full h-full" ...${playStateMap[playState]} poster="${calculatePostersFromCloudinaryVideo(lgVideoSrc)}">
+            <source src="${calculateVideoSrcFromCloudinary(lgVideoSrc)}" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      <//>
     `;
   }
 

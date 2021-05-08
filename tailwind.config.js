@@ -112,10 +112,14 @@ module.exports = {
         "secondary-hover": "var(--color-secondary-hover)",
         "secondary-active": "var(--color-secondary-active)",
 
+        "on-secondary": "var(--color-primary)",
+
         tertiary: "var(--color-tertiary)",
         "tertiary-lighter": "var(--color-tertiary-lighter)",
         "tertiary-hover": "var(--color-tertiary-hover)",
         "tertiary-active": "var(--color-tertiary-active)",
+
+        "on-tertiary": "var(--color-primary)",
 
         accent: "var(--color-accent)",
 

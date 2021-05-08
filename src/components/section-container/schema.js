@@ -1,3 +1,5 @@
+import {BlockColor} from '../_parts/block-color';
+
 export default {
   name: 'sectionContainer',
   title: 'Section Container',
@@ -16,20 +18,7 @@ export default {
       initialValue: 'py-12 px-8 lg:py-48 lg:px-5',
       validation: Rule => Rule.required(),
     },
-    {
-      type: 'string',
-      name: 'backgroundColorClasses',
-      title: 'Background Color Classes',
-      initialValue: 'bg-primary',
-      validation: Rule => Rule.required(),
-    },
-    {
-      type: 'string',
-      name: 'textColorClasses',
-      title: 'Padding Classes',
-      initialValue: 'text-primary',
-      validation: Rule => Rule.required(),
-    },
+    ...BlockColor,
     {
       type: 'string',
       name: 'displayClasses',

@@ -42,7 +42,7 @@ import headlineVertical  from '../../components/headline-vertical/headline-verti
 import textOverShape from '../../components/text-over-shape/schema';
 import mediaGridArea from '../../components/media-grid-area/schema';
 import highlightMedia from '../../components/highlight-media/schema';
-
+import aspectRatio from '../../components/aspect-ratio/schema';
 import textContainer from '../../components/text-container/schema';
 import { regularTextNode } from '../../components/text-nodes/regularText';
 import { animatedTextNode } from '../../components/text-nodes/animated';
@@ -112,7 +112,8 @@ export default createSchema({
     HRSchema,
     ResponsiveImage,
     ResponsiveMedia,
-    SectionContainer
+    SectionContainer,
+    aspectRatio
   ])
 });
 
