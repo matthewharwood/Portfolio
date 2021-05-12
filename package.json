@@ -83,7 +83,7 @@
     "babel-jest": "^26.2.2",
     "htm": "^3.0.4",
     "just-omit": "^1.1.0",
-    "postcss": "7",
+    "postcss": "8",
     "preact": "^10.4.7",
     "quicklink": "^2.0.0-beta",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
