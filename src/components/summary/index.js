@@ -17,7 +17,7 @@ export const Summary = (props) => {
           <div className="col-span-6 lg:col-span-${lgColumns} flex flex-col">
             <span className="text-xl text-accent font-mono">${number}</span>
             <h2 className="text-4xl font-mono mb-12">${heading}</h2>
-            <p className="leading-loose text-lg">${text}</p>
+            <p className="leading-loose text-lg whitespace-pre-line">${text}</p>
           </div>
         </div>
       </section>
