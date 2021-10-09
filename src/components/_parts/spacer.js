@@ -1,34 +1,37 @@
-import {html} from 'htm/preact';
+import { html } from "htm/preact";
 
 const defaultSpacing = {
+  auto: "auto",
   px: "1px",
-  "0": "0",
-  "1": "0.25rem",
-  "2": "0.5rem",
-  "3": "0.75rem",
-  "4": "1rem",
-  "5": "1.25rem",
-  "6": "1.5rem",
-  "8": "2rem",
-  "10": "2.5rem",
-  "12": "3rem",
-  "16": "4rem",
-  "20": "5rem",
-  "24": "6rem",
-  "32": "8rem",
-  "40": "10rem",
-  "48": "12rem",
-  "56": "14rem",
-  "64": "16rem",
+  0: "0",
+  1: "0.25rem",
+  2: "0.5rem",
+  3: "0.75rem",
+  4: "1rem",
+  5: "1.25rem",
+  6: "1.5rem",
+  8: "2rem",
+  10: "2.5rem",
+  12: "3rem",
+  16: "4rem",
+  20: "5rem",
+  24: "6rem",
+  32: "8rem",
+  40: "10rem",
+  48: "12rem",
+  56: "14rem",
+  64: "16rem",
 };
 
 const otherSpacing = {
   "1/1": "100%",
   "1/2": "50%",
-  "80vh": "80vh",
+  "1/3": "33.333334%",
   "1/5": "20%",
-  "1/6": "16.6666667",
-  "16/9": "56.25%",
+  "1/6": "16.6666667%",
+  "1/8": "12.5%",
+  "1/10": "10%",
+  "5/4": "80%",
 };
 
 const spacersMapped = Object.entries({
@@ -74,21 +77,49 @@ export const Spacers = {
       collapsed: true, // Defines if the fieldset should be collapsed by default or not
       columns: 4, // Defines a grid for the fields and how many columns it should have
     },
-  }
+  },
 };
 
-export const generateSpacingClassString = ( props ) => {
-  const classString = SpacerFields.map(field => {
-    if(props.hasOwnProperty(field.name)){
-      return `${field.prefix}${props[field.name]}`
+/**
+ * @param {string} fieldName - fieldName to be used for prefix
+ */
+export const generateCustomSpacerFields = (fieldName) => {
+  return {
+    fields: SpacerFields.map((field) => ({
+      type: "string",
+      name: `${fieldName}_${field.name}`,
+      title: field.title,
+      options: {
+        list: [...spacersMapped],
+      },
+      fieldset: fieldName,
+    })),
+    fieldset: {
+      name: fieldName,
+      title: fieldName,
+      options: {
+        collapsible: true, // Makes the whole fieldset collapsible
+        collapsed: true, // Defines if the fieldset should be collapsed by default or not
+        columns: 4, // Defines a grid for the fields and how many columns it should have
+      },
+    },
+  };
+};
+
+export const generateSpacingClassString = (props) => {
+  const classString = SpacerFields.map((field) => {
+    if (props.hasOwnProperty(field.name)) {
+      return `${field.prefix}${props[field.name]}`;
     }
   }).join(" ");
   return classString;
-}
+};
 
 export const SpacingContainer = (props) => {
   const spacingClasses = generateSpacingClassString(props);
   return html`
-    <div className="${spacingClasses}" data-name="${props.name}">${props.children}</div>
-`;
-}
+    <div className="${spacingClasses}" data-name="${props.name}">
+      ${props.children}
+    </div>
+  `;
+};

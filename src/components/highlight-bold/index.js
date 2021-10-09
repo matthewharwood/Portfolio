@@ -8,7 +8,7 @@ export const HighlightBold= ({
   ui = {},
 }) => {
   return html`
-    <section className="py-16 px-5 lg:px-0">
+    <section className="px-5 lg:px-0">
       <div
         className="container px-5 lg:px-16 grid grid-cols-12 lg:gap-10 py-16 ${BackgroundColor[ui.backgroundColor || 'primary']}"
       >

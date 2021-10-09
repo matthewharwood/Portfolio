@@ -28,7 +28,7 @@ const HeadlineText = (props) => {
   }
 
   return html`
-    <div className="col-span-3 lg:col-span-2 ${Sans.xl}">${props.text}</div>
+    <div className="mt-1 col-span-3 lg:col-span-2 ${Sans.xl}">${props.text}</div>
   `
 };
 
