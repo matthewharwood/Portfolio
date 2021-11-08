@@ -80,32 +80,6 @@ export const Spacers = {
   },
 };
 
-/**
- * @param {string} fieldName - fieldName to be used for prefix
- */
-export const generateCustomSpacerFields = (fieldName) => {
-  return {
-    fields: SpacerFields.map((field) => ({
-      type: "string",
-      name: `${fieldName}_${field.name}`,
-      title: field.title,
-      options: {
-        list: [...spacersMapped],
-      },
-      fieldset: fieldName,
-    })),
-    fieldset: {
-      name: fieldName,
-      title: fieldName,
-      options: {
-        collapsible: true, // Makes the whole fieldset collapsible
-        collapsed: true, // Defines if the fieldset should be collapsed by default or not
-        columns: 4, // Defines a grid for the fields and how many columns it should have
-      },
-    },
-  };
-};
-
 export const generateSpacingClassString = (props) => {
   const classString = SpacerFields.map((field) => {
     if (props.hasOwnProperty(field.name)) {

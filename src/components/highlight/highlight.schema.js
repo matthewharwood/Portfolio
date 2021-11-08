@@ -1,13 +1,11 @@
 import { Header } from "../_parts/header";
-import { Spacers, generateCustomSpacerFields } from "../_parts/spacer";
-
-const TextSpacers = generateCustomSpacerFields("textBlockSpacer");
+import { Spacers } from "../_parts/spacer";
 
 export default {
   name: "highlight",
   title: "Highlight",
   type: "document",
-  fieldsets: [Spacers.fieldset, TextSpacers.fieldset],
+  fieldsets: [Spacers.fieldset],
   fields: [
     ...Spacers.fields,
     ...Header,
@@ -27,6 +25,5 @@ export default {
       title: "Is Image Right?",
       type: "boolean",
     },
-    ...TextSpacers.fields,
   ],
 };
