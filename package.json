@@ -103,7 +103,7 @@
     "connect-livereload": "^0.6.1",
     "cross-env": "^7.0.2",
     "cssnano": "^4.1.10",
-    "dotty": "^0.1.0",
+    "dotty": "^0.1.2",
     "esm": "^3.2.21",
     "express": "^4.17.1",
     "fs-extra": "^9.0.0",
