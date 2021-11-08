@@ -1,50 +1,53 @@
 import { html } from "htm/preact";
-import {Mono, Sans} from '../typography';
-import {SpacingContainer} from '../_parts/spacer';
-
+import { Mono, Sans } from "../typography";
+import {
+  SpacingContainer,
+  generateCustomSpacingClassString,
+} from "../_parts/spacer";
 
 const HeadlineNumber = (props) => {
-  if(!props.number) {
+  if (!props.number) {
     return null;
   }
 
-  return html`
-    <span>${props.span}</span>
-  `;
+  return html` <span>${props.span}</span> `;
 };
 
 const HeadlineTitle = (props) => {
-  if(!props.title) {
+  if (!props.title) {
     return null;
   }
-  return html`
-    <h3 className="${Mono.xl4} mb-2">${props.title}</h3>
-  `
-}
+  return html` <h3 className="${Mono.xl4} mb-2">${props.title}</h3> `;
+};
 
 const HeadlineText = (props) => {
-  if(!props.text) {
+  if (!props.text) {
     return null;
   }
 
   return html`
-    <div className="mt-1 col-span-3 lg:col-span-2 ${Sans.xl}">${props.text}</div>
-  `
+    <div
+      className="mt-1 col-span-3 lg:col-span-2 ${Sans.xl} ${props.className}"
+    >
+      ${props.text}
+    </div>
+  `;
 };
 
 const HeadlineBorder = (props) => {
-  if(props.hasBorder) {
+  if (props.hasBorder) {
     return html`
       <div className="container px-5 lg:px-16 w-full">
         <div className="h-px w-full bg-border" />
       </div>
-    `
+    `;
   }
   return null;
 };
 
- const Headline = (props) => {
-  const { hasBorder, number, title, text= '' } = props;
+const Headline = (props) => {
+  const textSpacingClass = generateCustomSpacingClassString("text", props);
+  const { hasBorder, number, title, text = "" } = props;
   return html`
     <${SpacingContainer} ...${props} name="Headline">
       <section>
@@ -53,7 +56,7 @@ const HeadlineBorder = (props) => {
             <${HeadlineNumber} number="${number}" />
             <${HeadlineTitle} title="${title}" />
           </div>
-          <${HeadlineText} text="${text}" />
+          <${HeadlineText} text="${text}" className="${textSpacingClass}" />
         </div>
         <${HeadlineBorder} hasBorder="${hasBorder}" />
       </section>
@@ -61,7 +64,4 @@ const HeadlineBorder = (props) => {
   `;
 };
 
- export {
-   Headline
- }
-
+export { Headline };

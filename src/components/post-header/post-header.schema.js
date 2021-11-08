@@ -1,3 +1,5 @@
+import { Spacers } from "../_parts/spacer";
+
 /**
   const FIXTURE = {
     heading: 'Uber.com Performance',
@@ -14,56 +16,56 @@
   };
 */
 export const info = {
-  name: 'info',
-  title: 'Info',
-  type: 'document',
+  name: "info",
+  title: "Info",
+  type: "document",
   fields: [
     {
-      name: 'heading',
-      title: 'Heading',
-      type: 'string'
+      name: "heading",
+      title: "Heading",
+      type: "string",
     },
     {
-      name: 'values',
-      title: 'Values',
-      type: 'array',
+      name: "values",
+      title: "Values",
+      type: "array",
       of: [
-        {name: 'person', type: 'reference', to: [{type: 'person'}]},
-        {name: 'technology',  type: 'reference', to: [{type: 'technology'}]},
-        {name: 'company',  type: 'reference', to: [{type: 'company'}]},
-        {name: 'customField', title: 'Custom Field', type: 'customField'},
-      ]
-    }
-  ]
-}
+        { name: "person", type: "reference", to: [{ type: "person" }] },
+        { name: "technology", type: "reference", to: [{ type: "technology" }] },
+        { name: "company", type: "reference", to: [{ type: "company" }] },
+        { name: "customField", title: "Custom Field", type: "customField" },
+      ],
+    },
+  ],
+};
 
 export default {
-  name: 'postHeader',
-  title: 'PostHeader',
-  type: 'document',
+  name: "postHeader",
+  title: "PostHeader",
+  type: "document",
+  fieldsets: [Spacers.fieldset],
   fields: [
+    ...Spacers.fields,
     {
-      name: 'tag',
-      title: 'Tag',
-      type: 'tag'
+      name: "tag",
+      title: "Tag",
+      type: "tag",
     },
     {
-      name: 'heading',
-      title: 'Heading',
-      type: 'string'
+      name: "heading",
+      title: "Heading",
+      type: "string",
     },
     {
-      name: 'description',
-      title: 'Description',
-      type: 'string'
+      name: "description",
+      title: "Description",
+      type: "string",
     },
     {
-      name: 'info',
-      title: 'Info',
-      type: 'array',
-      of: [
-        {type: 'info'}
-      ]
+      name: "info",
+      title: "Info",
+      type: "array",
+      of: [{ type: "info" }],
     },
-  ]
-}
+  ],
+};
