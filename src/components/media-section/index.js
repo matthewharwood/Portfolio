@@ -6,7 +6,7 @@ export const MediaSection = (props) => {
   return html`
     <${SpacingContainer} ...${props} name="MediaSection">
       <div className="container">
-        <${MediaAspectRatio} ...${props.media} className="object-contain"/>
+        <${MediaAspectRatio} ...${props.media} className="object-contain w-full"/>
       </div>
     <//>
   `
