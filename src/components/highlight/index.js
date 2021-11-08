@@ -3,12 +3,20 @@ import { Image } from "../media";
 import { Mono, Sans } from "../typography";
 import {
   SpacingContainer,
-  generateCustomSpacingCLassString,
+  generateCustomSpacingClassString,
 } from "../_parts/spacer";
 
 export const Highlight = (props) => {
-  const imageClassString = generateCustomSpacingCLassString("image", props);
-  const { isImageRight, imageCols = 6, subtitle, title, text, image, number } = props;
+  const imageClassString = generateCustomSpacingClassString("image", props);
+  const {
+    isImageRight,
+    imageCols = 6,
+    subtitle,
+    title,
+    text,
+    image,
+    number,
+  } = props;
   const imageOrder = isImageRight ? "order-last" : "order-first";
   const imageColsClass = `lg:col-span-${imageCols}`;
   const textColsClass = `lg:col-span-${12 - imageCols}`;

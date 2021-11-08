@@ -108,7 +108,13 @@ export const generateCustomSpacers = (prefix = "") => {
   };
 };
 
-export const generateCustomSpacingCLassString = (sanityPrefix, props) => {
+/**
+ *
+ * @param {string} sanityPrefix Spacer prefix that was added in Schema
+ * @param {*} props Props received from the component
+ * @returns {string} Generated class string
+ */
+export const generateCustomSpacingClassString = (sanityPrefix, props) => {
   const classString = SpacerFields.map((field) => {
     if (props.hasOwnProperty(`${sanityPrefix}_${field.name}`)) {
       return `${field.prefix}${props[`${sanityPrefix}_${field.name}`]}`;
