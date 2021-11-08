@@ -80,6 +80,43 @@ export const Spacers = {
   },
 };
 
+/**
+ *
+ * @param {string} prefix Unique Identifier for a particular spacer (eg: "text" for TextSpacer)
+ * @returns
+ */
+export const generateCustomSpacers = (prefix = "") => {
+  return {
+    fields: SpacerFields.map((field) => ({
+      type: "string",
+      name: `${prefix}_${field.name}`,
+      title: field.title,
+      options: {
+        list: [...spacersMapped],
+      },
+      fieldset: `${prefix}_spacer`,
+    })),
+    fieldset: {
+      name: `${prefix}_spacer`,
+      title: `${prefix} Spacer`,
+      options: {
+        collapsible: true, // Makes the whole fieldset collapsible
+        collapsed: true, // Defines if the fieldset should be collapsed by default or not
+        columns: 4, // Defines a grid for the fields and how many columns it should have
+      },
+    },
+  };
+};
+
+export const generateCustomSpacingCLassString = (sanityPrefix, props) => {
+  const classString = SpacerFields.map((field) => {
+    if (props.hasOwnProperty(`${sanityPrefix}_${field.name}`)) {
+      return `${field.prefix}${props[`${sanityPrefix}_${field.name}`]}`;
+    }
+  }).join(" ");
+  return classString;
+};
+
 export const generateSpacingClassString = (props) => {
   const classString = SpacerFields.map((field) => {
     if (props.hasOwnProperty(field.name)) {

@@ -1,11 +1,13 @@
 import { Header } from "../_parts/header";
-import { Spacers } from "../_parts/spacer";
+import { Spacers, generateCustomSpacers } from "../_parts/spacer";
+
+const ImageSpacer = generateCustomSpacers("image");
 
 export default {
   name: "highlight",
   title: "Highlight",
   type: "document",
-  fieldsets: [Spacers.fieldset],
+  fieldsets: [Spacers.fieldset, ImageSpacer.fieldset],
   fields: [
     ...Spacers.fields,
     ...Header,
@@ -20,6 +22,7 @@ export default {
       type: "number",
       validation: (Rule) => Rule.required().integer().min(1).max(9),
     },
+    ...ImageSpacer.fields,
     {
       name: "isImageRight",
       title: "Is Image Right?",
